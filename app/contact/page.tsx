@@ -18,7 +18,7 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main>
-        <section className="pt-[120px] md:pt-[160px] pb-[32px] md:pb-[48px]">
+        <section className="page-header" style={{ paddingTop: 160, paddingBottom: 48 }}>
           <div className="px-6 md:px-6" style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
             <Badge>Contact</Badge>
             <div style={{ marginTop: 24 }}>

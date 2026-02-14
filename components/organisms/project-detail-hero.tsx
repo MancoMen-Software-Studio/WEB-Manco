@@ -46,7 +46,7 @@ export function ProjectDetailHero({
   }, { scope: sectionRef });
 
   return (
-    <section className="pt-[120px] md:pt-[160px] pb-[32px] md:pb-[48px]">
+    <section className="page-header" style={{ paddingTop: 160, paddingBottom: 48 }}>
       <div
         ref={sectionRef}
         className="px-6 md:px-8 lg:px-12"

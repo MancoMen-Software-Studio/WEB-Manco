@@ -70,7 +70,7 @@ export function TechShowcase() {
   const row2 = technologies.slice(12).map((t) => t.name);
 
   return (
-    <section ref={sectionRef} className="py-[60px] md:py-[80px] lg:py-[100px]" style={{ overflow: "hidden" }}>
+    <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 100, paddingBottom: 100, overflow: "hidden" }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
         <div ref={headerRef} style={{ opacity: 0, marginBottom: 56 }}>
           <SectionHeader

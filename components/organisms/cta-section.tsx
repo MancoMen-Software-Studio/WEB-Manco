@@ -37,8 +37,8 @@ export function CTASection() {
   return (
     <section
       ref={sectionRef}
-      className="py-[60px] md:py-[80px] lg:py-[100px]"
-      style={{ position: "relative", overflow: "hidden" }}
+      className="section-spacing"
+      style={{ paddingTop: 100, paddingBottom: 100, position: "relative", overflow: "hidden" }}
     >
       <div
         style={{

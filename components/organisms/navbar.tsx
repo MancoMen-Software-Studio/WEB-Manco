@@ -9,6 +9,7 @@ import { navigationItems } from "@/data/navigation";
 import { NavLink } from "@/components/molecules/nav-link";
 import { Button } from "@/components/atoms/button";
 import { Icon } from "@/components/atoms/icon";
+import { getLenisInstance } from "@/lib/lenis";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +22,18 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    const lenis = getLenisInstance();
     if (isOpen) {
+      lenis?.stop();
       document.body.style.overflow = "hidden";
-      document.documentElement.classList.add("lenis-stopped");
     } else {
+      lenis?.start();
       document.body.style.overflow = "";
-      document.documentElement.classList.remove("lenis-stopped");
     }
     return () => {
+      const l = getLenisInstance();
+      l?.start();
       document.body.style.overflow = "";
-      document.documentElement.classList.remove("lenis-stopped");
     };
   }, [isOpen]);
 

@@ -50,7 +50,7 @@ export function ProjectDetailContent({
 
   return (
     <div ref={sectionRef} className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 py-[48px] md:py-[64px] lg:py-[96px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 content-spacing" style={{ paddingTop: 96, paddingBottom: 96 }}>
         <div data-animate style={{ display: "flex", flexDirection: "column", gap: 16, opacity: 0 }}>
           <Heading as="h3">The Challenge</Heading>
           <Text>{challenge}</Text>
@@ -67,7 +67,7 @@ export function ProjectDetailContent({
 
       <Divider />
 
-      <div data-animate className="py-[48px] md:py-[64px] lg:py-[96px]" style={{ opacity: 0 }}>
+      <div data-animate className="content-spacing" style={{ paddingTop: 96, paddingBottom: 96, opacity: 0 }}>
         <div style={{ marginBottom: 24 }}>
           <Heading as="h3">Technology Stack</Heading>
         </div>

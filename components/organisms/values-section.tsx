@@ -36,7 +36,7 @@ export function ValuesSection() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="py-[60px] md:py-[80px] lg:py-[100px]">
+    <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <Badge>Values</Badge>

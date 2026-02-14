@@ -71,6 +71,10 @@ html.lenis body {
   overflow: hidden;
 }
 
+.lenis.lenis-stopped body {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -79,5 +83,23 @@ html.lenis body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile responsive overrides */
+@media (max-width: 767px) {
+  .section-spacing {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .page-header {
+    padding-top: 120px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .content-spacing {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
   }
 }
