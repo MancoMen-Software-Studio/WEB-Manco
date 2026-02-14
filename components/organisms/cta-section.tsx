@@ -37,7 +37,8 @@ export function CTASection() {
   return (
     <section
       ref={sectionRef}
-      style={{ position: "relative", overflow: "hidden", padding: "100px 0" }}
+      className="py-16 md:py-24"
+      style={{ position: "relative", overflow: "hidden" }}
     >
       <div
         style={{
@@ -47,7 +48,7 @@ export function CTASection() {
         }}
       />
 
-      <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", padding: "0 24px" }}>
+      <div className="px-5 md:px-8" style={{ position: "relative", maxWidth: 900, margin: "0 auto" }}>
         <div
           ref={contentRef}
           style={{

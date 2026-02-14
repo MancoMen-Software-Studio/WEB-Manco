@@ -49,15 +49,8 @@ export function ProjectDetailContent({
   }, { scope: sectionRef });
 
   return (
-    <div ref={sectionRef} style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: 64,
-          padding: "64px 0 96px",
-        }}
-      >
+    <div ref={sectionRef} className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 py-12 md:py-16 lg:py-24">
         <div data-animate style={{ display: "flex", flexDirection: "column", gap: 16, opacity: 0 }}>
           <Heading as="h3">The Challenge</Heading>
           <Text>{challenge}</Text>
@@ -74,7 +67,7 @@ export function ProjectDetailContent({
 
       <Divider />
 
-      <div data-animate style={{ padding: "64px 0 96px", opacity: 0 }}>
+      <div data-animate className="py-12 md:py-16 lg:py-24" style={{ opacity: 0 }}>
         <div style={{ marginBottom: 24 }}>
           <Heading as="h3">Technology Stack</Heading>
         </div>

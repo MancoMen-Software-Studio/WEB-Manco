@@ -23,7 +23,7 @@ export function ServiceCard({
   return (
     <Link
       href={href}
-      className="group hover:border-electric"
+      className="group hover:border-electric p-6 md:p-10"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -31,7 +31,6 @@ export function ServiceCard({
         borderRadius: 16,
         border: "1px solid #262626",
         background: "#1a1a1a",
-        padding: 40,
         transition: "all 0.5s",
         textDecoration: "none",
       }}

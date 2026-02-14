@@ -52,16 +52,9 @@ export function CompanyIntro() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} style={{ padding: "100px 0" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 80,
-            alignItems: "center",
-          }}
-        >
+    <section ref={sectionRef} className="py-16 md:py-24">
+      <div className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 24, opacity: 0 }}>
             <Badge>About Us</Badge>
             <Heading as="h2">
@@ -74,13 +67,7 @@ export function CompanyIntro() {
           </div>
 
           <div ref={rightRef} style={{ opacity: 0 }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 40,
-              }}
-            >
+            <div className="grid grid-cols-2 gap-6 md:gap-10">
               {companyInfo.stats.map((stat) => (
                 <StatBlock
                   key={stat.label}

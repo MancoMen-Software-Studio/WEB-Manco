@@ -42,13 +42,13 @@ export function ServiceDetailHero({
   }, { scope: sectionRef });
 
   return (
-    <section style={{ paddingTop: 160, paddingBottom: 48 }}>
+    <section className="pt-28 md:pt-40 pb-8 md:pb-12">
       <div
         ref={sectionRef}
+        className="px-5 md:px-8 lg:px-12"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "0 48px",
           display: "flex",
           flexDirection: "column",
           gap: 24,

@@ -40,7 +40,7 @@ export function ProjectCard({
       <div
         style={{
           position: "relative",
-          height: 280,
+          height: "clamp(180px, 35vw, 280px)",
           width: "100%",
           overflow: "hidden",
           background: `linear-gradient(135deg, ${color}15 0%, ${color}05 100%)`,
@@ -60,7 +60,7 @@ export function ProjectCard({
           <Badge>{category}</Badge>
         </div>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, padding: 32 }}>
+      <div className="p-5 md:p-8" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <Heading as="h3" className="text-white group-hover:text-electric">
             {title}

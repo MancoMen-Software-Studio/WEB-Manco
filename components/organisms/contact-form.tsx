@@ -91,17 +91,11 @@ export function ContactForm() {
   };
 
   return (
-    <section style={{ padding: "64px 0 96px" }}>
+    <section className="py-12 md:py-16 lg:py-24">
       <div
         ref={sectionRef}
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "0 48px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 80,
-        }}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 px-5 md:px-8 lg:px-12"
+        style={{ maxWidth: 1200, margin: "0 auto" }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
           <div data-animate style={{ display: "flex", flexDirection: "column", gap: 16, opacity: 0 }}>
@@ -141,6 +135,7 @@ export function ContactForm() {
         <div data-animate style={{ opacity: 0 }}>
           {submitted ? (
             <div
+              className="p-8 md:p-12"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -150,7 +145,6 @@ export function ContactForm() {
                 borderRadius: 16,
                 border: "1px solid rgba(0,102,255,0.3)",
                 background: "rgba(0,102,255,0.1)",
-                padding: 48,
                 textAlign: "center",
               }}
             >

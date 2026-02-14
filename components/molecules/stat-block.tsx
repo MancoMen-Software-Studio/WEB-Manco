@@ -14,7 +14,7 @@ export function StatBlock({ value, label }: StatBlockProps) {
       <AnimatedCounter
         value={value}
         className="text-white"
-        style={{ fontSize: 48, fontWeight: 700 }}
+        style={{ fontSize: "clamp(32px, 6vw, 48px)", fontWeight: 700 }}
       />
       <Text size="sm" color="secondary">
         {label}

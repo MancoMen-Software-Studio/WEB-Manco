@@ -65,7 +65,7 @@ export function HeroHome() {
           zIndex: 10,
           maxWidth: 900,
           margin: "0 auto",
-          padding: "0 24px",
+          padding: "0 20px",
           textAlign: "center",
         }}
       >

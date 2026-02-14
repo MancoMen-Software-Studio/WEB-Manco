@@ -36,8 +36,8 @@ export function ValuesSection() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} style={{ padding: "100px 0" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+    <section ref={sectionRef} className="py-16 md:py-24">
+      <div className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <Badge>Values</Badge>
           <div style={{ marginTop: 20 }}>
@@ -52,23 +52,18 @@ export function ValuesSection() {
         </div>
         <div
           ref={cardsRef}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: 32,
-          }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           {companyValues.map((value) => (
             <div
               key={value.title}
-              className="hover:border-electric/30"
+              className="hover:border-electric/30 p-6 md:p-8"
               style={{
                 display: "flex",
                 gap: 24,
                 borderRadius: 16,
                 border: "1px solid #262626",
                 background: "#1a1a1a",
-                padding: 32,
                 opacity: 0,
                 transition: "border-color 0.3s",
               }}

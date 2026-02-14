@@ -48,16 +48,11 @@ export function ServiceDetailContent({
   }, { scope: sectionRef });
 
   return (
-    <div ref={sectionRef} style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+    <div ref={sectionRef} className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
       <div
         data-animate
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 64,
-          padding: "64px 0 96px",
-          opacity: 0,
-        }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 py-12 md:py-16 lg:py-24"
+        style={{ opacity: 0 }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <Heading as="h3">What we deliver</Heading>
@@ -90,32 +85,26 @@ export function ServiceDetailContent({
 
       <Divider />
 
-      <div data-animate style={{ padding: "64px 0 96px", opacity: 0 }}>
+      <div data-animate className="py-12 md:py-16 lg:py-24" style={{ opacity: 0 }}>
         <div style={{ marginBottom: 48 }}>
           <Heading as="h2">Our Process</Heading>
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 32,
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {process.map((step, i) => (
             <div
               key={step.title}
+              className="p-6 md:p-8"
               style={{
                 display: "flex",
                 gap: 24,
                 borderRadius: 16,
                 border: "1px solid #262626",
                 background: "#1a1a1a",
-                padding: 32,
               }}
             >
               <span
                 className="font-mono"
-                style={{ fontSize: 36, fontWeight: 700, color: "rgba(0,102,255,0.2)", lineHeight: 1 }}
+                style={{ fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 700, color: "rgba(0,102,255,0.2)", lineHeight: 1 }}
               >
                 {String(i + 1).padStart(2, "0")}
               </span>

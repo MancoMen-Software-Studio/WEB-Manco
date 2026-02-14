@@ -46,13 +46,13 @@ export function ProjectDetailHero({
   }, { scope: sectionRef });
 
   return (
-    <section style={{ paddingTop: 160, paddingBottom: 48 }}>
+    <section className="pt-28 md:pt-40 pb-8 md:pb-12">
       <div
         ref={sectionRef}
+        className="px-5 md:px-8 lg:px-12"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "0 48px",
           display: "flex",
           flexDirection: "column",
           gap: 24,
@@ -74,23 +74,17 @@ export function ProjectDetailHero({
           style={{
             marginTop: 32,
             width: "100%",
-            height: 384,
+            height: "clamp(200px, 40vw, 384px)",
             borderRadius: 16,
             opacity: 0,
             background: `linear-gradient(135deg, ${color}20 0%, ${color}08 100%)`,
           }}
         />
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 24,
-            opacity: 0,
-          }}
-        >
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" style={{ opacity: 0 }}>
           {stats.map((stat) => (
             <div
               key={stat.label}
+              className="p-4 md:p-5"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -98,11 +92,10 @@ export function ProjectDetailHero({
                 borderRadius: 12,
                 border: "1px solid #262626",
                 background: "#1a1a1a",
-                padding: 20,
               }}
             >
-              <span style={{ fontSize: 24, fontWeight: 700, color: "white" }}>{stat.value}</span>
-              <span style={{ fontSize: 14, color: "#a3a3a3" }}>{stat.label}</span>
+              <span style={{ fontSize: "clamp(18px, 3vw, 24px)", fontWeight: 700, color: "white" }}>{stat.value}</span>
+              <span style={{ fontSize: "clamp(12px, 1.5vw, 14px)", color: "#a3a3a3" }}>{stat.label}</span>
             </div>
           ))}
         </div>

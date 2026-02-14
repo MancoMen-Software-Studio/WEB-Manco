@@ -35,10 +35,10 @@ export function Navbar() {
       )}
     >
       <nav
+        className="px-5 md:px-8 lg:px-12"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "0 48px",
           height: 80,
           display: "flex",
           alignItems: "center",

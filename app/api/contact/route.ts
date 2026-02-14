@@ -6,6 +6,14 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("[Contact API] RESEND_API_KEY is not configured");
+      return NextResponse.json(
+        { error: "Email service is not configured." },
+        { status: 503 }
+      );
+    }
+
     const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
     const result = contactSchema.safeParse(body);
@@ -18,10 +26,12 @@ export async function POST(request: Request) {
     }
 
     const { name, email, company, message } = result.data;
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+    const toEmail = process.env.CONTACT_EMAIL || "mancomenstudio@gmail.com";
 
-    await resend.emails.send({
-      from: `MancoMen Website <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
-      to: [process.env.CONTACT_EMAIL || "mancomenstudio@gmail.com"],
+    const { data, error } = await resend.emails.send({
+      from: `MancoMen Website <${fromEmail}>`,
+      to: [toEmail],
       replyTo: email,
       subject: `New inquiry from ${name} — ${company}`,
       html: `
@@ -54,8 +64,18 @@ export async function POST(request: Request) {
       `,
     });
 
+    if (error) {
+      console.error("[Contact API] Resend error:", JSON.stringify(error));
+      return NextResponse.json(
+        { error: error.message || "Failed to send email." },
+        { status: 500 }
+      );
+    }
+
+    console.log("[Contact API] Email sent successfully:", data?.id);
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("[Contact API] Unexpected error:", err);
     return NextResponse.json(
       { error: "Failed to send message. Please try again." },
       { status: 500 }

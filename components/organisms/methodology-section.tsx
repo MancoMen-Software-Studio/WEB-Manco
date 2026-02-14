@@ -35,8 +35,8 @@ export function MethodologySection() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} style={{ padding: "100px 0" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+    <section ref={sectionRef} className="py-16 md:py-24">
+      <div className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <Badge>Methodology</Badge>
           <div style={{ marginTop: 20 }}>
@@ -51,19 +51,17 @@ export function MethodologySection() {
         </div>
         <div
           ref={stepsRef}
-          style={{ display: "flex", flexDirection: "column", gap: 32 }}
+          style={{ display: "flex", flexDirection: "column", gap: 24 }}
         >
           {methodology.map((step) => (
             <div
               key={step.number}
-              className="hover:border-electric/30"
+              className="hover:border-electric/30 p-6 md:p-10 gap-4 md:gap-8"
               style={{
                 display: "flex",
-                gap: 32,
                 borderRadius: 16,
                 border: "1px solid #262626",
                 background: "#1a1a1a",
-                padding: 40,
                 opacity: 0,
                 transition: "border-color 0.3s",
               }}
@@ -71,7 +69,7 @@ export function MethodologySection() {
               <span
                 className="font-display"
                 style={{
-                  fontSize: 60,
+                  fontSize: "clamp(36px, 5vw, 60px)",
                   fontWeight: 400,
                   color: "rgba(0,102,255,0.1)",
                   lineHeight: 1,
