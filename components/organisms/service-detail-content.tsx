@@ -48,10 +48,10 @@ export function ServiceDetailContent({
   }, { scope: sectionRef });
 
   return (
-    <div ref={sectionRef} className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
+    <div ref={sectionRef} className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
       <div
         data-animate
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 py-12 md:py-16 lg:py-24"
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 py-[48px] md:py-[64px] lg:py-[96px]"
         style={{ opacity: 0 }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -85,7 +85,7 @@ export function ServiceDetailContent({
 
       <Divider />
 
-      <div data-animate className="py-12 md:py-16 lg:py-24" style={{ opacity: 0 }}>
+      <div data-animate className="py-[48px] md:py-[64px] lg:py-[96px]" style={{ opacity: 0 }}>
         <div style={{ marginBottom: 48 }}>
           <Heading as="h2">Our Process</Heading>
         </div>

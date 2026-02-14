@@ -19,8 +19,8 @@ export default function ServicesPage() {
     <>
       <Navbar />
       <main>
-        <section className="pt-28 md:pt-40 pb-8 md:pb-12">
-          <div className="px-5 md:px-6" style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
+        <section className="pt-[120px] md:pt-[160px] pb-[32px] md:pb-[48px]">
+          <div className="px-6 md:px-6" style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
             <Badge>Services</Badge>
             <div style={{ marginTop: 24 }}>
               <Heading as="h1" display>

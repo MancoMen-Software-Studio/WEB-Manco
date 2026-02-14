@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -21,9 +21,20 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.classList.add("lenis-stopped");
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.classList.remove("lenis-stopped");
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.classList.remove("lenis-stopped");
+    };
   }, [isOpen]);
+
+  const closeMenu = useCallback(() => setIsOpen(false), []);
 
   return (
     <header
@@ -35,7 +46,7 @@ export function Navbar() {
       )}
     >
       <nav
-        className="px-5 md:px-8 lg:px-12"
+        className="px-6 md:px-8 lg:px-12"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
@@ -47,15 +58,9 @@ export function Navbar() {
       >
         <Link
           href={ROUTES.home}
-          className="relative z-50"
+          className="relative z-[60]"
           style={{ display: "flex", alignItems: "center", gap: 12 }}
         >
-          {/*
-            LOGO: Replace the placeholder below with your PNG logo.
-            1. Place your logo file at: public/images/logo/mancomen-logo.png
-            2. Uncomment the <img> tag below and delete the placeholder <div>
-          */}
-          {/* <img src="/images/logo/mancomen-logo.png" alt="MancoMen" width={36} height={36} style={{ borderRadius: 8 }} /> */}
           <div
             style={{
               width: 36,
@@ -89,7 +94,7 @@ export function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative z-50 md:hidden"
+          className="relative z-[60] md:hidden"
           style={{ width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center" }}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -104,8 +109,13 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black md:hidden"
-            style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}
+            className="fixed inset-0 z-[55] bg-black md:hidden"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
               {navigationItems.map((item, i) => (
@@ -117,8 +127,8 @@ export function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    style={{ fontSize: 28, fontWeight: 600, color: "white" }}
+                    onClick={closeMenu}
+                    style={{ fontSize: 28, fontWeight: 600, color: "white", textDecoration: "none" }}
                   >
                     {item.label}
                   </Link>
@@ -129,7 +139,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
-                <Button href={ROUTES.contact} onClick={() => setIsOpen(false)}>
+                <Button href={ROUTES.contact} onClick={closeMenu}>
                   Get in Touch
                 </Button>
               </motion.div>

@@ -91,10 +91,10 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-24">
+    <section className="py-[60px] md:py-[80px] lg:py-[100px]">
       <div
         ref={sectionRef}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 px-5 md:px-8 lg:px-12"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 px-6 md:px-8 lg:px-12"
         style={{ maxWidth: 1200, margin: "0 auto" }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>

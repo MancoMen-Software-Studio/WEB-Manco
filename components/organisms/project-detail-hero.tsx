@@ -46,10 +46,10 @@ export function ProjectDetailHero({
   }, { scope: sectionRef });
 
   return (
-    <section className="pt-28 md:pt-40 pb-8 md:pb-12">
+    <section className="pt-[120px] md:pt-[160px] pb-[32px] md:pb-[48px]">
       <div
         ref={sectionRef}
-        className="px-5 md:px-8 lg:px-12"
+        className="px-6 md:px-8 lg:px-12"
         style={{
           maxWidth: 1200,
           margin: "0 auto",

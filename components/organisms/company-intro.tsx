@@ -52,8 +52,8 @@ export function CompanyIntro() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24">
-      <div className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto" }}>
+    <section ref={sectionRef} className="py-[60px] md:py-[80px] lg:py-[100px]">
+      <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 24, opacity: 0 }}>
             <Badge>About Us</Badge>

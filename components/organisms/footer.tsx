@@ -6,7 +6,7 @@ import { Icon } from "@/components/atoms/icon";
 export function Footer() {
   return (
     <footer style={{ borderTop: "1px solid #262626", background: "#0a0a0a" }}>
-      <div className="px-5 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto", paddingTop: 48, paddingBottom: 48 }}>
+      <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto", paddingTop: 48, paddingBottom: 48 }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           <div className="md:col-span-1" style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <Link
