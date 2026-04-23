@@ -36,7 +36,7 @@ export function NavLink({ href, children, onClick }: NavLinkProps) {
             left: 0,
             height: 1,
             width: "100%",
-            background: "#0066FF",
+            background: "#8b5cf6",
           }}
         />
       )}

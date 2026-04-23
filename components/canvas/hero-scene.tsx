@@ -2,7 +2,6 @@
 
 import { Canvas } from "@react-three/fiber";
 import { Preload } from "@react-three/drei";
-import NoiseSphere from "./noise-sphere";
 import ParticlesBackground from "./particles-background";
 import FloatingGeometry from "./floating-geometry";
 import GridPlane from "./grid-plane";
@@ -24,10 +23,9 @@ export default function HeroScene() {
       }}
       style={{ pointerEvents: "none" }}
     >
-      <ambientLight intensity={0.1} />
-      <NoiseSphere mouse={{ x: mouse.normalizedX, y: mouse.normalizedY }} />
+      <ambientLight intensity={0.05} />
       <ParticlesBackground
-        count={isMobile ? 200 : 500}
+        count={isMobile ? 150 : 350}
         mouse={{ x: mouse.normalizedX, y: mouse.normalizedY }}
       />
       <FloatingGeometry />

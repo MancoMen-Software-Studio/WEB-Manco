@@ -5,7 +5,7 @@ import { gsap, useGSAP } from "@/lib/gsap-config";
 import { Heading } from "@/components/atoms/heading";
 import { Text } from "@/components/atoms/text";
 import { Button } from "@/components/atoms/button";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, CONTACT } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 export function CTASection() {
@@ -38,13 +38,32 @@ export function CTASection() {
     <section
       ref={sectionRef}
       className="section-spacing"
-      style={{ paddingTop: 100, paddingBottom: 100, position: "relative", overflow: "hidden" }}
+      style={{ paddingTop: 120, paddingBottom: 120, position: "relative", overflow: "hidden" }}
     >
+      {/* Background gradient */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(to bottom, transparent, rgba(0,102,255,0.05), transparent)",
+          background: "radial-gradient(ellipse at 50% 50%, var(--color-electric-muted) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* Grid pattern */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `
+            linear-gradient(var(--color-gray-800) 1px, transparent 1px),
+            linear-gradient(90deg, var(--color-gray-800) 1px, transparent 1px)
+          `,
+          backgroundSize: "60px 60px",
+          opacity: 0.2,
+          pointerEvents: "none",
+          maskImage: "radial-gradient(ellipse at center, black 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 0%, transparent 70%)",
         }}
       />
 
@@ -55,28 +74,128 @@ export function CTASection() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 32,
+            gap: 0,
             textAlign: "center",
           }}
         >
-          <Heading as="h2" display className="opacity-0">
-            Ready to build something{" "}
-            <span className="text-electric">exceptional</span>?
-          </Heading>
-          <Text className="opacity-0" style={{ maxWidth: 600 }}>
-            Let&apos;s discuss how we can help you design, build, and scale your next
-            software system. No commitment, just a conversation.
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              marginBottom: 28,
+              padding: "6px 16px",
+              borderRadius: 9999,
+              border: "1px solid var(--color-electric-muted)",
+              background: "var(--color-electric-muted)",
+              opacity: 0,
+            }}
+          >
+            <div
+              style={{
+                width: 6,
+                height: 6,
+                borderRadius: "50%",
+                background: "var(--color-electric)",
+                animation: "pulse 2s ease-in-out infinite",
+              }}
+            />
+            <span
+              style={{
+                fontSize: 12,
+                color: "var(--color-electric-light)",
+                fontFamily: "var(--font-mono)",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+              }}
+            >
+              Pre-Seed Round — Open to Investors
+            </span>
+          </div>
+
+          <div className="opacity-0" style={{ marginBottom: 24 }}>
+            <Heading as="h2" display>
+              The behavioral modeling{" "}
+              <span
+                style={{
+                  background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                market doesn&apos;t exist yet.
+              </span>
+            </Heading>
+          </div>
+
+          <Text className="opacity-0" style={{ maxWidth: 580, marginBottom: 48 }}>
+            Nexus is building the category. The engine is built, the architecture is solid, the
+            problem is real. We&apos;re looking for the partner who understands that the wellness
+            market is waiting for software that respects the intelligence of its users.
           </Text>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center", opacity: 0 }}>
-            <Button href={ROUTES.contact} size="large">
-              Start a Conversation
+
+          <div
+            className="opacity-0"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 12,
+              width: "100%",
+              maxWidth: 520,
+              marginBottom: 44,
+              padding: "28px 32px",
+              border: "1px solid rgba(139,92,246,0.15)",
+              borderRadius: 16,
+              background: "rgba(139,92,246,0.04)",
+            }}
+          >
+            {[
+              { glyph: "◈", text: "The core engine is complete and functional" },
+              { glyph: "⬡", text: "A new category — no direct competition" },
+              { glyph: "⊕", text: "Local-first, privacy by design" },
+              { glyph: "∿", text: "App Store launch target: 2026" },
+            ].map((item) => (
+              <div key={item.text} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
+                <span style={{ color: "var(--color-electric-light)", fontSize: 14, flexShrink: 0, paddingTop: 1 }}>
+                  {item.glyph}
+                </span>
+                <span style={{ fontSize: 14, color: "var(--color-gray-400)", lineHeight: 1.5 }}>
+                  {item.text}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="opacity-0" style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
+            <Button href={`mailto:${CONTACT.email}`} size="large">
+              Talk to Juan
             </Button>
-            <Button href={ROUTES.services} variant="secondary" size="large">
-              Explore Services
+            <Button href={ROUTES.contact} variant="secondary" size="large">
+              Get Early Access
             </Button>
           </div>
+
+          <p
+            className="opacity-0"
+            style={{
+              marginTop: 24,
+              fontSize: 13,
+              color: "#404040",
+              fontFamily: "var(--font-mono)",
+            }}
+          >
+            {CONTACT.email} · Bogotá, Colombia
+          </p>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+      `}</style>
     </section>
   );
 }

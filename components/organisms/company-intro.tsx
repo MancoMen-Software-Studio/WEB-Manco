@@ -5,9 +5,25 @@ import { gsap, useGSAP } from "@/lib/gsap-config";
 import { Heading } from "@/components/atoms/heading";
 import { Text } from "@/components/atoms/text";
 import { Badge } from "@/components/atoms/badge";
-import { StatBlock } from "@/components/molecules/stat-block";
-import { companyInfo } from "@/data/company";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+const problems = [
+  {
+    stat: "$13B",
+    label: "wellness market",
+    description: "Flooded with apps that track but don't understand. Streaks, points, reminders — surface-level signals with no structural model underneath.",
+  },
+  {
+    stat: "0",
+    label: "behavioral graph platforms",
+    description: "No existing product models behavior as a causal network. They count what you do — not why, not how one thing affects another.",
+  },
+  {
+    stat: "∞",
+    label: "failed habits",
+    description: "Not from lack of motivation — from lack of visibility. People can't fix what they can't see. The architecture of their change is invisible to them.",
+  },
+];
 
 export function CompanyIntro() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -20,7 +36,7 @@ export function CompanyIntro() {
 
     gsap.fromTo(
       leftRef.current,
-      { opacity: 0, x: -80 },
+      { opacity: 0, x: -60 },
       {
         opacity: 1,
         x: 0,
@@ -35,16 +51,17 @@ export function CompanyIntro() {
     );
 
     gsap.fromTo(
-      rightRef.current,
-      { opacity: 0, x: 80 },
+      rightRef.current?.children ?? [],
+      { opacity: 0, y: 40 },
       {
         opacity: 1,
-        x: 0,
-        duration: 1.2,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.15,
         ease: "expo.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
+          start: "top 70%",
           toggleActions: "play none none none",
         },
       }
@@ -52,31 +69,84 @@ export function CompanyIntro() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 100, paddingBottom: 100 }}>
+    <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 120, paddingBottom: 120 }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 24, opacity: 0 }}>
-            <Badge>About Us</Badge>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+          {/* Left: The problem statement */}
+          <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 28, opacity: 0 }}>
+            <Badge>The Problem</Badge>
             <Heading as="h2">
-              Software consultancy for{" "}
-              <span className="text-electric">ambitious businesses</span>
+              The wellness market has{" "}
+              <span className="text-electric">never seen its own data</span>
             </Heading>
             <Text style={{ maxWidth: 480 }}>
-              {companyInfo.description}
+              Hundreds of millions of people try to change every year. They download apps, set
+              goals, build streaks. Most fail — not because they&apos;re weak, but because they&apos;re
+              flying blind. No app shows them the structure of their own process.
             </Text>
+            <Text style={{ maxWidth: 480 }}>
+              Nexus is the first product to model behavioral change as what it actually is:
+              a network of habits, decisions, emotions, and states with real causal relationships
+              between them. A graph that lives, grows, and decays in real time.
+            </Text>
+            <blockquote
+              style={{
+                borderLeft: "2px solid var(--color-electric)",
+                paddingLeft: 20,
+                margin: "8px 0 0",
+                fontStyle: "italic",
+                color: "#d4d4d4",
+                fontSize: 16,
+                lineHeight: 1.7,
+              }}
+            >
+              &ldquo;Not an app of wellness. A mirror of your behavior that doesn&apos;t lie.&rdquo;
+            </blockquote>
           </div>
 
-          <div ref={rightRef} style={{ opacity: 0 }}>
-            <div className="grid grid-cols-2 gap-6 md:gap-10">
-              {companyInfo.stats.map((stat) => (
-                <StatBlock
-                  key={stat.label}
-                  value={stat.value}
-                  label={stat.label}
-                />
-              ))}
-            </div>
+          {/* Right: Problem stats */}
+          <div ref={rightRef} style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+            {problems.map((p) => (
+              <div
+                key={p.label}
+                style={{
+                  padding: "28px 32px",
+                  borderRadius: 16,
+                  border: "1px solid #1e1e2e",
+                  background: "linear-gradient(135deg, #0d0d1a 0%, #13131f 100%)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 10,
+                  opacity: 0,
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+                  <span
+                    className="font-display"
+                    style={{
+                      fontSize: 44,
+                      fontWeight: 400,
+                      background: "linear-gradient(135deg, var(--color-electric-light), var(--color-cyan))",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      lineHeight: 1,
+                    }}
+                  >
+                    {p.stat}
+                  </span>
+                  <span style={{ fontSize: 13, color: "#a3a3a3", textTransform: "uppercase", letterSpacing: "0.1em", fontFamily: "var(--font-mono)" }}>
+                    {p.label}
+                  </span>
+                </div>
+                <p style={{ fontSize: 14, color: "#737373", lineHeight: 1.6 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
           </div>
+
         </div>
       </div>
     </section>

@@ -69,7 +69,7 @@ export function ServiceDetailContent({
                     height: 6,
                     flexShrink: 0,
                     borderRadius: 9999,
-                    background: "#0066FF",
+                    background: "#8b5cf6",
                   }}
                 />
                 <Text as="span">{feature}</Text>
@@ -104,7 +104,7 @@ export function ServiceDetailContent({
             >
               <span
                 className="font-mono"
-                style={{ fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 700, color: "rgba(0,102,255,0.2)", lineHeight: 1 }}
+                style={{ fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 700, color: "rgba(139,92,246,0.2)", lineHeight: 1 }}
               >
                 {String(i + 1).padStart(2, "0")}
               </span>

@@ -1,8 +1,5 @@
 "use client";
 
-import { AnimatedCounter } from "@/components/atoms/animated-counter";
-import { Text } from "@/components/atoms/text";
-
 interface StatBlockProps {
   value: string;
   label: string;
@@ -10,15 +7,24 @@ interface StatBlockProps {
 
 export function StatBlock({ value, label }: StatBlockProps) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-      <AnimatedCounter
-        value={value}
-        className="text-white"
-        style={{ fontSize: "clamp(32px, 6vw, 48px)", fontWeight: 700 }}
-      />
-      <Text size="sm" color="secondary">
+    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+      <span
+        className="stat-number"
+        style={{ fontSize: "clamp(36px, 5vw, 52px)", lineHeight: 1 }}
+      >
+        {value}
+      </span>
+      <span
+        style={{
+          fontSize: 12,
+          color: "var(--color-gray-500)",
+          fontFamily: "var(--font-mono)",
+          letterSpacing: "0.1em",
+          textTransform: "uppercase",
+        }}
+      >
         {label}
-      </Text>
+      </span>
     </div>
   );
 }

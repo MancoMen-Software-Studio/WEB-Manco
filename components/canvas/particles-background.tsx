@@ -70,7 +70,7 @@ export default function ParticlesBackground({
       </bufferGeometry>
       <pointsMaterial
         size={0.02}
-        color="#0066FF"
+        color="#8b5cf6"
         transparent
         opacity={0.6}
         sizeAttenuation

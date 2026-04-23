@@ -3,45 +3,45 @@ import type { CompanyValue, MethodologyStep } from "@/lib/types";
 export const companyInfo = {
   name: "MancoMen Software Studio",
   legalName: "MancoMen Software Studio S.A.S.",
-  tagline: "Built to Scale, Built to Last",
+  tagline: "Software that reveals the structure of human behavior",
   description:
-    "We are a Bogota-based enterprise software consultancy that bridges the gap between large system integrators and independent freelancers. Our senior engineering teams deliver production-grade systems with the agility of a startup and the rigor of an enterprise.",
+    "MancoMen is an independent software studio with a single clear mission: build products that reveal what people can't see about themselves. We don't consult. We don't build for others. We build our own products — starting with Nexus, the first behavioral modeling platform that maps personal change as a living graph.",
   shortDescription:
-    "Enterprise software consultancy delivering scalable, production-grade systems for ambitious businesses.",
+    "Independent software studio. Building Nexus — behavioral modeling for personal transformation.",
   founded: "2024",
-  location: "Bogota, Colombia",
-  teamSize: "10-25",
+  location: "Bogotá, Colombia",
+  teamSize: "1",
   stats: [
-    { label: "Projects Delivered", value: "30+" },
-    { label: "Client Retention", value: "95%" },
-    { label: "Years Combined Experience", value: "50+" },
-    { label: "Countries Served", value: "8" },
+    { label: "Pre-Seed Target", value: "$150K–300K" },
+    { label: "App Store Launch", value: "2026" },
+    { label: "Target Price", value: "$9.99/mo" },
+    { label: "Market Size", value: "$13B+" },
   ],
 };
 
 export const companyValues: CompanyValue[] = [
   {
-    title: "Engineering Excellence",
+    title: "Reveal, don't prescribe",
     description:
-      "We write code that other engineers enjoy maintaining. Clean architecture, comprehensive testing, and thoughtful documentation are non-negotiable.",
-    icon: "code",
-  },
-  {
-    title: "Radical Transparency",
-    description:
-      "No black boxes. Clients have full visibility into our process, codebase, and decision-making. We explain the trade-offs, not just the solution.",
+      "The best software doesn't tell you what to do. It shows you what you couldn't see. Nexus doesn't coach — it maps, models, and mirrors.",
     icon: "eye",
   },
   {
-    title: "Ownership Mentality",
+    title: "Structure over noise",
     description:
-      "We treat every project as if it were our own product. This means proactive communication, thoughtful architecture, and a genuine stake in outcomes.",
+      "Behavioral change isn't random. It has patterns, cycles, causal chains. Our job is to surface that structure — not to gamify it or flatten it.",
+    icon: "code",
+  },
+  {
+    title: "Privacy by design",
+    description:
+      "Your behavioral data is the most sensitive data that exists. Everything stays on your device. No persistent cloud storage of personal text. Ever.",
     icon: "shield",
   },
   {
-    title: "Continuous Learning",
+    title: "Built to last",
     description:
-      "Technology evolves fast. We invest in our team's growth, staying current with industry best practices and bringing that knowledge to every engagement.",
+      "Every architecture decision in Nexus is made to endure. Strict TypeScript, SQLite-first, deterministic simulation engine. Not a prototype — a platform.",
     icon: "book",
   },
 ];
@@ -49,26 +49,26 @@ export const companyValues: CompanyValue[] = [
 export const methodology: MethodologyStep[] = [
   {
     number: "01",
-    title: "Discover",
+    title: "Check In",
     description:
-      "We start by understanding your business deeply — goals, constraints, users, and existing systems. This phase produces a clear technical specification and architectural blueprint.",
+      "Write in natural language. No templates, no forms. The AI reads your entry and extracts the behavioral nodes and connections hidden in your words.",
   },
   {
     number: "02",
-    title: "Design",
+    title: "Graph Updates",
     description:
-      "Architecture decisions are made upfront with rigor. We design systems for the requirements of today and the scale of tomorrow, documenting every trade-off.",
+      "Every check-in strengthens or weakens nodes. Habits, decisions, emotional states — they're all connected. The graph evolves with you.",
   },
   {
     number: "03",
-    title: "Develop",
+    title: "Decay Happens",
     description:
-      "Iterative two-week sprints with continuous delivery. Every cycle produces working software, tested and ready for review. Full transparency via shared dashboards.",
+      "If you stop registering, nodes fade. Silence is data. The graph shows you what you've been ignoring, not just what you've been doing.",
   },
   {
     number: "04",
-    title: "Deliver",
+    title: "Simulate",
     description:
-      "Zero-downtime deployments with comprehensive monitoring. We don't just hand off code — we ensure your team can operate, extend, and scale the system independently.",
+      "Run forward simulations. What happens to your graph if you maintain this habit for 30 days? What if you drop it? The model answers.",
   },
 ];

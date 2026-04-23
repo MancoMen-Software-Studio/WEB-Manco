@@ -17,7 +17,7 @@ export default function Loading() {
             height: 32,
             borderRadius: 9999,
             border: "2px solid #262626",
-            borderTopColor: "#0066FF",
+            borderTopColor: "#8b5cf6",
           }}
         />
       </div>

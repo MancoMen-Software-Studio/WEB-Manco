@@ -36,7 +36,7 @@ function FloatingShape({
       {type === "octahedron" && <octahedronGeometry args={[1, 0]} />}
       {type === "torus" && <torusGeometry args={[1, 0.3, 8, 16]} />}
       {type === "icosahedron" && <icosahedronGeometry args={[1, 0]} />}
-      <meshBasicMaterial color="#0066FF" wireframe transparent opacity={0.15} />
+      <meshBasicMaterial color="#8b5cf6" wireframe transparent opacity={0.15} />
     </mesh>
   );
 }

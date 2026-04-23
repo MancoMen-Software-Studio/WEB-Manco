@@ -14,9 +14,11 @@ const HeroScene = createDynamicScene(
 
 export function HeroHome() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const eyebrowRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const metaRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
 
   useGSAP(() => {
@@ -24,23 +26,11 @@ export function HeroHome() {
 
     const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
-    tl.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 80 },
-      { opacity: 1, y: 0, duration: 1.2, delay: 0.3 }
-    )
-      .fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.6"
-      )
-      .fromTo(
-        ctaRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.4"
-      );
+    tl.fromTo(eyebrowRef.current, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.3 })
+      .fromTo(titleRef.current, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 1.3 }, "-=0.3")
+      .fromTo(subtitleRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, "-=0.7")
+      .fromTo(ctaRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.5")
+      .fromTo(metaRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.3");
   }, { scope: containerRef });
 
   return (
@@ -53,11 +43,27 @@ export function HeroHome() {
         justifyContent: "center",
         minHeight: "100vh",
         overflow: "hidden",
+        paddingTop: 80, // clear fixed navbar
       }}
     >
+      {/* 3D scene */}
       <SceneContainer className="z-0">
         <HeroScene />
       </SceneContainer>
+
+      {/* Bottom fade */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "50%",
+          background: "linear-gradient(to top, var(--color-black-rich), transparent)",
+          zIndex: 5,
+          pointerEvents: "none",
+        }}
+      />
 
       <div
         style={{
@@ -65,57 +71,167 @@ export function HeroHome() {
           zIndex: 10,
           maxWidth: 900,
           margin: "0 auto",
-          padding: "0 20px",
+          padding: "0 24px",
           textAlign: "center",
         }}
       >
+        {/* Eyebrow */}
+        <div
+          ref={eyebrowRef}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 10,
+            marginBottom: 32,
+            padding: "6px 16px 6px 10px",
+            borderRadius: 9999,
+            border: "1px solid rgba(139,92,246,0.2)",
+            background: "rgba(139,92,246,0.05)",
+            backdropFilter: "blur(12px)",
+            opacity: 0,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              padding: "2px 9px",
+              borderRadius: 9999,
+              background: "rgba(139,92,246,0.12)",
+              border: "1px solid rgba(139,92,246,0.25)",
+            }}
+          >
+            <div
+              style={{
+                width: 5,
+                height: 5,
+                borderRadius: "50%",
+                background: "var(--color-electric)",
+                boxShadow: "0 0 8px var(--color-electric-glow)",
+                animation: "pulse-dot 2s ease-in-out infinite",
+              }}
+            />
+            <span
+              className="font-logo"
+              style={{ fontSize: 9, letterSpacing: "0.3em", color: "var(--color-electric-light)" }}
+            >
+              MANCOMEN
+            </span>
+          </div>
+          <span
+            style={{
+              fontSize: 12,
+              color: "rgba(163,163,163,0.6)",
+              fontFamily: "var(--font-mono)",
+              letterSpacing: "0.06em",
+            }}
+          >
+            Software Studio · Bogotá, Colombia
+          </span>
+        </div>
+
+        {/* Main heading — tighter spacing, less extreme size */}
         <h1
           ref={titleRef}
-          className="font-display text-white"
+          className="font-display"
           style={{
-            fontSize: "clamp(40px, 7vw, 88px)",
-            fontWeight: 400,
+            fontSize: "clamp(42px, 6.5vw, 88px)",
+            fontWeight: 700,
             lineHeight: 1.05,
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.03em",
             opacity: 0,
+            color: "white",
           }}
         >
-          Built to Scale,
+          Not a tracker.
           <br />
-          <span className="text-electric">Built to Last</span>
+          <span
+            style={{
+              background: "linear-gradient(120deg, var(--color-electric-light) 0%, var(--color-cyan) 60%, var(--color-electric-light) 100%)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "shimmer 5s linear infinite",
+            }}
+          >
+            A behavioral mirror.
+          </span>
         </h1>
+
+        {/* Subtitle */}
         <p
           ref={subtitleRef}
-          className="text-gray-400"
           style={{
-            maxWidth: 600,
-            margin: "32px auto 0",
-            fontSize: "clamp(16px, 2vw, 20px)",
-            lineHeight: 1.6,
+            maxWidth: 540,
+            margin: "24px auto 0",
+            fontSize: "clamp(15px, 1.6vw, 17px)",
+            lineHeight: 1.75,
+            color: "var(--color-gray-500)",
             opacity: 0,
           }}
         >
-          Enterprise software consultancy delivering scalable, production-grade
-          systems for ambitious businesses. From architecture to deployment.
+          Nexus maps your personal change as a{" "}
+          <span style={{ color: "var(--color-gray-300)" }}>living graph</span> — AI journaling,
+          causal analysis, exponential decay, forward simulation.
+          The first platform to show you the{" "}
+          <span style={{ color: "var(--color-gray-300)" }}>architecture</span>{" "}
+          of your own behavior.
         </p>
+
+        {/* CTAs */}
         <div
           ref={ctaRef}
           style={{
-            marginTop: 48,
+            marginTop: 44,
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "center",
-            gap: 16,
+            gap: 14,
             opacity: 0,
           }}
         >
-          <Button href={ROUTES.services} size="large">
-            Our Services
+          <Button href={ROUTES.projects} size="large">
+            See Nexus
           </Button>
-          <Button href={ROUTES.projects} variant="secondary" size="large">
-            View Projects
+          <Button href={ROUTES.contact} variant="secondary" size="large">
+            Talk to Juan
           </Button>
+        </div>
+
+        {/* Meta tags */}
+        <div
+          ref={metaRef}
+          style={{
+            marginTop: 40,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 0,
+            opacity: 0,
+          }}
+        >
+          {["Behavioral modeling", "Mobile-first", "App Store 2026"].map((item, i) => (
+            <div key={item} style={{ display: "flex", alignItems: "center" }}>
+              <span
+                style={{
+                  fontSize: 11,
+                  color: "var(--color-gray-700)",
+                  fontFamily: "var(--font-mono)",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "0 16px",
+                }}
+              >
+                {item}
+              </span>
+              {i < 2 && (
+                <span style={{ width: 1, height: 12, background: "var(--color-gray-800)", flexShrink: 0 }} />
+              )}
+            </div>
+          ))}
         </div>
       </div>
 

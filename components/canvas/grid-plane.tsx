@@ -19,10 +19,10 @@ export default function GridPlane() {
         args={[40, 40]}
         cellSize={0.5}
         cellThickness={0.5}
-        cellColor="#0066FF"
+        cellColor="#8b5cf6"
         sectionSize={2}
         sectionThickness={1}
-        sectionColor="#0066FF"
+        sectionColor="#8b5cf6"
         fadeDistance={25}
         fadeStrength={1}
         followCamera={false}

@@ -1,31 +1,45 @@
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "default" | "outline";
+  variant?: "default" | "accent" | "outline";
 }
 
 export function Badge({ children, variant = "default" }: BadgeProps) {
-  const baseStyle: React.CSSProperties = {
-    display: "inline-flex",
-    alignItems: "center",
-    borderRadius: 9999,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingTop: 6,
-    paddingBottom: 6,
-    fontSize: 12,
-    fontWeight: 500,
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-  };
-
   const variantStyle: React.CSSProperties =
-    variant === "default"
-      ? { background: "rgba(0,102,255,0.1)", color: "#0066FF" }
-      : { border: "1px solid #262626", color: "#a3a3a3" };
+    variant === "accent"
+      ? { background: "var(--color-cyan-muted)", color: "var(--color-cyan)", border: "1px solid rgba(34,211,238,0.2)" }
+      : variant === "outline"
+        ? { background: "transparent", color: "var(--color-gray-400)", border: "1px solid var(--color-gray-800)" }
+        : { background: "var(--color-electric-muted)", color: "var(--color-electric-light)", border: "1px solid rgba(139,92,246,0.25)" };
 
   return (
-    <span className="font-mono" style={{ ...baseStyle, ...variantStyle }}>
-      {children}
-    </span>
+    <div style={{ display: "inline-flex", alignItems: "center" }}>
+      <span
+        className="font-logo"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 8,
+          borderRadius: 9999,
+          padding: "5px 14px",
+          fontSize: 10,
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          lineHeight: 1.4,
+          ...variantStyle,
+        }}
+      >
+        <span
+          style={{
+            width: 4,
+            height: 4,
+            borderRadius: "50%",
+            background: variant === "accent" ? "var(--color-cyan)" : "var(--color-electric)",
+            boxShadow: variant === "accent" ? "0 0 6px var(--color-cyan-glow)" : "0 0 6px var(--color-electric-glow)",
+            flexShrink: 0,
+          }}
+        />
+        {children}
+      </span>
+    </div>
   );
 }

@@ -19,7 +19,7 @@ export function ScrollIndicator() {
             top: 0,
             height: "33%",
             width: "100%",
-            background: "#0066FF",
+            background: "#8b5cf6",
           }}
           animate={{ y: ["-100%", "400%"] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

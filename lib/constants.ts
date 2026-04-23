@@ -8,21 +8,21 @@ export const ROUTES = {
 
 export const SITE = {
   name: "MancoMen Software Studio",
-  tagline: "Built to Scale, Built to Last",
+  tagline: "Software that reveals the structure of human behavior",
   description:
-    "MancoMen Software Studio is a Bogota-based enterprise software consultancy specializing in .NET backend systems, React data visualization platforms, and Unity XR immersive solutions. We deliver scalable, production-grade software for ambitious businesses.",
+    "MancoMen Software Studio is building Nexus — a behavioral modeling platform that maps personal change as a living graph. AI journaling, causal analysis, decay engine, forward simulation. Currently seeking pre-seed funding.",
   url: "https://mancomen.com",
   locale: "en-US",
 } as const;
 
 export const SOCIAL = {
   linkedin: "https://www.linkedin.com/company/mancomen",
-  github: "https://github.com/MancoMen-Software-Studio",
+  github: "https://github.com/MancoMartinez",
 } as const;
 
 export const CONTACT = {
-  email: "mancomenstudio@gmail.com",
-  address: "Bogota, Colombia",
+  email: "macomenstudio@icloud.com",
+  address: "Bogotá, Colombia",
 } as const;
 
 export const EASING = {

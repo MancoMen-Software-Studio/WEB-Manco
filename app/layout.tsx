@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = genMeta();
 export const viewport: Viewport = {
-  themeColor: "#000000"
+  themeColor: "#08080f"
 };
 
 export default function RootLayout({

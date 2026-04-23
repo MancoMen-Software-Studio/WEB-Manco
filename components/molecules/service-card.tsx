@@ -44,8 +44,8 @@ export function ServiceCard({
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 12,
-          background: "rgba(0,102,255,0.1)",
-          color: "#0066FF",
+          background: "rgba(139,92,246,0.1)",
+          color: "#8b5cf6",
           transition: "all 0.5s",
         }}
       >
@@ -58,7 +58,7 @@ export function ServiceCard({
             fontSize: 12,
             textTransform: "uppercase",
             letterSpacing: "0.05em",
-            color: "#0066FF",
+            color: "#8b5cf6",
           }}
         >
           {subtitle}
@@ -77,7 +77,7 @@ export function ServiceCard({
           gap: 8,
           fontSize: 14,
           fontWeight: 500,
-          color: "#0066FF",
+          color: "#8b5cf6",
           opacity: 0,
           transition: "all 0.3s",
         }}

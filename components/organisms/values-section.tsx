@@ -2,12 +2,17 @@
 
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
-import { Heading } from "@/components/atoms/heading";
-import { Text } from "@/components/atoms/text";
 import { Badge } from "@/components/atoms/badge";
-import { Icon } from "@/components/atoms/icon";
 import { companyValues } from "@/data/company";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+const glyphs = ["◈", "⬡", "⊕", "∿"];
+const accents = [
+  "var(--color-electric-light)",
+  "var(--color-cyan)",
+  "var(--color-electric-light)",
+  "var(--color-cyan)",
+];
 
 export function ValuesSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -19,12 +24,12 @@ export function ValuesSection() {
 
     gsap.fromTo(
       cardsRef.current.children,
-      { opacity: 0, y: 60 },
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 0.8,
-        stagger: 0.15,
+        stagger: 0.12,
         ease: "expo.out",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -36,57 +41,86 @@ export function ValuesSection() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 100, paddingBottom: 100 }}>
+    <section ref={sectionRef} style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: 56 }}>
-          <Badge>Values</Badge>
-          <div style={{ marginTop: 20 }}>
-            <Heading as="h2">What drives us</Heading>
-          </div>
-          <div style={{ marginTop: 16, maxWidth: 672, marginLeft: "auto", marginRight: "auto" }}>
-            <Text>
-              The principles that guide every decision, every line of code,
-              and every client relationship.
-            </Text>
-          </div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", marginBottom: 64 }}>
+          <Badge>Principles</Badge>
+          <h2
+            className="font-display"
+            style={{
+              fontSize: "clamp(28px, 4vw, 52px)",
+              fontWeight: 700,
+              letterSpacing: "-0.025em",
+              lineHeight: 1.08,
+              color: "white",
+            }}
+          >
+            What we believe
+          </h2>
         </div>
+
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-px"
+          style={{
+            background: "rgba(30,30,56,0.3)",
+            borderRadius: 20,
+            overflow: "hidden",
+            border: "1px solid rgba(30,30,56,0.6)",
+          }}
         >
-          {companyValues.map((value) => (
+          {companyValues.map((value, i) => (
             <div
               key={value.title}
-              className="hover:border-electric/30 p-6 md:p-8"
               style={{
+                padding: "40px 36px",
+                background: "var(--color-black-rich)",
                 display: "flex",
-                gap: 24,
-                borderRadius: 16,
-                border: "1px solid #262626",
-                background: "#1a1a1a",
+                flexDirection: "column",
+                gap: 18,
                 opacity: 0,
-                transition: "border-color 0.3s",
+                transition: "background 0.35s",
+                position: "relative",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.background = "var(--color-black-soft)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.background = "var(--color-black-rich)";
               }}
             >
+              <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                <span
+                  style={{
+                    fontSize: 24,
+                    lineHeight: 1,
+                    color: accents[i],
+                    filter: `drop-shadow(0 0 10px ${accents[i]})`,
+                    flexShrink: 0,
+                  }}
+                >
+                  {glyphs[i]}
+                </span>
+                <h3
+                  className="font-display"
+                  style={{ fontSize: 17, fontWeight: 600, color: "white", letterSpacing: "-0.01em", lineHeight: 1.2 }}
+                >
+                  {value.title}
+                </h3>
+              </div>
+              <p style={{ fontSize: 14, color: "var(--color-gray-500)", lineHeight: 1.72 }}>
+                {value.description}
+              </p>
               <div
                 style={{
-                  width: 48,
-                  height: 48,
-                  flexShrink: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 12,
-                  background: "rgba(0,102,255,0.1)",
-                  color: "#0066FF",
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: 1,
+                  background: `linear-gradient(90deg, ${accents[i]}30, transparent)`,
                 }}
-              >
-                <Icon name={value.icon} size={24} />
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                <Heading as="h4">{value.title}</Heading>
-                <Text>{value.description}</Text>
-              </div>
+              />
             </div>
           ))}
         </div>

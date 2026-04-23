@@ -2,12 +2,12 @@
 
 import { useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
-import { contactSchema, type ContactFormData } from "@/lib/validation";
-import { FormField } from "@/components/molecules/form-field";
-import { Button } from "@/components/atoms/button";
 import { Heading } from "@/components/atoms/heading";
 import { Text } from "@/components/atoms/text";
 import { Icon } from "@/components/atoms/icon";
+import { contactSchema, type ContactFormData } from "@/lib/validation";
+import { FormField } from "@/components/molecules/form-field";
+import { Button } from "@/components/atoms/button";
 import { CONTACT } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
@@ -98,37 +98,69 @@ export function ContactForm() {
         style={{ maxWidth: 1200, margin: "0 auto" }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
-          <div data-animate style={{ display: "flex", flexDirection: "column", gap: 16, opacity: 0 }}>
-            <Heading as="h2">
-              Let&apos;s build something{" "}
-              <span className="text-electric">great</span>
-            </Heading>
-            <Text>
-              Tell us about your project. We&apos;ll get back to you within 24 hours
-              with initial thoughts and next steps.
-            </Text>
-          </div>
-
-          <div data-animate style={{ display: "flex", flexDirection: "column", gap: 24, opacity: 0 }}>
-            <a
-              href={`mailto:${CONTACT.email}`}
-              className="hover:text-white"
+          <div data-animate style={{ display: "flex", flexDirection: "column", gap: 20, opacity: 0 }}>
+            <h2
+              className="font-display"
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 16,
-                color: "#a3a3a3",
-                textDecoration: "none",
-                transition: "color 0.3s",
+                fontSize: "clamp(26px, 3.5vw, 42px)",
+                fontWeight: 700,
+                lineHeight: 1.1,
+                letterSpacing: "-0.025em",
+                color: "white",
               }}
             >
-              <Icon name="mail" size={20} />
-              <span>{CONTACT.email}</span>
-            </a>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, color: "#a3a3a3" }}>
-              <Icon name="mappin" size={20} />
-              <span>{CONTACT.address}</span>
-            </div>
+              Let&apos;s talk about{" "}
+              <span
+                style={{
+                  background: "linear-gradient(135deg, var(--color-electric-light), var(--color-cyan))",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                what you&apos;re building.
+              </span>
+            </h2>
+            <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.7 }}>
+              Investor conversation, early access to Nexus, or just want to connect —
+              Juan reads every message and responds personally.
+            </p>
+          </div>
+
+          <div data-animate style={{ display: "flex", flexDirection: "column", gap: 12, opacity: 0 }}>
+            {[
+              { glyph: "✉", label: CONTACT.email, href: `mailto:${CONTACT.email}` },
+              { glyph: "◎", label: CONTACT.address, href: undefined },
+            ].map((item) => (
+              <div
+                key={item.label}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                  padding: "14px 18px",
+                  borderRadius: 12,
+                  border: "1px solid var(--color-gray-800)",
+                  background: "var(--color-black-soft)",
+                }}
+              >
+                <span style={{ fontSize: 16, color: "var(--color-electric-light)", flexShrink: 0 }}>
+                  {item.glyph}
+                </span>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    style={{ fontSize: 14, color: "var(--color-gray-400)", textDecoration: "none", fontFamily: "var(--font-mono)" }}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <span style={{ fontSize: 14, color: "var(--color-gray-400)", fontFamily: "var(--font-mono)" }}>
+                    {item.label}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -143,8 +175,8 @@ export function ContactForm() {
                 justifyContent: "center",
                 gap: 16,
                 borderRadius: 16,
-                border: "1px solid rgba(0,102,255,0.3)",
-                background: "rgba(0,102,255,0.1)",
+                border: "1px solid rgba(139,92,246,0.3)",
+                background: "rgba(139,92,246,0.1)",
                 textAlign: "center",
               }}
             >
@@ -156,7 +188,7 @@ export function ContactForm() {
                   alignItems: "center",
                   justifyContent: "center",
                   borderRadius: 9999,
-                  background: "rgba(0,102,255,0.2)",
+                  background: "rgba(139,92,246,0.2)",
                 }}
               >
                 <Icon name="mail" size={32} className="text-electric" />

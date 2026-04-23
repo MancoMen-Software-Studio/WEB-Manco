@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
     const { name, email, company, message } = result.data;
     const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-    const toEmail = process.env.CONTACT_EMAIL || "mancomenstudio@gmail.com";
+    const toEmail = process.env.CONTACT_EMAIL || "macomenstudio@icloud.com";
 
     const { data, error } = await resend.emails.send({
       from: `MancoMen Website <${fromEmail}>`,
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
       subject: `New inquiry from ${name} — ${company}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #0066ff; border-bottom: 2px solid #0066ff; padding-bottom: 12px;">
+          <h2 style="color: #8b5cf6; border-bottom: 2px solid #8b5cf6; padding-bottom: 12px;">
             New Contact Form Submission
           </h2>
           <table style="width: 100%; border-collapse: collapse;">

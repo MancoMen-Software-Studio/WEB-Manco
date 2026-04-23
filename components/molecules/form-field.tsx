@@ -50,7 +50,7 @@ export function FormField({
           rows={5}
           style={{ ...inputStyle, resize: "none" }}
           onFocus={(e) => {
-            e.currentTarget.style.borderColor = error ? "#ef4444" : "#0066FF";
+            e.currentTarget.style.borderColor = error ? "#ef4444" : "#8b5cf6";
           }}
           onBlur={(e) => {
             e.currentTarget.style.borderColor = error ? "#ef4444" : "#262626";
@@ -66,7 +66,7 @@ export function FormField({
           placeholder={placeholder}
           style={inputStyle}
           onFocus={(e) => {
-            e.currentTarget.style.borderColor = error ? "#ef4444" : "#0066FF";
+            e.currentTarget.style.borderColor = error ? "#ef4444" : "#8b5cf6";
           }}
           onBlur={(e) => {
             e.currentTarget.style.borderColor = error ? "#ef4444" : "#262626";

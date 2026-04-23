@@ -62,8 +62,8 @@ export function ServiceDetailHero({
             alignItems: "center",
             justifyContent: "center",
             borderRadius: 16,
-            background: "rgba(0,102,255,0.1)",
-            color: "#0066FF",
+            background: "rgba(139,92,246,0.1)",
+            color: "#8b5cf6",
             opacity: 0,
           }}
         >

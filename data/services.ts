@@ -2,152 +2,139 @@ import type { Service } from "@/lib/types";
 
 export const services: Service[] = [
   {
-    slug: "custom-software-development",
-    title: "Custom Software Development",
-    subtitle: "Enterprise-Grade Backend & API Engineering",
+    slug: "behavioral-graph",
+    title: "Behavioral Graph",
+    subtitle: "Your change, mapped as a living structure",
     description:
-      "We architect and build production-grade software systems with .NET, C#, and cloud-native infrastructure. From secure transaction APIs to event-driven microservices, every solution is engineered for scale, security, and long-term maintainability.",
-    icon: "code",
-    features: [
-      "Backend API development with .NET and ASP.NET Core",
-      "Microservices architecture with CQRS and MediatR",
-      "Enterprise security (OAuth 2.0, JWT, AES-256 encryption)",
-      "Event-driven systems with Azure Service Bus and RabbitMQ",
-      "Database design with PostgreSQL, Redis, and Entity Framework Core",
-      "CI/CD pipelines with GitHub Actions and Azure DevOps",
-    ],
-    technologies: [
-      ".NET 9",
-      "C# 13",
-      "ASP.NET Core",
-      "PostgreSQL",
-      "Redis",
-      "Azure Service Bus",
-      "RabbitMQ",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-    ],
-    process: [
-      {
-        title: "Discovery & Architecture",
-        description:
-          "Deep-dive into your business requirements. We map domain boundaries, define system architecture, and establish technical foundations with security-first design.",
-      },
-      {
-        title: "Iterative Development",
-        description:
-          "Two-week sprints with continuous delivery. Every iteration produces working, tested software with full transparency and code quality enforcement via CodeQL and SonarQube.",
-      },
-      {
-        title: "Quality Assurance",
-        description:
-          "Automated testing with xUnit, NSubstitute, and Testcontainers. Performance benchmarks and security scanning ensure production readiness at every stage.",
-      },
-      {
-        title: "Deployment & Observability",
-        description:
-          "Zero-downtime deployments on Azure Container Apps. Full OpenTelemetry observability with Seq, Grafana, and Azure Monitor for end-to-end system visibility.",
-      },
-    ],
-  },
-  {
-    slug: "frontend-data-visualization",
-    title: "Frontend & Data Visualization",
-    subtitle: "Real-Time Dashboards & Modern Web Applications",
-    description:
-      "We build high-performance web applications and real-time data dashboards with React, Next.js, and custom WebGL visualizations. From enterprise analytics platforms to consumer-facing interfaces, we deliver pixel-perfect experiences that scale.",
+      "Unlike habit trackers that log streaks, Nexus builds a personal graph of nodes and edges: habits, decisions, emotional states, and the causal connections between them. The graph is alive — it grows with every check-in and shows you patterns you couldn't see before.",
     icon: "eye",
     features: [
-      "React 19 and Next.js 15 application development",
-      "Real-time data visualization with D3.js and custom WebGL shaders",
-      "Live data streaming with SignalR and WebSocket",
-      "State management with Zustand and TanStack Query",
-      "Performance optimization with Web Workers and virtualization",
-      "WCAG 2.1 AA accessibility compliance",
+      "Automatic node extraction from natural language entries",
+      "Causal and correlative edge detection via AI analysis",
+      "Real-time graph visualization powered by React Native Skia",
+      "Contradiction detection — when your behaviors conflict",
+      "Node clustering by behavioral category",
+      "Full local storage — your graph never leaves your device",
     ],
     technologies: [
-      "React 19",
-      "Next.js 15",
-      "TypeScript",
-      "Tailwind CSS 4",
-      "D3.js",
-      "Recharts",
-      "WebGL",
-      "SignalR",
+      "React Native Skia",
+      "GLSL",
+      "SQLite",
+      "Drizzle ORM",
       "Zustand",
-      "Playwright",
+      "TypeScript",
     ],
     process: [
       {
-        title: "UX Research & Design",
+        title: "Natural Language Input",
         description:
-          "Data-driven interface design focused on information hierarchy, user workflows, and accessibility requirements from day one.",
+          "Write freely. No templates, no check-boxes. Nexus reads your words and extracts the behavioral structure hidden inside them.",
       },
       {
-        title: "Component Architecture",
+        title: "AI Analysis",
         description:
-          "Modular component library with atomic design patterns. Storybook-driven development ensures consistency across the entire application.",
+          "The Claude API pipeline identifies nodes (habits, states, events, decisions) and the relationships between them — causal, correlative, temporal, or contradictory.",
       },
       {
-        title: "Performance Engineering",
+        title: "Graph Construction",
         description:
-          "Web Workers for heavy computation, virtualized rendering for large datasets, Service Workers for offline capabilities, and bundle optimization for fast initial loads.",
+          "Extracted nodes and edges are merged into your personal graph via deterministic algorithms. Each new entry refines the model.",
       },
       {
-        title: "Testing & Deployment",
+        title: "Insight Generation",
         description:
-          "Comprehensive testing with Vitest and Playwright. Deployed on Vercel or Azure with CI/CD via GitHub Actions and automated Lighthouse audits.",
+          "With enough history, the AI audits the full graph and surfaces non-obvious patterns: cycles, bottlenecks, and connections you've never consciously seen.",
       },
     ],
   },
   {
-    slug: "xr-immersive-solutions",
-    title: "XR & Immersive Solutions",
-    subtitle: "Enterprise Training & Simulation Platforms",
+    slug: "decay-engine",
+    title: "Decay Engine",
+    subtitle: "Silence is data. Time changes everything.",
     description:
-      "We develop cross-platform XR experiences for enterprise training, simulation, and visualization using Unity 6, DOTS architecture, and real-time multiplayer networking. From VR headsets to WebGL, we deliver immersive solutions that run everywhere.",
-    icon: "strategy",
+      "Most apps treat inactivity as zero data. Nexus treats it as signal. The decay engine applies exponential decay to every node based on time elapsed since last reinforcement. The graph fades where you stop paying attention — making absence visible, not invisible.",
+    icon: "code",
     features: [
-      "Unity 6 LTS development with DOTS high-performance architecture",
-      "Cross-platform XR: Meta Quest, Desktop, WebGL, and iOS",
-      "Real-time multiplayer with Photon Fusion 2",
-      "Enterprise backend integration with REST APIs and OAuth 2.0",
-      "Foveated rendering and performance optimization for VR",
-      "Progressive asset loading and Brotli compression for web",
+      "Exponential decay per node based on elapsed time",
+      "Visual decay reflected in real-time graph rendering",
+      "Configurable half-life per behavior category",
+      "Decay events trigger structural re-evaluation",
+      "Recovery curves when a node is reinforced after dormancy",
+      "Decay history as a longitudinal behavioral record",
     ],
     technologies: [
-      "Unity 6 LTS",
-      "Unity DOTS",
-      "Burst Compiler",
-      "XR Interaction Toolkit",
-      "Photon Fusion 2",
-      "Vulkan",
-      "DirectX 12",
-      "WebGL 2.0",
-      "SignalR",
-      "Azure",
+      "SQLite",
+      "TypeScript",
+      "Drizzle ORM",
+      "React Native Skia",
+      "Reanimated 4",
     ],
     process: [
       {
-        title: "Concept & Prototyping",
+        title: "Time as a Dimension",
         description:
-          "Rapid prototyping of XR interactions and training scenarios. We validate concepts on target hardware before committing to full development.",
+          "Every node has a half-life. The longer you go without reinforcing a behavior, the weaker it becomes in the graph — visually and structurally.",
       },
       {
-        title: "Performance-First Development",
+        title: "Visual Fading",
         description:
-          "DOTS-first architecture with Entities, Burst Compiler, and Job System ensures 60fps on all target platforms including standalone VR headsets.",
+          "Decayed nodes become translucent, edges soften. You see which behaviors are slipping before they've fully collapsed.",
       },
       {
-        title: "Multiplayer & Backend",
+        title: "Structural Re-evaluation",
         description:
-          "Photon Fusion 2 for real-time multiplayer simulation with authoritative server architecture. SignalR for real-time backend events and progress tracking.",
+          "When anchor nodes decay, the graph re-evaluates which behaviors were dependent on them. The ripple effect is visible.",
       },
       {
-        title: "Cross-Platform Deployment",
+        title: "Reinforcement Recovery",
         description:
-          "Single codebase deployed to Meta Quest 3, Windows Desktop, WebGL, and iOS. Automated builds via GitHub Actions with platform-specific optimizations.",
+          "Returning to a behavior after absence produces a recovery curve — not just a reset. The system remembers the context of the gap.",
+      },
+    ],
+  },
+  {
+    slug: "simulation",
+    title: "Simulator",
+    subtitle: "See your future before you live it",
+    description:
+      "Nexus can project the state of your behavioral graph 30, 60, or 90 days into the future under different scenarios. Maintain this habit, drop that one, add a new one — and watch how your graph evolves. The simulator is deterministic and audited by AI.",
+    icon: "strategy",
+    features: [
+      "Deterministic forward simulation under user-defined scenarios",
+      "30 / 60 / 90 day projection windows",
+      "AI audit of simulation output — narrative interpretation",
+      "Scenario comparison: maintain vs. abandon vs. add",
+      "Burnout, recovery, and transition scenario templates",
+      "Export simulation snapshots for journaling and reflection",
+    ],
+    technologies: [
+      "TypeScript strict",
+      "Claude API",
+      "SQLite",
+      "Zustand",
+      "React Native",
+      "Expo SDK 54",
+    ],
+    process: [
+      {
+        title: "Scenario Definition",
+        description:
+          "Choose what changes: which habits to maintain, which to drop, which new ones to introduce. The simulator takes your graph as the starting state.",
+      },
+      {
+        title: "Deterministic Projection",
+        description:
+          "The simulation engine applies the behavioral model forward in time using historical patterns as the probabilistic baseline.",
+      },
+      {
+        title: "AI Interpretation",
+        description:
+          "The Claude API audits the simulation output and translates the graph changes into human-readable insight: what collapses, what strengthens, what new patterns emerge.",
+      },
+      {
+        title: "Scenario Comparison",
+        description:
+          "Run multiple scenarios side by side. See which path leads to the graph you want in 90 days — and what it costs to get there.",
       },
     ],
   },

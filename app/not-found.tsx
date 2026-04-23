@@ -18,7 +18,7 @@ export default function NotFound() {
     >
       <span
         className="font-mono"
-        style={{ marginBottom: 24, fontSize: 96, fontWeight: 700, color: "rgba(0,102,255,0.2)" }}
+        style={{ marginBottom: 24, fontSize: 96, fontWeight: 700, color: "rgba(139,92,246,0.2)" }}
       >
         404
       </span>

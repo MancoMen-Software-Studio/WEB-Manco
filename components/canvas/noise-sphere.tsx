@@ -98,8 +98,8 @@ export default function NoiseSphere({ mouse }: NoiseSphereProps) {
     uFrequency: { value: 1.5 },
     uAmplitude: { value: 0.35 },
     uMouse: { value: new THREE.Vector2(0, 0) },
-    uColor: { value: new THREE.Color("#050510") },
-    uAccentColor: { value: new THREE.Color("#0066FF") },
+    uColor: { value: new THREE.Color("#0d0520") },
+    uAccentColor: { value: new THREE.Color("#8b5cf6") },
   });
 
   useFrame((state) => {
