@@ -47,7 +47,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           challenge={project.challenge}
           solution={project.solution}
           results={project.results}
-          technologies={project.technologies}
         />
         <CTASection />
       </main>

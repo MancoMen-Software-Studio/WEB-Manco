@@ -151,29 +151,6 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    <div>
-                      <p style={{ fontSize: 11, color: "#404040", textTransform: "uppercase", letterSpacing: "0.15em", fontFamily: "var(--font-mono)", marginBottom: 12 }}>
-                        Tech
-                      </p>
-                      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                        {service.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            style={{
-                              fontSize: 12,
-                              color: "#737373",
-                              border: "1px solid #1e1e2e",
-                              borderRadius: 9999,
-                              padding: "4px 12px",
-                              fontFamily: "var(--font-mono)",
-                              background: "#0d0d1a",
-                            }}
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

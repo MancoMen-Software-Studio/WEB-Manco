@@ -21,17 +21,13 @@ const buildStatus = [
   { label: "Subscription System", done: false },
 ];
 
-const techPills = [
-  "React Native 0.81",
-  "Expo SDK 54",
-  "TypeScript strict",
-  "React Native Skia",
-  "GLSL",
-  "Reanimated 4",
-  "SQLite",
-  "Drizzle ORM",
-  "Zustand",
-  "Claude API",
+const mathConcepts = [
+  { notation: "W(t) = W₀ · e^−λt", label: "Exponential decay" },
+  { notation: "P(B|A) = P(A|B)·P(B) / P(A)", label: "Bayesian inference" },
+  { notation: "G = (V, E, W)", label: "Weighted directed graph" },
+  { notation: "s(u,v) = Σ wₖ · φₖ(u,v)", label: "Edge strength function" },
+  { notation: "Δsₜ = −λ · sₜ₋₁ · (1 − rₜ)", label: "Reinforcement delta" },
+  { notation: "Ŝ(t+n) = f(Gₜ, Θ)", label: "State forward projection" },
 ];
 
 export function ProjectsShowcase() {
@@ -205,27 +201,50 @@ export function ProjectsShowcase() {
               ))}
             </div>
 
-            {/* Tech stack pills */}
+            {/* Mathematical model */}
             <div>
-              <p style={{ fontSize: 12, color: "#404040", textTransform: "uppercase", letterSpacing: "0.1em", fontFamily: "var(--font-mono)", marginBottom: 12 }}>
-                Tech Stack
+              <p style={{ fontSize: 11, color: "#404040", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "var(--font-mono)", marginBottom: 14 }}>
+                Model
               </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {techPills.map((tech) => (
-                  <span
-                    key={tech}
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {mathConcepts.map((item) => (
+                  <div
+                    key={item.notation}
                     style={{
-                      fontSize: 12,
-                      color: "#a3a3a3",
+                      display: "flex",
+                      alignItems: "baseline",
+                      justifyContent: "space-between",
+                      gap: 16,
+                      padding: "9px 14px",
+                      borderRadius: 8,
                       border: "1px solid #1e1e2e",
-                      borderRadius: 9999,
-                      padding: "5px 12px",
-                      fontFamily: "var(--font-mono)",
-                      background: "#0d0d1a",
+                      background: "#0c0c1a",
                     }}
                   >
-                    {tech}
-                  </span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: 12,
+                        color: "var(--color-electric-light)",
+                        letterSpacing: "0.02em",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {item.notation}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: 11,
+                        color: "#404040",
+                        fontFamily: "var(--font-mono)",
+                        letterSpacing: "0.06em",
+                        textAlign: "right",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {item.label}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>

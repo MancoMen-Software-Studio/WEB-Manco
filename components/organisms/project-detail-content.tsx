@@ -4,22 +4,18 @@ import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { Heading } from "@/components/atoms/heading";
 import { Text } from "@/components/atoms/text";
-import { TechBadgeGroup } from "@/components/molecules/tech-badge-group";
-import { Divider } from "@/components/atoms/divider";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 interface ProjectDetailContentProps {
   challenge: string;
   solution: string;
   results: string;
-  technologies: string[];
 }
 
 export function ProjectDetailContent({
   challenge,
   solution,
   results,
-  technologies,
 }: ProjectDetailContentProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
@@ -65,14 +61,6 @@ export function ProjectDetailContent({
         </div>
       </div>
 
-      <Divider />
-
-      <div data-animate className="content-spacing" style={{ paddingTop: 96, paddingBottom: 96, opacity: 0 }}>
-        <div style={{ marginBottom: 24 }}>
-          <Heading as="h3">Technology Stack</Heading>
-        </div>
-        <TechBadgeGroup technologies={technologies} />
-      </div>
     </div>
   );
 }
