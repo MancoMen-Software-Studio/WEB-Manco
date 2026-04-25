@@ -21,13 +21,13 @@ const buildStatus = [
   { label: "Subscription System", done: false },
 ];
 
-const mathConcepts = [
-  { notation: "W(t) = W₀ · e^−λt", label: "Exponential decay" },
-  { notation: "P(B|A) = P(A|B)·P(B) / P(A)", label: "Bayesian inference" },
-  { notation: "G = (V, E, W)", label: "Weighted directed graph" },
-  { notation: "s(u,v) = Σ wₖ · φₖ(u,v)", label: "Edge strength function" },
-  { notation: "Δsₜ = −λ · sₜ₋₁ · (1 − rₜ)", label: "Reinforcement delta" },
-  { notation: "Ŝ(t+n) = f(Gₜ, Θ)", label: "State forward projection" },
+const modelConcepts = [
+  { name: "Exponential node decay", description: "Node weight diminishes over time without reinforcement" },
+  { name: "Bayesian state inference", description: "Behavioral states updated from conditional evidence" },
+  { name: "Weighted directed graph", description: "Habits and states as nodes with causal edge weights" },
+  { name: "Edge strength function", description: "Connection intensity derived from co-occurrence patterns" },
+  { name: "Reinforcement delta", description: "Weight change on behavioral reactivation after dormancy" },
+  { name: "Forward state projection", description: "Deterministic simulation of graph evolution over time" },
 ];
 
 export function ProjectsShowcase() {
@@ -207,43 +207,22 @@ export function ProjectsShowcase() {
                 Model
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {mathConcepts.map((item) => (
+                {modelConcepts.map((item) => (
                   <div
-                    key={item.notation}
+                    key={item.name}
                     style={{
-                      display: "flex",
-                      alignItems: "baseline",
-                      justifyContent: "space-between",
-                      gap: 16,
-                      padding: "9px 14px",
+                      padding: "10px 14px",
                       borderRadius: 8,
                       border: "1px solid #1e1e2e",
                       background: "#0c0c1a",
                     }}
                   >
-                    <span
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: 12,
-                        color: "var(--color-electric-light)",
-                        letterSpacing: "0.02em",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {item.notation}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: 11,
-                        color: "#404040",
-                        fontFamily: "var(--font-mono)",
-                        letterSpacing: "0.06em",
-                        textAlign: "right",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {item.label}
-                    </span>
+                    <p style={{ fontSize: 13, color: "var(--color-gray-300)", marginBottom: 3 }}>
+                      {item.name}
+                    </p>
+                    <p style={{ fontSize: 12, color: "#404040", lineHeight: 1.5 }}>
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>
