@@ -209,26 +209,28 @@ export function HeroHome() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexWrap: "wrap",
             gap: 0,
             opacity: 0,
           }}
         >
-          {["Behavioral modeling", "Mobile-first", "App Store 2026"].map((item, i) => (
+          {["Behavioral modeling", "iOS & Android", "App Store 2026"].map((item, i) => (
             <div key={item} style={{ display: "flex", alignItems: "center" }}>
               <span
                 style={{
                   fontSize: 11,
                   color: "var(--color-gray-700)",
                   fontFamily: "var(--font-mono)",
-                  letterSpacing: "0.1em",
+                  letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  padding: "0 16px",
+                  padding: "4px 20px",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {item}
               </span>
               {i < 2 && (
-                <span style={{ width: 1, height: 12, background: "var(--color-gray-800)", flexShrink: 0 }} />
+                <span style={{ width: 1, height: 10, background: "var(--color-gray-800)", flexShrink: 0 }} />
               )}
             </div>
           ))}

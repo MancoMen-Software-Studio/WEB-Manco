@@ -160,9 +160,8 @@ export default function AboutPage() {
                 {/* Link pills */}
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 8 }}>
                   {[
-                    { label: "GitHub →", href: "https://github.com/MancoMartinez" },
                     { label: "LinkedIn →", href: "https://www.linkedin.com/in/juansebastianmartinezmarin/" },
-                    { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
+                    { label: "contact@mancomen.com", href: "mailto:contact@mancomen.com" },
                   ].map((link) => (
                     <a
                       key={link.label}

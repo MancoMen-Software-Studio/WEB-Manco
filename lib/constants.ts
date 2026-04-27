@@ -21,7 +21,7 @@ export const SOCIAL = {
 } as const;
 
 export const CONTACT = {
-  email: "macomenstudio@icloud.com",
+  email: "contact@mancomen.com",
   address: "Bogotá, Colombia",
 } as const;
 

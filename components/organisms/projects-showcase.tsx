@@ -21,13 +21,10 @@ const buildStatus = [
   { label: "Subscription System", done: false },
 ];
 
-const modelConcepts = [
-  { name: "Exponential node decay", description: "Node weight diminishes over time without reinforcement" },
-  { name: "Bayesian state inference", description: "Behavioral states updated from conditional evidence" },
-  { name: "Weighted directed graph", description: "Habits and states as nodes with causal edge weights" },
-  { name: "Edge strength function", description: "Connection intensity derived from co-occurrence patterns" },
-  { name: "Reinforcement delta", description: "Weight change on behavioral reactivation after dormancy" },
-  { name: "Forward state projection", description: "Deterministic simulation of graph evolution over time" },
+const modelPillars = [
+  { glyph: "≈", label: "Habits fade", sub: "Without reinforcement, every pattern decays" },
+  { glyph: "◈", label: "Everything connects", sub: "One behavior shifts the weight of everything around it" },
+  { glyph: "→", label: "Your future is visible", sub: "Nexus simulates where your graph is heading" },
 ];
 
 export function ProjectsShowcase() {
@@ -201,31 +198,45 @@ export function ProjectsShowcase() {
               ))}
             </div>
 
-            {/* Mathematical model */}
-            <div>
-              <p style={{ fontSize: 11, color: "#404040", textTransform: "uppercase", letterSpacing: "0.12em", fontFamily: "var(--font-mono)", marginBottom: 14 }}>
-                Model
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {modelConcepts.map((item) => (
-                  <div
-                    key={item.name}
+            {/* Model pillars */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {modelPillars.map((p) => (
+                <div
+                  key={p.label}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 16,
+                    padding: "14px 16px",
+                    borderRadius: 12,
+                    border: "1px solid #1e1e2e",
+                    background: "linear-gradient(135deg, #0c0c1a 0%, #0f0f1e 100%)",
+                  }}
+                >
+                  <span
                     style={{
-                      padding: "10px 14px",
-                      borderRadius: 8,
-                      border: "1px solid #1e1e2e",
-                      background: "#0c0c1a",
+                      fontSize: 22,
+                      lineHeight: 1,
+                      color: "var(--color-electric-light)",
+                      filter: "drop-shadow(0 0 8px var(--color-electric-glow))",
+                      fontFamily: "monospace",
+                      flexShrink: 0,
+                      width: 28,
+                      textAlign: "center",
                     }}
                   >
-                    <p style={{ fontSize: 13, color: "var(--color-gray-300)", marginBottom: 3 }}>
-                      {item.name}
+                    {p.glyph}
+                  </span>
+                  <div>
+                    <p style={{ fontSize: 13, fontWeight: 600, color: "var(--color-gray-300)", marginBottom: 2 }}>
+                      {p.label}
                     </p>
-                    <p style={{ fontSize: 12, color: "#404040", lineHeight: 1.5 }}>
-                      {item.description}
+                    <p style={{ fontSize: 12, color: "#525252", lineHeight: 1.5 }}>
+                      {p.sub}
                     </p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
 
             <Button href={ROUTES.projects} size="large">
@@ -257,7 +268,7 @@ export function ProjectsShowcase() {
             />
 
             {/* Phone mockups — three screenshots */}
-            {["/screenshots/IMG_2508.PNG", "/screenshots/IMG_2509.PNG", "/screenshots/IMG_2510.PNG"].map((src, i) => (
+            {["/screenshots/IMG_2562.jpg", "/screenshots/IMG_2593.jpg", "/screenshots/IMG_2633.jpg"].map((src, i) => (
               <div
                 key={src}
                 style={{
