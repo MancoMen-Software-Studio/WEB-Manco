@@ -214,7 +214,7 @@ export function HeroHome() {
             opacity: 0,
           }}
         >
-          {["Behavioral modeling", "iOS & Android", "App Store 2026"].map((item, i) => (
+          {["Behavioral modeling", "App Store 2026"].map((item, i) => (
             <div key={item} style={{ display: "flex", alignItems: "center" }}>
               <span
                 style={{
@@ -229,7 +229,7 @@ export function HeroHome() {
               >
                 {item}
               </span>
-              {i < 2 && (
+              {i < 1 && (
                 <span style={{ width: 1, height: 10, background: "var(--color-gray-800)", flexShrink: 0 }} />
               )}
             </div>
@@ -237,7 +237,7 @@ export function HeroHome() {
         </div>
       </div>
 
-      <div style={{ position: "absolute", bottom: 40, left: "50%", transform: "translateX(-50%)", zIndex: 10 }}>
+      <div style={{ position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)", zIndex: 10 }}>
         <ScrollIndicator />
       </div>
     </section>
