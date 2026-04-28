@@ -28,7 +28,7 @@ export function generateMetadata({
       "behavioral modeling",
       "personal transformation app",
       "habit graph",
-      "AI journaling",
+      "behavioral capture",
       "behavior change platform",
       "Nexus app",
       "MancoMen Software Studio",

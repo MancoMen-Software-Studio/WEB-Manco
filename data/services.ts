@@ -33,7 +33,7 @@ export const services: Service[] = [
       {
         title: "AI Analysis",
         description:
-          "The Claude API pipeline identifies nodes (habits, states, events, decisions) and the relationships between them — causal, correlative, temporal, or contradictory.",
+          "The model identifies nodes (habits, states, events, decisions) and the relationships between them — causal, correlative, temporal, or contradictory.",
       },
       {
         title: "Graph Construction",

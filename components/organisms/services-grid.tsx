@@ -8,9 +8,9 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion";
 const features = [
   {
     icon: "✦",
-    title: "AI Check-In",
+    title: "Check-In",
     description:
-      "Write in natural language. The Claude API pipeline extracts behavioral nodes, causal connections, and structural patterns from your words — no forms, no templates.",
+      "Write freely. Nexus extracts the behavioral structure hidden in your words — nodes, connections, causal relationships — and updates the model. No forms. No templates. No chatbot.",
     color: "var(--color-electric)",
   },
   {

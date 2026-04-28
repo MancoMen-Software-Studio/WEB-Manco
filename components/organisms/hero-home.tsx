@@ -173,8 +173,8 @@ export function HeroHome() {
           }}
         >
           Nexus maps your personal change as a{" "}
-          <span style={{ color: "var(--color-gray-300)" }}>living graph</span> — AI journaling,
-          causal analysis, exponential decay, forward simulation.
+          <span style={{ color: "var(--color-gray-300)" }}>living graph</span> — causal modeling,
+          exponential decay, forward simulation.
           The first platform to show you the{" "}
           <span style={{ color: "var(--color-gray-300)" }}>architecture</span>{" "}
           of your own behavior.

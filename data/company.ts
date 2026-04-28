@@ -51,7 +51,7 @@ export const methodology: MethodologyStep[] = [
     number: "01",
     title: "Check In",
     description:
-      "Write in natural language. No templates, no forms. The AI reads your entry and extracts the behavioral nodes and connections hidden in your words.",
+      "Write in natural language. No templates, no forms. Nexus extracts the behavioral structure hidden in your words — nodes, connections, causal relationships.",
   },
   {
     number: "02",

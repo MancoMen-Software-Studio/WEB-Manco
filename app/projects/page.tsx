@@ -9,7 +9,7 @@ import { Badge } from "@/components/atoms/badge";
 export const metadata = genMeta({
   title: "Nexus",
   description:
-    "Nexus — behavioral modeling platform by MancoMen Software Studio. AI journaling, living graph, decay engine, forward simulation. Currently seeking investment.",
+    "Nexus — behavioral modeling engine by MancoMen Software Studio. Causal graph, decay engine, forward simulation. The graph is the product. Currently seeking investment.",
   path: "/projects",
 });
 
@@ -53,8 +53,9 @@ export default function ProjectsPage() {
                 }}
               >
                 A mobile-first platform that maps your personal change as a living graph.
-                Write in natural language. The AI extracts structure. The graph evolves, decays,
-                and simulates — showing you what you couldn&apos;t see about yourself.
+                Feed it data in natural language — Nexus extracts the behavioral structure,
+                builds a causal graph, and models what happens over time. The graph decays
+                when you stop. It simulates your future when you ask.
               </p>
 
               {/* Status pill */}

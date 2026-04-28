@@ -10,7 +10,7 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion";
 const buildStatus = [
   { label: "Graph Engine", done: true },
   { label: "Decay Engine", done: true },
-  { label: "AI Check-in Pipeline", done: true },
+  { label: "Check-In Pipeline", done: true },
   { label: "Skia Graph Visualization", done: true },
   { label: "Forward Simulator", done: true },
   { label: "Latent State Engine", done: true },

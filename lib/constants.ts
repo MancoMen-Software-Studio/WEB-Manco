@@ -10,7 +10,7 @@ export const SITE = {
   name: "MancoMen Software Studio",
   tagline: "Software that reveals the structure of human behavior",
   description:
-    "MancoMen Software Studio is building Nexus — a behavioral modeling platform that maps personal change as a living graph. AI journaling, causal analysis, decay engine, forward simulation. Currently seeking pre-seed funding.",
+    "MancoMen Software Studio is building Nexus — a behavioral modeling engine that maps personal change as a living graph. Causal modeling, decay engine, forward simulation. The graph is the product. Currently seeking pre-seed funding.",
   url: "https://mancomen.com",
   locale: "en-US",
 } as const;
