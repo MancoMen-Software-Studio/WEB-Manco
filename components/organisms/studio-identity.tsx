@@ -243,24 +243,38 @@ export function StudioIdentity() {
           style={{
             marginTop: 48,
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
-            gap: 16,
+            gap: 12,
           }}
         >
-          <div style={{ height: 1, width: 40, background: "var(--color-gray-800)" }} />
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <div style={{ height: 1, width: 40, background: "var(--color-gray-800)" }} />
+            <span
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: 12,
+                color: "var(--color-gray-500)",
+                letterSpacing: "0.15em",
+                textAlign: "center",
+              }}
+            >
+              BOGOTÁ, COLOMBIA · FOUNDED 2024 · PRE-SEED 2026
+            </span>
+            <div style={{ height: 1, width: 40, background: "var(--color-gray-800)" }} />
+          </div>
           <span
             style={{
               fontFamily: "var(--font-mono)",
-              fontSize: 12,
-              color: "var(--color-gray-500)",
-              letterSpacing: "0.15em",
-              textAlign: "center",
+              fontSize: 11,
+              color: "var(--color-electric-light)",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              opacity: 0.6,
             }}
           >
-            BOGOTÁ, COLOMBIA · FOUNDED 2024 · PRE-SEED 2026
+            Built to scale · Built to last
           </span>
-          <div style={{ height: 1, width: 40, background: "var(--color-gray-800)" }} />
         </div>
       </div>
     </section>

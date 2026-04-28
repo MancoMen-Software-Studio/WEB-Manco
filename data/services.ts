@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     slug: "behavioral-graph",
     title: "Behavioral Graph",
-    subtitle: "Your change, mapped as a living structure",
+    subtitle: "A causal map of who you're becoming.",
     description:
       "Unlike habit trackers that log streaks, Nexus builds a personal graph of nodes and edges: habits, decisions, emotional states, and the causal connections between them. The graph is alive — it grows with every check-in and shows you patterns you couldn't see before.",
     icon: "eye",

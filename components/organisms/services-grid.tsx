@@ -82,7 +82,7 @@ export function ServicesGrid() {
         <div style={{ textAlign: "center", marginBottom: 72 }}>
           <SectionHeader
             badge="How Nexus Works"
-            title="Six capabilities nobody else has"
+            title="The architecture, piece by piece"
             description="Each layer of Nexus solves a problem that existing wellness apps structurally can't — because they weren't built on a behavioral model."
             align="center"
           />
