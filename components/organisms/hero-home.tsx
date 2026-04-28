@@ -197,7 +197,7 @@ export function HeroHome() {
             See Nexus
           </Button>
           <Button href={ROUTES.contact} variant="secondary" size="large">
-            Talk to Juan
+            Build with us
           </Button>
         </div>
 

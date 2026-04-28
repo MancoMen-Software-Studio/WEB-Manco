@@ -258,7 +258,7 @@ export function StudioIdentity() {
               textAlign: "center",
             }}
           >
-            BOGOTÁ, COLOMBIA · FOUNDED 2024 · BUILT BY ONE PERSON
+            BOGOTÁ, COLOMBIA · FOUNDED 2024 · PRE-SEED 2026
           </span>
           <div style={{ height: 1, width: 40, background: "var(--color-gray-800)" }} />
         </div>

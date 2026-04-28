@@ -95,7 +95,7 @@ export function ProjectsShowcase() {
           <SectionHeader
             badge="The Product"
             title="Nexus — built and functional"
-            description="The core engine is complete. What you see below is not a concept — it's working software, built solo, from scratch, with production-grade architecture."
+            description="The core engine is complete. What you see below is not a concept — it's working software, built from scratch, with production-grade architecture."
             align="center"
           />
         </div>

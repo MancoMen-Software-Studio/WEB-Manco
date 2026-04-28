@@ -146,7 +146,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </span>
           <span style={{ fontSize: 12, color: "#404040", fontFamily: "var(--font-mono)" }}>
-            Bogotá, Colombia · Built by Juan Martinez
+            Bogotá, Colombia · MancoMen Software Studio
           </span>
         </div>
       </div>

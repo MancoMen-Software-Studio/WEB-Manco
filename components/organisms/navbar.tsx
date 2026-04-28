@@ -152,7 +152,7 @@ export function Navbar() {
               </NavLink>
             ))}
             <Button href={ROUTES.contact} magnetic>
-              Talk to Juan
+              Build with us
             </Button>
           </div>
 
@@ -327,7 +327,7 @@ export function Navbar() {
               }}
             >
               <Button href={ROUTES.contact} onClick={closeMenu} size="large" fullWidth>
-                Talk to Juan
+                Build with us
               </Button>
               <p
                 style={{

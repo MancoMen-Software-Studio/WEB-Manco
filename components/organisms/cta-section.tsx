@@ -131,8 +131,8 @@ export function CTASection() {
 
           <Text className="opacity-0" style={{ maxWidth: 580, marginBottom: 48 }}>
             Nexus is building the category. The engine is built, the architecture is solid, the
-            problem is real. We&apos;re looking for the partner who understands that the wellness
-            market is waiting for software that respects the intelligence of its users.
+            problem is real. We&apos;re looking for partners who understand that the wellness
+            market is waiting for software that actually respects the intelligence of its users.
           </Text>
 
           <div
@@ -169,7 +169,7 @@ export function CTASection() {
 
           <div className="opacity-0" style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
             <Button href={`mailto:${CONTACT.email}`} size="large">
-              Talk to Juan
+              Build with us
             </Button>
             <Button href={ROUTES.contact} variant="secondary" size="large">
               Get Early Access

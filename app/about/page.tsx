@@ -139,14 +139,14 @@ export default function AboutPage() {
                     color: "white",
                   }}
                 >
-                  Built by one person,{" "}
-                  <span className="text-gradient">from scratch</span>
+                  Founded from conviction,{" "}
+                  <span className="text-gradient">built from scratch</span>
                 </h2>
 
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
-                  Juan Martinez built Nexus alone — the entire architecture, behavioral graph engine,
-                  AI pipeline, decay system, forward simulator, and custom Skia visualizations.
-                  No team. No external funding. No shortcuts.
+                  Juan Martinez founded MancoMen to solve a problem no existing software had the
+                  architecture to address. Nexus is the result — every layer of the stack conceived
+                  from first principles, with production-grade rigor and no compromises.
                 </p>
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
                   The core of Nexus is a probabilistic graph model where each node carries
