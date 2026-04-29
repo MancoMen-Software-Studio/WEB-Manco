@@ -82,8 +82,8 @@ export default function AboutPage() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/visuals/profile.png"
-                    alt="Juan Martinez — MancoMen Software Studio"
+                    src="/visuals/founder-photo.jpg"
+                    alt="Juan Martinez, MancoMen Software Studio"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                   <div
@@ -144,14 +144,14 @@ export default function AboutPage() {
                 </h2>
 
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
-                  I believe deeply in the power of ideas — and in their capacity to change a life
+                  I believe deeply in the power of ideas and in their capacity to change a life
                   when they become something real. I see technology as a tool for shaping profound
                   ideas, building worlds with identity, and transforming the way we understand our
                   own experience.
                 </p>
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
                   MancoMen Studio is the space where that vision takes form. Nexus is today its
-                  clearest and most ambitious manifestation — what I want to build and leave in
+                  clearest and most ambitious manifestation, what I want to build and leave in
                   the world.
                 </p>
 
