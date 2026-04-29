@@ -267,15 +267,15 @@ export function ProjectsShowcase() {
               }}
             />
 
-            {/* Phone mockups — four screenshots */}
-            {["/screenshots/IMG_2786.jpg", "/screenshots/IMG_2789.jpg", "/screenshots/IMG_2793.jpg", "/screenshots/IMG_2799.jpg"].map((src, i) => (
+            {/* Phone mockups — three screenshots */}
+            {["/screenshots/IMG_2786.jpg", "/screenshots/IMG_2793.jpg", "/screenshots/IMG_2799.jpg"].map((src, i) => (
               <div
                 key={src}
                 style={{
                   position: "relative",
-                  zIndex: i === 1 || i === 2 ? 3 : 2,
-                  transform: i === 0 ? "translateY(36px) rotate(-5deg)" : i === 3 ? "translateY(36px) rotate(5deg)" : i === 1 ? "translateY(10px) rotate(-1.5deg)" : "translateY(10px) rotate(1.5deg)",
-                  width: i === 0 || i === 3 ? 125 : 160,
+                  zIndex: i === 1 ? 3 : 2,
+                  transform: i === 0 ? "translateY(30px) rotate(-4deg)" : i === 2 ? "translateY(30px) rotate(4deg)" : "none",
+                  width: i === 1 ? 180 : 145,
                   flexShrink: 0,
                 }}
               >
@@ -285,7 +285,7 @@ export function ProjectsShowcase() {
                     overflow: "hidden",
                     border: "1px solid #2a2a3e",
                     background: "#0d0d1a",
-                    boxShadow: (i === 1 || i === 2)
+                    boxShadow: i === 1
                       ? "0 40px 80px rgba(0,0,0,0.8), 0 0 40px var(--color-electric-glow)"
                       : "0 24px 48px rgba(0,0,0,0.6)",
                     aspectRatio: "9/19.5",

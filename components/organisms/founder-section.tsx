@@ -1,7 +1,5 @@
 "use client";
 
-import { CONTACT } from "@/lib/constants";
-
 export function FounderSection() {
   return (
     <section style={{ paddingTop: 40, paddingBottom: 80 }}>
