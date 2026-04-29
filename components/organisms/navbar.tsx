@@ -92,6 +92,21 @@ export function Navbar() {
                   overflow: "hidden",
                 }}
               >
+                {/* Founder avatar */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/visuals/founder-avatar.jpg"
+                  alt="Juan Martinez"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    borderRadius: 9,
+                  }}
+                />
                 {/* Scan line inside logo */}
                 <div
                   style={{
@@ -99,9 +114,9 @@ export function Navbar() {
                     inset: 0,
                     background: "linear-gradient(180deg, transparent 0%, rgba(139,92,246,0.15) 50%, transparent 100%)",
                     animation: "scan-logo 3s linear infinite",
+                    zIndex: 1,
                   }}
                 />
-                <span style={{ position: "relative", zIndex: 1, fontFamily: "var(--font-mono)", fontWeight: 700, fontSize: 14 }}>M</span>
               </div>
               {/* Pulse ring */}
               <div

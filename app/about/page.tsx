@@ -144,17 +144,15 @@ export default function AboutPage() {
                 </h2>
 
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
-                  Juan Martinez founded MancoMen to solve a problem no existing software had the
-                  architecture to address. Nexus is the result — every layer of the stack conceived
-                  from first principles, with production-grade rigor and no compromises.
+                  I believe deeply in the power of ideas — and in their capacity to change a life
+                  when they become something real. I see technology as a tool for shaping profound
+                  ideas, building worlds with identity, and transforming the way we understand our
+                  own experience.
                 </p>
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
-                  The core of Nexus is a probabilistic graph model where each node carries
-                  a weight that evolves under exponential decay — W(t) = W₀ · e<sup style={{ fontSize: 11 }}>−λt</sup>.
-                  Edges encode conditional probabilities between behaviors. The simulation
-                  engine propagates state forward using Bayesian inference over the graph
-                  topology, producing a deterministic forecast of behavioral collapse or
-                  reinforcement under user-defined scenarios.
+                  MancoMen Studio is the space where that vision takes form. Nexus is today its
+                  clearest and most ambitious manifestation — what I want to build and leave in
+                  the world.
                 </p>
 
                 {/* Link pills */}
