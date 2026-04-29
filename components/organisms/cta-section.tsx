@@ -130,7 +130,7 @@ export function CTASection() {
           </div>
 
           <Text className="opacity-0" style={{ maxWidth: 580, marginBottom: 48 }}>
-            Nexus is building the category. The engine is built. The architecture is solid.
+            Nodeself is building the category. The engine is built. The architecture is solid.
             The problem is real. We&apos;re looking for capital to ship — not to prove the concept.
           </Text>
 

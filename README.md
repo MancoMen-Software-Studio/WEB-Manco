@@ -8,7 +8,7 @@ MancoMen Software Studio is an independent software studio building products tha
 
 ## About
 
-MancoMen was founded in Bogotá, Colombia by Juan Martinez. The studio's first and flagship product is **Nexus** — a mobile-first behavioral modeling platform that maps personal change as a living graph.
+MancoMen was founded in Bogotá, Colombia by Juan Martinez. The studio's first and flagship product is **Nodeself** — a mobile-first behavioral modeling platform that maps personal change as a living graph.
 
 The website serves as the central identity and communication hub of the studio: product presentation, investor outreach, early access signups, and direct contact.
 
@@ -67,7 +67,7 @@ hooks/                # Custom React hooks
 lib/                  # Config, utilities, constants, fonts, types
 public/
   fonts/              # Blanka typeface
-  screenshots/        # Nexus app screenshots
+  screenshots/        # Nodeself app screenshots
   videos/             # Product demo video
   visuals/            # Brand assets
 ```

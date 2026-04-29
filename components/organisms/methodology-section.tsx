@@ -44,7 +44,7 @@ export function MethodologySection() {
     <section ref={sectionRef} style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", marginBottom: 64 }}>
-          <Badge>How Nexus Works</Badge>
+          <Badge>How Nodeself Works</Badge>
           <h2
             className="font-display"
             style={{

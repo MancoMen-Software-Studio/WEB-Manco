@@ -10,7 +10,7 @@ import { CONTACT } from "@/lib/constants";
 export const metadata = genMeta({
   title: "Studio",
   description:
-    "MancoMen Software Studio — independent product studio building Nexus. Founded by Juan Martinez, Bogotá, Colombia.",
+    "MancoMen Software Studio — independent product studio building Nodeself. Founded by Juan Martinez, Bogotá, Colombia.",
   path: "/about",
 });
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
               >
                 MancoMen Software Studio was born as an enterprise consultancy.
                 It pivoted. Today it has one mission: build software that reveals
-                the structure of human behavior — starting with Nexus.
+                the structure of human behavior — starting with Nodeself.
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
                   own experience.
                 </p>
                 <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
-                  MancoMen Studio is the space where that vision takes form. Nexus is today its
+                  MancoMen Studio is the space where that vision takes form. Nodeself is today its
                   clearest and most ambitious manifestation, what I want to build and leave in
                   the world.
                 </p>

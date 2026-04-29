@@ -5,9 +5,9 @@ export const companyInfo = {
   legalName: "MancoMen Software Studio S.A.S.",
   tagline: "Software that reveals the structure of human behavior",
   description:
-    "MancoMen is an independent software studio with a single clear mission: build products that reveal what people can't see about themselves. We don't consult. We don't build for others. We build our own products — starting with Nexus, the first behavioral modeling platform that maps personal change as a living graph.",
+    "MancoMen is an independent software studio with a single clear mission: build products that reveal what people can't see about themselves. We don't consult. We don't build for others. We build our own products — starting with Nodeself, the first behavioral modeling platform that maps personal change as a living graph.",
   shortDescription:
-    "Independent software studio. Building Nexus — behavioral modeling for personal transformation.",
+    "Independent software studio. Building Nodeself — behavioral modeling for personal transformation.",
   founded: "2024",
   location: "Bogotá, Colombia",
   teamSize: "1",
@@ -23,7 +23,7 @@ export const companyValues: CompanyValue[] = [
   {
     title: "Reveal, don't prescribe",
     description:
-      "The best software doesn't tell you what to do. It shows you what you couldn't see. Nexus doesn't coach — it maps, models, and mirrors.",
+      "The best software doesn't tell you what to do. It shows you what you couldn't see. Nodeself doesn't coach — it maps, models, and mirrors.",
     icon: "eye",
   },
   {
@@ -41,7 +41,7 @@ export const companyValues: CompanyValue[] = [
   {
     title: "Built to last",
     description:
-      "Every architecture decision in Nexus is made to endure. Strict TypeScript, SQLite-first, deterministic simulation engine. Not a prototype — a platform.",
+      "Every architecture decision in Nodeself is made to endure. Strict TypeScript, SQLite-first, deterministic simulation engine. Not a prototype — a platform.",
     icon: "book",
   },
 ];
@@ -51,7 +51,7 @@ export const methodology: MethodologyStep[] = [
     number: "01",
     title: "Check In",
     description:
-      "Write in natural language. No templates, no forms. Nexus extracts the behavioral structure hidden in your words — nodes, connections, causal relationships.",
+      "Write in natural language. No templates, no forms. Nodeself extracts the behavioral structure hidden in your words — nodes, connections, causal relationships.",
   },
   {
     number: "02",

@@ -9,9 +9,9 @@ import { Badge } from "@/components/atoms/badge";
 import { services } from "@/data/services";
 
 export const metadata = genMeta({
-  title: "Nexus — How it works",
+  title: "Nodeself — How it works",
   description:
-    "The three core systems inside Nexus: Behavioral Graph, Decay Engine, and Forward Simulator — a new category of software for personal transformation.",
+    "The three core systems inside Nodeself: Behavioral Graph, Decay Engine, and Forward Simulator — a new category of software for personal transformation.",
   path: "/services",
 });
 
@@ -23,7 +23,7 @@ export default function ServicesPage() {
         <section className="page-header" style={{ paddingTop: 160, paddingBottom: 80 }}>
           <div className="px-6 md:px-8" style={{ maxWidth: 860, margin: "0 auto" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 24, alignItems: "center", textAlign: "center" }}>
-              <Badge>How Nexus Works</Badge>
+              <Badge>How Nodeself Works</Badge>
               <Heading as="h1" display>
                 Three systems.{" "}
                 <span
@@ -38,7 +38,7 @@ export default function ServicesPage() {
                 </span>
               </Heading>
               <Text size="lg" style={{ maxWidth: 600 }}>
-                Nexus is built around three core engines that nobody else has built together.
+                Nodeself is built around three core engines that nobody else has built together.
                 Each one solves a structural problem in how wellness apps understand behavior.
               </Text>
             </div>

@@ -4,7 +4,7 @@ import { StudioIdentity } from "@/components/organisms/studio-identity";
 import { CompanyIntro } from "@/components/organisms/company-intro";
 import { ServicesGrid } from "@/components/organisms/services-grid";
 import { ProjectsShowcase } from "@/components/organisms/projects-showcase";
-import { NexusVideos } from "@/components/organisms/nexus-videos";
+import { NodeselfVideos } from "@/components/organisms/nodeself-videos";
 import { TechShowcase } from "@/components/organisms/tech-showcase";
 import { CTASection } from "@/components/organisms/cta-section";
 import { Footer } from "@/components/organisms/footer";
@@ -19,7 +19,7 @@ export default function Home() {
         <CompanyIntro />
         <ServicesGrid />
         <ProjectsShowcase />
-        <NexusVideos />
+        <NodeselfVideos />
         <TechShowcase />
         <CTASection />
       </main>

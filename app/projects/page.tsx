@@ -2,14 +2,14 @@ import { generateMetadata as genMeta } from "@/lib/metadata";
 import { Navbar } from "@/components/organisms/navbar";
 import { Footer } from "@/components/organisms/footer";
 import { ProjectsShowcase } from "@/components/organisms/projects-showcase";
-import { NexusVideos } from "@/components/organisms/nexus-videos";
+import { NodeselfVideos } from "@/components/organisms/nodeself-videos";
 import { CTASection } from "@/components/organisms/cta-section";
 import { Badge } from "@/components/atoms/badge";
 
 export const metadata = genMeta({
-  title: "Nexus",
+  title: "Nodeself",
   description:
-    "Nexus — behavioral modeling engine by MancoMen Software Studio. Causal graph, decay engine, forward simulation. The graph is the product. Currently seeking investment.",
+    "Nodeself — behavioral modeling engine by MancoMen Software Studio. Causal graph, decay engine, forward simulation. The graph is the product. Currently seeking investment.",
   path: "/projects",
 });
 
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
                   color: "white",
                 }}
               >
-                Nexus —{" "}
+                Nodeself —{" "}
                 <span
                   style={{
                     background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                 }}
               >
                 A mobile-first platform that maps your personal change as a living graph.
-                Feed it data in natural language — Nexus extracts the behavioral structure,
+                Feed it data in natural language — Nodeself extracts the behavioral structure,
                 builds a causal graph, and models what happens over time. The graph decays
                 when you stop. It simulates your future when you ask.
               </p>
@@ -79,7 +79,7 @@ export default function ProjectsPage() {
           </div>
         </section>
         <ProjectsShowcase />
-        <NexusVideos />
+        <NodeselfVideos />
         <CTASection />
       </main>
       <Footer />

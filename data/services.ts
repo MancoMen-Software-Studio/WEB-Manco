@@ -6,7 +6,7 @@ export const services: Service[] = [
     title: "Behavioral Graph",
     subtitle: "A causal map of who you're becoming.",
     description:
-      "Unlike habit trackers that log streaks, Nexus builds a personal graph of nodes and edges: habits, decisions, emotional states, and the causal connections between them. The graph is alive — it grows with every check-in and shows you patterns you couldn't see before.",
+      "Unlike habit trackers that log streaks, Nodeself builds a personal graph of nodes and edges: habits, decisions, emotional states, and the causal connections between them. The graph is alive — it grows with every check-in and shows you patterns you couldn't see before.",
     icon: "eye",
     features: [
       "Automatic node extraction from natural language entries",
@@ -28,7 +28,7 @@ export const services: Service[] = [
       {
         title: "Natural Language Input",
         description:
-          "Write freely. No templates, no check-boxes. Nexus reads your words and extracts the behavioral structure hidden inside them.",
+          "Write freely. No templates, no check-boxes. Nodeself reads your words and extracts the behavioral structure hidden inside them.",
       },
       {
         title: "AI Analysis",
@@ -52,7 +52,7 @@ export const services: Service[] = [
     title: "Decay Engine",
     subtitle: "Silence is data. Time changes everything.",
     description:
-      "Most apps treat inactivity as zero data. Nexus treats it as signal. The decay engine applies exponential decay to every node based on time elapsed since last reinforcement. The graph fades where you stop paying attention — making absence visible, not invisible.",
+      "Most apps treat inactivity as zero data. Nodeself treats it as signal. The decay engine applies exponential decay to every node based on time elapsed since last reinforcement. The graph fades where you stop paying attention — making absence visible, not invisible.",
     icon: "code",
     features: [
       "Exponential decay per node based on elapsed time",
@@ -97,7 +97,7 @@ export const services: Service[] = [
     title: "Simulator",
     subtitle: "See your future before you live it",
     description:
-      "Nexus can project the state of your behavioral graph 30, 60, or 90 days into the future under different scenarios. Maintain this habit, drop that one, add a new one — and watch how your graph evolves. The simulator is deterministic and audited by AI.",
+      "Nodeself can project the state of your behavioral graph 30, 60, or 90 days into the future under different scenarios. Maintain this habit, drop that one, add a new one — and watch how your graph evolves. The simulator is deterministic and audited by AI.",
     icon: "strategy",
     features: [
       "Deterministic forward simulation under user-defined scenarios",

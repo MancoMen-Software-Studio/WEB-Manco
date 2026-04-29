@@ -24,7 +24,7 @@ const buildStatus = [
 const modelPillars = [
   { glyph: "≈", label: "Habits fade", sub: "Without reinforcement, every pattern decays" },
   { glyph: "◈", label: "Everything connects", sub: "One behavior shifts the weight of everything around it" },
-  { glyph: "→", label: "Your future is visible", sub: "Nexus simulates where your graph is heading" },
+  { glyph: "→", label: "Your future is visible", sub: "Nodeself simulates where your graph is heading" },
 ];
 
 export function ProjectsShowcase() {
@@ -94,7 +94,7 @@ export function ProjectsShowcase() {
         <div style={{ textAlign: "center", marginBottom: 80 }}>
           <SectionHeader
             badge="The Product"
-            title="Nexus — built and functional"
+            title="Nodeself — built and functional"
             description="The core engine is complete. What you see below is not a concept — it's working software, built from scratch, with production-grade architecture."
             align="center"
           />
@@ -298,7 +298,7 @@ export function ProjectsShowcase() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={src}
-                    alt="Nexus app screenshot"
+                    alt="Nodeself app screenshot"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -311,7 +311,7 @@ export function ProjectsShowcase() {
                       const parent = el.parentElement;
                       if (parent) {
                         parent.style.background = "#13131f";
-                        parent.innerHTML = `<span style="color:#404040;font-size:12px;font-family:monospace;text-align:center;padding:16px;">Nexus</span>`;
+                        parent.innerHTML = `<span style="color:#404040;font-size:12px;font-family:monospace;text-align:center;padding:16px;">Nodeself</span>`;
                       }
                     }}
                   />

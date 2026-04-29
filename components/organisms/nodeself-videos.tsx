@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-export function NexusVideos() {
+export function NodeselfVideos() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const [activeVideo, setActiveVideo] = useState<0 | 1>(0);
@@ -32,13 +32,13 @@ export function NexusVideos() {
 
   const videos = [
     {
-      src: "/videos/nexus-demo.mov",
+      src: "/videos/nodeself-demo.mov",
       label: "Graph Demo",
       description: "The living behavioral graph — nodes, edges, and decay in real time",
       available: true,
     },
     {
-      src: "/videos/nexus-full.mp4",
+      src: "/videos/nodeself-full.mp4",
       label: "Full Walkthrough",
       description: "Complete product demo: check-in → AI analysis → graph update → simulation",
       available: false, // hosted externally — too large for static deployment
@@ -233,7 +233,7 @@ export function NexusVideos() {
                   letterSpacing: "0.1em",
                 }}
               >
-                NEXUS · LIVE BUILD
+                NODESELF · LIVE BUILD
               </span>
             </div>
           </div>

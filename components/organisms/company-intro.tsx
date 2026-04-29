@@ -86,7 +86,7 @@ export function CompanyIntro() {
               flying blind. No app shows them the structure of their own process.
             </Text>
             <Text style={{ maxWidth: 480 }}>
-              Nexus is the first product to model behavioral change as what it actually is:
+              Nodeself is the first product to model behavioral change as what it actually is:
               a network of habits, decisions, emotions, and states with real causal relationships
               between them. A graph that lives, grows, and decays in real time.
             </Text>

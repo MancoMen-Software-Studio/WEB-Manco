@@ -7,7 +7,7 @@ import { Badge } from "@/components/atoms/badge";
 export const metadata = genMeta({
   title: "Contact",
   description:
-    "Get in touch with MancoMen Software Studio — discuss Nexus, early access, or investment opportunities.",
+    "Get in touch with MancoMen Software Studio — discuss Nodeself, early access, or investment opportunities.",
   path: "/contact",
 });
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
                   color: "var(--color-gray-500)",
                 }}
               >
-                Whether you&apos;re interested in Nexus early access, a conversation about
+                Whether you&apos;re interested in Nodeself early access, a conversation about
                 investing in MancoMen, or just want to say hello — Juan reads every message.
               </p>
             </div>

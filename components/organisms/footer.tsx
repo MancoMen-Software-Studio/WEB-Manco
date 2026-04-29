@@ -37,7 +37,7 @@ export function Footer() {
               </span>
             </Link>
             <p style={{ maxWidth: 400, fontSize: 14, lineHeight: 1.7, color: "#737373" }}>
-              MancoMen is building the first behavioral modeling platform. Nexus maps personal change as a living graph — pre-seed, 2026.
+              MancoMen is building the first behavioral modeling platform. Nodeself maps personal change as a living graph — pre-seed, 2026.
             </p>
             <div style={{ display: "flex", gap: 10 }}>
               {[

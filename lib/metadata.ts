@@ -30,7 +30,7 @@ export function generateMetadata({
       "habit graph",
       "behavioral capture",
       "behavior change platform",
-      "Nexus app",
+      "Nodeself app",
       "MancoMen Software Studio",
       "pre-seed startup",
       "React Native",

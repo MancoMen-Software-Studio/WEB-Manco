@@ -172,7 +172,7 @@ export function HeroHome() {
             opacity: 0,
           }}
         >
-          Nexus maps your personal change as a{" "}
+          Nodeself maps your personal change as a{" "}
           <span style={{ color: "var(--color-gray-300)" }}>living graph</span> — causal modeling,
           exponential decay, forward simulation.
           The first platform to show you the{" "}
@@ -194,7 +194,7 @@ export function HeroHome() {
           }}
         >
           <Button href={ROUTES.projects} size="large">
-            See Nexus
+            See Nodeself
           </Button>
           <Button href={ROUTES.contact} variant="secondary" size="large">
             Build with us

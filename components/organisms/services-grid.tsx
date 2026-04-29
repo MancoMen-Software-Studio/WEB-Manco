@@ -10,7 +10,7 @@ const features = [
     icon: "✦",
     title: "Check-In",
     description:
-      "Write freely. Nexus extracts the behavioral structure hidden in your words — nodes, connections, causal relationships — and updates the model. No forms. No templates. No chatbot.",
+      "Write freely. Nodeself extracts the behavioral structure hidden in your words — nodes, connections, causal relationships — and updates the model. No forms. No templates. No chatbot.",
     color: "var(--color-electric)",
   },
   {
@@ -81,9 +81,9 @@ export function ServicesGrid() {
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 72 }}>
           <SectionHeader
-            badge="How Nexus Works"
+            badge="How Nodeself Works"
             title="The architecture, piece by piece"
-            description="Each layer of Nexus solves a problem that existing wellness apps structurally can't — because they weren't built on a behavioral model."
+            description="Each layer of Nodeself solves a problem that existing wellness apps structurally can't — because they weren't built on a behavioral model."
             align="center"
           />
         </div>

@@ -12,7 +12,7 @@ const transmissions = [
   { id: "T-005", text: "Causality, not correlation. Structure, not streaks." },
   { id: "T-006", text: "The graph knows what you forgot to track." },
   { id: "T-007", text: "Privacy is not a feature. It is the architecture." },
-  { id: "T-008", text: "Nexus simulates futures before you live them." },
+  { id: "T-008", text: "Nodeself simulates futures before you live them." },
 ];
 
 function TypewriterText({ text, speed = 30 }: { text: string; speed?: number }) {
@@ -141,7 +141,7 @@ export function TechShowcase() {
                 marginLeft: 8,
               }}
             >
-              nexus_system · transmission_log · live
+              nodeself_system · transmission_log · live
             </span>
             <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 6 }}>
               <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#28c840", boxShadow: "0 0 6px #28c840" }} />
