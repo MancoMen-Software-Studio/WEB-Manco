@@ -92,18 +92,18 @@ export function Navbar() {
                   overflow: "hidden",
                 }}
               >
-                {/* Founder avatar */}
+                {/* Cat logo */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/visuals/founder-avatar.jpg"
-                  alt="Juan Martinez"
+                  src="/visuals/cat-logo.png"
+                  alt="MancoMen"
                   style={{
                     position: "absolute",
                     inset: 0,
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    objectPosition: "center top",
+                    objectPosition: "center",
                     borderRadius: 9,
                   }}
                 />
