@@ -80,7 +80,7 @@ export function FounderSection() {
                 MANCOMEN
               </span>
               <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, var(--color-electric-muted), transparent)" }} />
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--color-gray-700)" }}>FOUNDER</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--color-gray-500)" }}>FOUNDER</span>
             </div>
 
             <h2
@@ -97,13 +97,13 @@ export function FounderSection() {
               <span className="text-gradient">built from scratch</span>
             </h2>
 
-            <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
+            <p style={{ fontSize: 17, color: "var(--color-gray-300)", lineHeight: 1.75 }}>
               I believe deeply in the power of ideas and in their capacity to change a life
               when they become something real. I see technology as a tool for shaping profound
               ideas, building worlds with identity, and transforming the way we understand our
               own experience.
             </p>
-            <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75 }}>
+            <p style={{ fontSize: 17, color: "var(--color-gray-300)", lineHeight: 1.75 }}>
               MancoMen Studio is the space where that vision takes form. Nodeself is today its
               clearest and most ambitious manifestation, what I want to build and leave in
               the world.

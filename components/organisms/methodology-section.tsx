@@ -105,10 +105,10 @@ export function MethodologySection() {
                   <span
                     style={{
                       fontFamily: "var(--font-mono)",
-                      fontSize: 10,
+                      fontSize: 12,
                       color: accents[i],
                       letterSpacing: "0.15em",
-                      opacity: 0.6,
+                      opacity: 0.8,
                     }}
                   >
                     {step.number}
@@ -121,7 +121,7 @@ export function MethodologySection() {
                   </h3>
                 </div>
               </div>
-              <p style={{ fontSize: 14, color: "var(--color-gray-500)", lineHeight: 1.72 }}>
+              <p style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.72 }}>
                 {step.description}
               </p>
               <div

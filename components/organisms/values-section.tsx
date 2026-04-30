@@ -108,7 +108,7 @@ export function ValuesSection() {
                   {value.title}
                 </h3>
               </div>
-              <p style={{ fontSize: 14, color: "var(--color-gray-500)", lineHeight: 1.72 }}>
+              <p style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.72 }}>
                 {value.description}
               </p>
               <div

@@ -46,10 +46,10 @@ export default function ProjectsPage() {
               </h1>
               <p
                 style={{
-                  maxWidth: 600,
-                  fontSize: "clamp(15px, 1.6vw, 17px)",
+                  maxWidth: 680,
+                  fontSize: "clamp(16px, 1.8vw, 18px)",
                   lineHeight: 1.75,
-                  color: "var(--color-gray-500)",
+                  color: "var(--color-gray-300)",
                 }}
               >
                 A mobile-first platform that maps your personal change as a living graph.

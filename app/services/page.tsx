@@ -101,7 +101,7 @@ export default function ServicesPage() {
                             <p style={{ fontSize: 14, fontWeight: 600, color: "white", marginBottom: 6 }}>
                               {step.title}
                             </p>
-                            <p style={{ fontSize: 13, color: "#737373", lineHeight: 1.6 }}>
+                            <p style={{ fontSize: 15, color: "#a3a3a3", lineHeight: 1.6 }}>
                               {step.description}
                             </p>
                           </div>
@@ -143,7 +143,7 @@ export default function ServicesPage() {
                             >
                               ✓
                             </div>
-                            <span style={{ fontSize: 14, color: "#a3a3a3", lineHeight: 1.5 }}>
+                            <span style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.5 }}>
                               {feature}
                             </span>
                           </div>

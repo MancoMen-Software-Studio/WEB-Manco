@@ -159,7 +159,7 @@ export function CTASection() {
                 <span style={{ color: "var(--color-electric-light)", fontSize: 14, flexShrink: 0, paddingTop: 1 }}>
                   {item.glyph}
                 </span>
-                <span style={{ fontSize: 14, color: "var(--color-gray-400)", lineHeight: 1.5 }}>
+                <span style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.5 }}>
                   {item.text}
                 </span>
               </div>
@@ -178,9 +178,9 @@ export function CTASection() {
           <p
             className="opacity-0"
             style={{
-              marginTop: 24,
-              fontSize: 13,
-              color: "#404040",
+              marginTop: 28,
+              fontSize: 15,
+              color: "var(--color-gray-500)",
               fontFamily: "var(--font-mono)",
             }}
           >

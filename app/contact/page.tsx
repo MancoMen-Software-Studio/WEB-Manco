@@ -44,10 +44,10 @@ export default function ContactPage() {
               </h1>
               <p
                 style={{
-                  maxWidth: 520,
-                  fontSize: "clamp(15px, 1.6vw, 17px)",
-                  lineHeight: 1.7,
-                  color: "var(--color-gray-500)",
+                  maxWidth: 580,
+                  fontSize: "clamp(16px, 1.8vw, 18px)",
+                  lineHeight: 1.75,
+                  color: "var(--color-gray-300)",
                 }}
               >
                 Whether you&apos;re interested in Nodeself early access, a conversation about
