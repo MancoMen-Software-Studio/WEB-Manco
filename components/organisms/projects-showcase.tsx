@@ -209,7 +209,7 @@ export function ProjectsShowcase() {
             />
 
             {/* Phone mockups — three screenshots */}
-            {["/screenshots/IMG_2786.jpg", "/screenshots/IMG_2793.jpg", "/screenshots/IMG_2799.jpg"].map((src, i) => (
+            {["/screenshots/IMG_2786.jpg", "/screenshots/IMG_2799.jpg", "/screenshots/IMG_2793.jpg"].map((src, i) => (
               <div
                 key={src}
                 style={{

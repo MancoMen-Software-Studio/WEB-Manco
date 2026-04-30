@@ -5,9 +5,9 @@ import { gsap, useGSAP } from "@/lib/gsap-config";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const videos = [
-  { src: "/videos/nodeself-v1.mp4", label: "Check-in" },
-  { src: "/videos/nodeself-v2.mp4", label: "Graph" },
-  { src: "/videos/nodeself-v3.mp4", label: "Simulate" },
+  { src: "/videos/nodeself-v1.mp4", label: "Graph" },
+  { src: "/videos/nodeself-v2.mp4", label: "Check-in" },
+  { src: "/videos/nodeself-v3.mp4", label: "History" },
 ];
 
 function PhoneVideo({ src, label }: { src: string; label: string }) {
