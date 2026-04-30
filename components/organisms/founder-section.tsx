@@ -83,12 +83,12 @@ export function FounderSection() {
       <div
         style={{
           position: "absolute",
-          top: "10%",
+          top: "15%",
           left: "5%",
-          fontSize: "15vw",
+          fontSize: "12vw",
           fontWeight: 900,
           color: "var(--color-black-muted)",
-          opacity: 0.15,
+          opacity: 0.12,
           userSelect: "none",
           zIndex: 0,
           whiteSpace: "nowrap",
@@ -99,11 +99,11 @@ export function FounderSection() {
         CONVICTION
       </div>
 
-      <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+      <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
         
         {/* Shared Section Header */}
-        <div ref={headerRef} style={{ marginBottom: 100, maxWidth: 800, opacity: 0 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
+        <div ref={headerRef} style={{ marginBottom: 80, maxWidth: 800, opacity: 0 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <span
               className="font-logo"
               style={{
@@ -148,31 +148,31 @@ export function FounderSection() {
         </div>
 
         {/* Team Grid */}
-        <div ref={teamRef} style={{ display: "flex", flexDirection: "column", gap: 140 }}>
+        <div ref={teamRef} style={{ display: "flex", flexDirection: "column", gap: 100 }}>
           {team.map((member, idx) => (
             <div
               key={member.name}
               style={{
                 display: "grid",
-                gridTemplateColumns: idx % 2 === 0 ? "320px 1fr" : "1fr 320px",
-                gap: 60,
-                alignItems: "start",
+                gridTemplateColumns: idx % 2 === 0 ? "300px 1fr" : "1fr 300px",
+                gap: 48,
+                alignItems: "center",
                 opacity: 0,
               }}
               className="flex flex-col lg:grid"
             >
-              {/* Photo Box */}
+              {/* Photo Box - Simplified per request */}
               <div
                 style={{
                   order: idx % 2 === 0 ? 0 : 1,
                   position: "relative",
-                  width: 320,
-                  height: 400,
-                  borderRadius: 24,
+                  width: 300,
+                  height: 380,
+                  borderRadius: 20,
                   overflow: "hidden",
                   border: "1px solid var(--color-gray-800)",
                   background: "var(--color-black-soft)",
-                  boxShadow: "0 40px 100px rgba(0,0,0,0.4)",
+                  boxShadow: "0 24px 60px rgba(0,0,0,0.5)",
                 }}
               >
                 <img
@@ -182,26 +182,26 @@ export function FounderSection() {
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    filter: "grayscale(20%) brightness(0.9)",
+                    filter: "grayscale(10%) brightness(0.95)",
                   }}
                 />
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "linear-gradient(to top, var(--color-black-rich) 0%, transparent 50%)",
+                    background: "linear-gradient(to top, var(--color-black-rich) 0%, transparent 60%)",
                   }}
                 />
-                <div style={{ position: "absolute", bottom: 24, left: 24, zIndex: 10 }}>
+                <div style={{ position: "absolute", bottom: 20, left: 20, zIndex: 10 }}>
                   <p
                     className="font-display"
-                    style={{ fontSize: 20, fontWeight: 700, color: "white", marginBottom: 2 }}
+                    style={{ fontSize: 18, fontWeight: 700, color: "white", marginBottom: 2 }}
                   >
                     {member.name}
                   </p>
                   <p
                     style={{
-                      fontSize: 12,
+                      fontSize: 11,
                       color: "var(--color-electric-light)",
                       fontFamily: "var(--font-mono)",
                       letterSpacing: "0.1em",
@@ -211,64 +211,80 @@ export function FounderSection() {
                     {member.role}
                   </p>
                 </div>
+              </div>
 
-                {/* Decorative scanning line animation */}
+              {/* Description Box with Gato/Logo effect background */}
+              <div
+                style={{
+                  padding: "40px 48px",
+                  borderRadius: 24,
+                  border: "1px solid rgba(139,92,246,0.15)",
+                  background: "rgba(139,92,246,0.02)",
+                  backdropFilter: "blur(4px)",
+                  position: "relative",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 20,
+                }}
+              >
+                {/* Logo Effect 1: Scanning line */}
                 <div
                   style={{
                     position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: "2px",
-                    background: "linear-gradient(90deg, transparent, var(--color-electric-light), transparent)",
-                    boxShadow: "0 0 10px var(--color-electric-glow)",
-                    zIndex: 5,
-                    animation: "scan 4s linear infinite",
-                  }}
-                />
-              </div>
-
-              {/* Description Box */}
-              <div
-                style={{
-                  paddingTop: 20,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 24,
-                  position: "relative",
-                }}
-              >
-                {/* Stylized big quote background */}
-                <span
-                  style={{
-                    position: "absolute",
-                    top: -40,
-                    left: -20,
-                    fontSize: 120,
-                    fontFamily: "serif",
-                    color: "var(--color-electric-muted)",
-                    opacity: 0.1,
-                    lineHeight: 1,
+                    inset: 0,
+                    background: "linear-gradient(180deg, transparent 0%, rgba(139,92,246,0.06) 50%, transparent 100%)",
+                    animation: "scan-box 4s linear infinite",
+                    zIndex: 0,
                     pointerEvents: "none",
                   }}
-                >
-                  &ldquo;
-                </span>
+                />
 
-                {member.description.map((p, i) => (
-                  <p
-                    key={i}
-                    style={{
-                      fontSize: 17,
-                      color: "var(--color-gray-300)",
-                      lineHeight: 1.8,
-                      maxWidth: 640,
-                      position: "relative",
-                    }}
-                  >
-                    {p}
-                  </p>
-                ))}
+                {/* Logo Effect 2: Pulse ring (simulated as corners) */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    border: "1px solid var(--color-electric)",
+                    opacity: 0.1,
+                    borderRadius: 24,
+                    animation: "pulse-box 3s ease-out infinite",
+                    pointerEvents: "none",
+                  }}
+                />
+
+                {/* Content */}
+                <div style={{ position: "relative", zIndex: 2 }}>
+                  {member.description.map((p, i) => (
+                    <p
+                      key={i}
+                      style={{
+                        fontSize: 17,
+                        color: "var(--color-gray-300)",
+                        lineHeight: 1.7,
+                        marginBottom: i === member.description.length - 1 ? 0 : 20,
+                      }}
+                    >
+                      {p}
+                    </p>
+                  ))}
+                </div>
+
+                {/* Stylized tiny coordinate decoration from mobile menu */}
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 12,
+                    right: 20,
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 8,
+                    color: "rgba(139,92,246,0.25)",
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Ident // {member.name.split(' ')[0]}
+                </div>
               </div>
             </div>
           ))}
@@ -276,9 +292,14 @@ export function FounderSection() {
       </div>
 
       <style jsx>{`
-        @keyframes scan {
+        @keyframes scan-box {
           0% { transform: translateY(-100%); }
-          100% { transform: translateY(500%); }
+          100% { transform: translateY(100%); }
+        }
+        @keyframes pulse-box {
+          0% { opacity: 0.2; transform: scale(1); }
+          70% { opacity: 0; transform: scale(1.02); }
+          100% { opacity: 0; transform: scale(1.02); }
         }
       `}</style>
     </section>
