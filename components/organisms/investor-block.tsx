@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { Button } from "@/components/atoms/button";
-import { CONTACT } from "@/lib/constants";
+import { ROUTES, CONTACT } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 export function InvestorBlock() {
@@ -192,10 +192,10 @@ export function InvestorBlock() {
                 </p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                <Button href={`mailto:${CONTACT.email}?subject=Investor Inquiry — Nodeself`} size="large">
+                <Button href={`${ROUTES.contact}?intent=investor-deck`} size="large">
                   Request the deck
                 </Button>
-                <Button href={`mailto:${CONTACT.email}?subject=Schedule a call — Nodeself`} variant="secondary">
+                <Button href={`${ROUTES.contact}?intent=investor-conversation`} variant="secondary">
                   Schedule a conversation
                 </Button>
               </div>

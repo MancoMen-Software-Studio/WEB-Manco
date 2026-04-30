@@ -3,22 +3,15 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { SectionHeader } from "@/components/molecules/section-header";
-import { Button } from "@/components/atoms/button";
 import { ROUTES } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-const buildStatus = [
-  { label: "Graph Engine", done: true },
-  { label: "Decay Engine", done: true },
-  { label: "Check-In Pipeline", done: true },
-  { label: "Skia Graph Visualization", done: true },
-  { label: "Forward Simulator", done: true },
-  { label: "Latent State Engine", done: true },
-  { label: "Causal Analysis (AI)", done: true },
-  { label: "Insight Engine", done: true },
-  { label: "Cloud Sync", done: false },
-  { label: "User Auth", done: false },
-  { label: "Subscription System", done: false },
+const capabilities = [
+  "Turn natural-language check-ins into connected behavioral graphs",
+  "Reveal relationships between habits, emotions, and decisions",
+  "Show visual decay when important nodes stop being reinforced",
+  "Simulate possible outcomes under different behavioral scenarios",
+  "Generate insights from the structure of your graph over time",
 ];
 
 const modelPillars = [
@@ -94,106 +87,57 @@ export function ProjectsShowcase() {
         <div style={{ textAlign: "center", marginBottom: 80 }}>
           <SectionHeader
             badge="The Product"
-            title="Nodeself — built and functional"
-            description="The core engine is complete. What you see below is not a concept — it's working software, built from scratch, with production-grade architecture."
+            title="Nodeself — built and already working"
+            description="Nodeself is already a functional behavioral modeling system. It turns natural-language check-ins into connected graphs, reveals hidden relationships between habits and emotional states, and shows how behavior changes over time."
             align="center"
           />
+          <p
+            style={{
+              marginTop: 16,
+              fontSize: 13,
+              color: "var(--color-gray-700)",
+              fontFamily: "var(--font-mono)",
+              letterSpacing: "0.05em",
+            }}
+          >
+            What you see here is not a concept or prototype. It is a real product built to make personal change visible as structure.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left: Build status + info */}
+          {/* Left: capabilities + model pillars */}
           <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 32, opacity: 0 }}>
 
-            {/* Progress header */}
-            <div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                <span style={{ fontSize: 12, fontFamily: "var(--font-mono)", color: "#a3a3a3", textTransform: "uppercase", letterSpacing: "0.1em" }}>
-                  Build Progress
-                </span>
-                <span
-                  style={{
-                    fontSize: 12,
-                    fontFamily: "var(--font-mono)",
-                    color: "var(--color-electric-light)",
-                    fontWeight: 600,
-                  }}
-                >
-                  {Math.round((buildStatus.filter(s => s.done).length / buildStatus.length) * 100)}%
-                </span>
-              </div>
-              <div
-                style={{
-                  height: 3,
-                  borderRadius: 9999,
-                  background: "#1e1e2e",
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  style={{
-                    height: "100%",
-                    width: `${Math.round((buildStatus.filter(s => s.done).length / buildStatus.length) * 100)}%`,
-                    background: "linear-gradient(90deg, var(--color-electric), var(--color-cyan))",
-                    borderRadius: 9999,
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Build checklist */}
+            {/* Capability list */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {buildStatus.map((item) => (
+              {capabilities.map((cap) => (
                 <div
-                  key={item.label}
+                  key={cap}
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: 12,
+                    padding: "14px 16px",
+                    borderRadius: 10,
+                    border: "1px solid #1e1e2e",
+                    background: "linear-gradient(135deg, #0c0c1a 0%, #0f0f1e 100%)",
                   }}
                 >
-                  <div
-                    style={{
-                      width: 18,
-                      height: 18,
-                      borderRadius: 4,
-                      border: item.done ? "none" : "1px solid #404040",
-                      background: item.done ? "var(--color-electric)" : "transparent",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      fontSize: 10,
-                      color: "white",
-                    }}
-                  >
-                    {item.done && "✓"}
-                  </div>
                   <span
                     style={{
-                      fontSize: 14,
-                      color: item.done ? "#d4d4d4" : "#404040",
-                      fontFamily: "var(--font-mono)",
+                      color: "var(--color-electric-light)",
+                      fontSize: 12,
+                      flexShrink: 0,
+                      paddingTop: 2,
+                      filter: "drop-shadow(0 0 6px var(--color-electric-glow))",
                     }}
                   >
-                    {item.label}
+                    ◈
                   </span>
-                  {!item.done && (
-                    <span
-                      style={{
-                        fontSize: 10,
-                        color: "var(--color-cyan)",
-                        background: "var(--color-cyan-muted)",
-                        borderRadius: 4,
-                        padding: "2px 8px",
-                        fontFamily: "var(--font-mono)",
-                        letterSpacing: "0.05em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      In Progress
-                    </span>
-                  )}
+                  <span style={{ fontSize: 13, color: "var(--color-gray-400)", lineHeight: 1.6 }}>
+                    {cap}
+                  </span>
                 </div>
               ))}
             </div>
@@ -239,9 +183,6 @@ export function ProjectsShowcase() {
               ))}
             </div>
 
-            <Button href={ROUTES.projects} size="large">
-              Full Product Details
-            </Button>
           </div>
 
           {/* Right: App screenshots mockup */}

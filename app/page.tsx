@@ -4,7 +4,6 @@ import { NodeselfVideos } from "@/components/organisms/nodeself-videos";
 import { CompanyIntro } from "@/components/organisms/company-intro";
 import { ServicesGrid } from "@/components/organisms/services-grid";
 import { DifferentiatorsSection } from "@/components/organisms/differentiators-section";
-import { CapabilitiesSection } from "@/components/organisms/capabilities-section";
 import { ProjectsShowcase } from "@/components/organisms/projects-showcase";
 import { TechShowcase } from "@/components/organisms/tech-showcase";
 import { StudioIdentity } from "@/components/organisms/studio-identity";
@@ -22,7 +21,6 @@ export default function Home() {
         <CompanyIntro />
         <ServicesGrid />
         <DifferentiatorsSection />
-        <CapabilitiesSection />
         <ProjectsShowcase />
         <TechShowcase />
         <StudioIdentity />
