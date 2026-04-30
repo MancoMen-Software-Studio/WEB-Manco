@@ -162,7 +162,7 @@ export function DifferentiatorsSection() {
                   {d.title}
                 </h3>
               </div>
-              <p style={{ fontSize: 14, color: "var(--color-gray-500)", lineHeight: 1.75, maxWidth: 400 }}>
+              <p style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.75, maxWidth: 440 }}>
                 {d.body}
               </p>
               <div

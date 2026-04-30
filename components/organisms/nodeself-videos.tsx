@@ -81,7 +81,7 @@ function PhoneVideo({ src, label }: { src: string; label: string }) {
         >
           <span
             style={{
-              fontSize: 10,
+              fontSize: 12,
               fontFamily: "var(--font-mono)",
               color: "var(--color-electric-light)",
               letterSpacing: "0.15em",
@@ -200,10 +200,10 @@ export function NodeselfVideos() {
           </h2>
           <p
             style={{
-              fontSize: 15,
-              color: "var(--color-gray-500)",
+              fontSize: 17,
+              color: "var(--color-gray-300)",
               lineHeight: 1.7,
-              maxWidth: 520,
+              maxWidth: 580,
             }}
           >
             Write naturally about your day, your habits, or your state of mind.

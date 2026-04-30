@@ -164,16 +164,16 @@ export function HeroHome() {
         <p
           ref={subtitleRef}
           style={{
-            maxWidth: 540,
+            maxWidth: 600,
             margin: "24px auto 0",
-            fontSize: "clamp(15px, 1.6vw, 17px)",
-            lineHeight: 1.75,
-            color: "var(--color-gray-500)",
+            fontSize: "clamp(16px, 1.8vw, 18px)",
+            lineHeight: 1.7,
+            color: "var(--color-gray-300)",
             opacity: 0,
           }}
         >
           Nodeself turns habits, emotions, and decisions into a{" "}
-          <span style={{ color: "var(--color-gray-300)" }}>living graph</span>
+          <span style={{ color: "var(--color-white)" }}>living graph</span>
           {" "}— so you can see what is shaping your behavior and what changes when one part of the system moves.
         </p>
 
@@ -202,11 +202,11 @@ export function HeroHome() {
         <p
           ref={metaRef}
           style={{
-            marginTop: 20,
-            fontSize: 12,
-            color: "var(--color-gray-700)",
+            marginTop: 24,
+            fontSize: 15,
+            color: "var(--color-gray-400)",
             fontFamily: "var(--font-mono)",
-            letterSpacing: "0.08em",
+            letterSpacing: "0.06em",
             opacity: 0,
           }}
         >

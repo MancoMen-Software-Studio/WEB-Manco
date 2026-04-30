@@ -80,7 +80,7 @@ export function CompanyIntro() {
               Most tools{" "}
               <span className="text-electric">measure the surface</span>
             </Heading>
-            <Text style={{ maxWidth: 480 }}>
+            <Text style={{ maxWidth: 520, fontSize: 18, color: "var(--color-gray-200)" }}>
               People try to change through reminders, streaks, and isolated habit tracking.
               But behavior does not move in straight lines. It behaves like a system of
               influences, tensions, reinforcement, and decay.
@@ -135,7 +135,7 @@ export function CompanyIntro() {
                     {p.label}
                   </span>
                 </div>
-                <p style={{ fontSize: 14, color: "#737373", lineHeight: 1.6 }}>
+                <p style={{ fontSize: 15, color: "#a3a3a3", lineHeight: 1.6 }}>
                   {p.description}
                 </p>
               </div>

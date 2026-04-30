@@ -93,11 +93,11 @@ export function ProjectsShowcase() {
           />
           <p
             style={{
-              marginTop: 16,
-              fontSize: 13,
-              color: "var(--color-gray-700)",
+              marginTop: 20,
+              fontSize: 16,
+              color: "var(--color-gray-400)",
               fontFamily: "var(--font-mono)",
-              letterSpacing: "0.05em",
+              letterSpacing: "0.06em",
             }}
           >
             What you see here is not a concept or prototype. It is a real product built to make personal change visible as structure.
@@ -135,7 +135,7 @@ export function ProjectsShowcase() {
                   >
                     ◈
                   </span>
-                  <span style={{ fontSize: 13, color: "var(--color-gray-400)", lineHeight: 1.6 }}>
+                  <span style={{ fontSize: 15, color: "var(--color-gray-300)", lineHeight: 1.6 }}>
                     {cap}
                   </span>
                 </div>
@@ -172,10 +172,10 @@ export function ProjectsShowcase() {
                     {p.glyph}
                   </span>
                   <div>
-                    <p style={{ fontSize: 13, fontWeight: 600, color: "var(--color-gray-300)", marginBottom: 2 }}>
+                    <p style={{ fontSize: 15, fontWeight: 600, color: "var(--color-white)", marginBottom: 4 }}>
                       {p.label}
                     </p>
-                    <p style={{ fontSize: 12, color: "#525252", lineHeight: 1.5 }}>
+                    <p style={{ fontSize: 14, color: "var(--color-gray-400)", lineHeight: 1.6 }}>
                       {p.sub}
                     </p>
                   </div>

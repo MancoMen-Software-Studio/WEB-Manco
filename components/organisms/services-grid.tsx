@@ -138,7 +138,7 @@ export function ServicesGrid() {
                   {step.title}
                 </h3>
               </div>
-              <p style={{ fontSize: 14, color: "#737373", lineHeight: 1.7, maxWidth: 360 }}>
+              <p style={{ fontSize: 16, color: "#a3a3a3", lineHeight: 1.7, maxWidth: 400 }}>
                 {step.description}
               </p>
             </div>

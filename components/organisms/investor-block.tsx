@@ -117,12 +117,12 @@ export function InvestorBlock() {
                 The product is already working.
               </span>
             </h2>
-            <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75, maxWidth: 560 }}>
+            <p style={{ fontSize: 17, color: "var(--color-gray-300)", lineHeight: 1.75, maxWidth: 600 }}>
               Nodeself is building a new category around behavioral modeling. The thesis is differentiated,
               the engine is complete, and the next phase is focused on launch, paid user validation,
               and long-term category positioning.
             </p>
-            <p style={{ fontSize: 14, color: "var(--color-gray-700)", lineHeight: 1.7, maxWidth: 540, marginTop: 12 }}>
+            <p style={{ fontSize: 16, color: "var(--color-gray-400)", lineHeight: 1.7, maxWidth: 600, marginTop: 16 }}>
               MancoMen is building original software systems around behavior, structure, and human experience.
               Nodeself is the first flagship product in that direction.
             </p>
@@ -160,7 +160,7 @@ export function InvestorBlock() {
                   <span style={{ color: "var(--color-electric-light)", fontSize: 13, flexShrink: 0, paddingTop: 1 }}>
                     {item.glyph}
                   </span>
-                  <span style={{ fontSize: 14, color: "var(--color-gray-400)", lineHeight: 1.5 }}>
+                  <span style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.5 }}>
                     {item.text}
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export function InvestorBlock() {
                 >
                   Interested in the opportunity?
                 </p>
-                <p style={{ fontSize: 13, color: "var(--color-gray-500)", lineHeight: 1.6 }}>
+                <p style={{ fontSize: 15, color: "var(--color-gray-300)", lineHeight: 1.6 }}>
                   Schedule a conversation or request the deck. We respond within 24 hours.
                 </p>
               </div>

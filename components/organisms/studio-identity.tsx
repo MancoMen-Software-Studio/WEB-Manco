@@ -152,7 +152,7 @@ export function StudioIdentity() {
               of self-understanding.
             </span>
           </h2>
-          <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75, maxWidth: 560, marginTop: 16 }}>
+          <p style={{ fontSize: 17, color: "var(--color-gray-300)", lineHeight: 1.75, maxWidth: 600, marginTop: 16 }}>
             Nodeself is built on a simple belief: personal change becomes clearer when it can be seen as structure.
             Not as guilt. Not as pressure. Not as isolated habits. Structure creates a different kind of honesty.
           </p>
