@@ -72,6 +72,7 @@ export function FounderSection() {
   return (
     <section
       ref={sectionRef}
+      className="team-section"
       style={{
         paddingTop: 120,
         paddingBottom: 160,
@@ -102,7 +103,7 @@ export function FounderSection() {
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
         
         {/* Shared Section Header */}
-        <div ref={headerRef} style={{ marginBottom: 80, maxWidth: 800, opacity: 0 }}>
+        <div ref={headerRef} style={{ marginBottom: 60, maxWidth: 800, opacity: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <span
               className="font-logo"
@@ -148,33 +149,15 @@ export function FounderSection() {
         </div>
 
         {/* Team Grid */}
-        <div ref={teamRef} style={{ display: "flex", flexDirection: "column", gap: 100 }}>
+        <div ref={teamRef} style={{ display: "flex", flexDirection: "column", gap: 80 }}>
           {team.map((member, idx) => (
             <div
               key={member.name}
-              style={{
-                display: "grid",
-                gridTemplateColumns: idx % 2 === 0 ? "300px 1fr" : "1fr 300px",
-                gap: 48,
-                alignItems: "center",
-                opacity: 0,
-              }}
-              className="flex flex-col lg:grid"
+              className={`team-member ${idx % 2 === 0 ? "even" : "odd"}`}
+              style={{ opacity: 0 }}
             >
-              {/* Photo Box - Simplified per request */}
-              <div
-                style={{
-                  order: idx % 2 === 0 ? 0 : 1,
-                  position: "relative",
-                  width: 300,
-                  height: 380,
-                  borderRadius: 20,
-                  overflow: "hidden",
-                  border: "1px solid var(--color-gray-800)",
-                  background: "var(--color-black-soft)",
-                  boxShadow: "0 24px 60px rgba(0,0,0,0.5)",
-                }}
-              >
+              {/* Photo Box */}
+              <div className="member-photo-box">
                 <img
                   src={member.photo}
                   alt={member.name}
@@ -214,20 +197,7 @@ export function FounderSection() {
               </div>
 
               {/* Description Box with Gato/Logo effect background */}
-              <div
-                style={{
-                  padding: "40px 48px",
-                  borderRadius: 24,
-                  border: "1px solid rgba(139,92,246,0.15)",
-                  background: "rgba(139,92,246,0.02)",
-                  backdropFilter: "blur(4px)",
-                  position: "relative",
-                  overflow: "hidden",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 20,
-                }}
-              >
+              <div className="member-description-box">
                 {/* Logo Effect 1: Scanning line */}
                 <div
                   style={{
@@ -240,7 +210,7 @@ export function FounderSection() {
                   }}
                 />
 
-                {/* Logo Effect 2: Pulse ring (simulated as corners) */}
+                {/* Logo Effect 2: Pulse ring */}
                 <div
                   style={{
                     position: "absolute",
@@ -270,7 +240,7 @@ export function FounderSection() {
                   ))}
                 </div>
 
-                {/* Stylized tiny coordinate decoration from mobile menu */}
+                {/* Stylized name decoration */}
                 <div
                   style={{
                     position: "absolute",
@@ -283,7 +253,7 @@ export function FounderSection() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Ident // {member.name.split(' ')[0]}
+                  {member.name.split(' ')[0]}
                 </div>
               </div>
             </div>
@@ -292,6 +262,58 @@ export function FounderSection() {
       </div>
 
       <style jsx>{`
+        .team-member {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .member-photo-box {
+          position: relative;
+          width: 100%;
+          max-width: 300px;
+          height: 380px;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 1px solid var(--color-gray-800);
+          background: var(--color-black-soft);
+          box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+        }
+
+        .member-description-box {
+          padding: 32px 24px;
+          border-radius: 24px;
+          border: 1px solid rgba(139,92,246,0.15);
+          background: rgba(139,92,246,0.02);
+          backdrop-filter: blur(4px);
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+          .team-member {
+            display: grid;
+            gap: 48px;
+            align-items: center;
+          }
+          .team-member.even {
+            grid-template-columns: 300px 1fr;
+          }
+          .team-member.odd {
+            grid-template-columns: 1fr 300px;
+          }
+          .team-member.odd .member-photo-box {
+            order: 1;
+          }
+          .member-description-box {
+            padding: 40px 48px;
+          }
+        }
+
         @keyframes scan-box {
           0% { transform: translateY(-100%); }
           100% { transform: translateY(100%); }
