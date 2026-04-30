@@ -109,13 +109,13 @@ export function CTASection() {
                 textTransform: "uppercase",
               }}
             >
-              Pre-Seed Round — Open to Investors
+              Now in development — App Store 2026
             </span>
           </div>
 
           <div className="opacity-0" style={{ marginBottom: 24 }}>
             <Heading as="h2" display>
-              The behavioral modeling{" "}
+              See yourself{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -124,14 +124,14 @@ export function CTASection() {
                   backgroundClip: "text",
                 }}
               >
-                market doesn&apos;t exist yet.
+                with more clarity.
               </span>
             </Heading>
           </div>
 
           <Text className="opacity-0" style={{ maxWidth: 580, marginBottom: 48 }}>
-            Nodeself is building the category. The engine is built. The architecture is solid.
-            The problem is real. We&apos;re looking for capital to ship — not to prove the concept.
+            Nodeself helps turn scattered experiences into visible structure,
+            so change becomes something you can understand, not just chase.
           </Text>
 
           <div
@@ -167,11 +167,11 @@ export function CTASection() {
           </div>
 
           <div className="opacity-0" style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
-            <Button href={`mailto:${CONTACT.email}`} size="large">
-              Build with us
+            <Button href={ROUTES.contact} size="large">
+              Get early access
             </Button>
-            <Button href={ROUTES.contact} variant="secondary" size="large">
-              Get Early Access
+            <Button href={ROUTES.projects} variant="secondary" size="large">
+              See how it works
             </Button>
           </div>
 

@@ -5,48 +5,34 @@ import { gsap, useGSAP } from "@/lib/gsap-config";
 import { SectionHeader } from "@/components/molecules/section-header";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-const features = [
+const steps = [
   {
+    number: "01",
     icon: "✦",
-    title: "Check-In",
-    description:
-      "Write freely. Nodeself extracts the behavioral structure hidden in your words — nodes, connections, causal relationships — and updates the model. No forms. No templates. No chatbot.",
+    title: "Write",
+    description: "Describe your day, habits, emotions, or decisions in natural language. No forms. No templates.",
     color: "var(--color-electric)",
   },
   {
+    number: "02",
     icon: "◈",
-    title: "Living Graph",
-    description:
-      "Every entry updates a personal graph of habits, decisions, states, and their relationships. Visualized in real time with React Native Skia and custom GLSL shaders.",
+    title: "Map",
+    description: "Nodeself turns that input into a graph of connected behaviors, states, and patterns.",
     color: "var(--color-cyan)",
   },
   {
+    number: "03",
     icon: "⊗",
-    title: "Decay Engine",
-    description:
-      "Silence is data. Nodes decay exponentially when you stop reinforcing them. The graph shows you what's slipping before it's fully gone — time becomes a first-class dimension.",
+    title: "Track change",
+    description: "The graph evolves over time, showing what strengthens, what fades, and what influences what.",
     color: "var(--color-electric-light)",
   },
   {
-    icon: "⟳",
-    title: "Causal Analysis",
-    description:
-      "The AI audits your full graph and surfaces hidden patterns: cycles, bottlenecks, contradictions, and the connections you've been too close to see yourself.",
-    color: "var(--color-cyan)",
-  },
-  {
+    number: "04",
     icon: "▷",
-    title: "Forward Simulator",
-    description:
-      "Project your graph 30, 60, or 90 days forward under any scenario. Deterministic engine, AI-interpreted narrative. See the cost of a habit before you live it.",
-    color: "var(--color-electric)",
-  },
-  {
-    icon: "⬡",
-    title: "Local-First Privacy",
-    description:
-      "Your behavioral data is the most sensitive data that exists. Everything lives in SQLite on your device. No persistent cloud storage of personal text. Ever.",
-    color: "var(--color-electric-light)",
+    title: "Simulate",
+    description: "Explore what may happen if a behavior improves, weakens, or disappears from the system.",
+    color: "var(--color-cyan)",
   },
 ];
 
@@ -78,19 +64,19 @@ export function ServicesGrid() {
 
   return (
     <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 120, paddingBottom: 120 }}>
-      <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 72 }}>
           <SectionHeader
-            badge="How Nodeself Works"
-            title="The architecture, piece by piece"
-            description="Each layer of Nodeself solves a problem that existing wellness apps structurally can't — because they weren't built on a behavioral model."
+            badge="How It Works"
+            title="How Nodeself works"
+            description="Write naturally. The system does the rest."
             align="center"
           />
         </div>
 
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px"
+          className="grid grid-cols-1 md:grid-cols-2 gap-px"
           style={{
             background: "#1e1e2e",
             borderRadius: 20,
@@ -98,12 +84,11 @@ export function ServicesGrid() {
             border: "1px solid #1e1e2e",
           }}
         >
-          {features.map((feature) => (
+          {steps.map((step) => (
             <div
-              key={feature.title}
-              className="group"
+              key={step.title}
               style={{
-                padding: "40px 36px",
+                padding: "44px 40px",
                 background: "#08080f",
                 display: "flex",
                 flexDirection: "column",
@@ -122,28 +107,39 @@ export function ServicesGrid() {
               <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <span
                   style={{
-                    fontSize: 22,
-                    color: feature.color,
-                    filter: `drop-shadow(0 0 8px ${feature.color})`,
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 11,
+                    color: step.color,
+                    letterSpacing: "0.2em",
+                    opacity: 0.6,
+                  }}
+                >
+                  {step.number}
+                </span>
+                <span
+                  style={{
+                    fontSize: 20,
+                    color: step.color,
+                    filter: `drop-shadow(0 0 8px ${step.color})`,
                     fontFamily: "monospace",
                     lineHeight: 1,
                   }}
                 >
-                  {feature.icon}
+                  {step.icon}
                 </span>
                 <h3
                   style={{
-                    fontSize: 16,
+                    fontSize: 17,
                     fontWeight: 600,
                     color: "white",
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  {feature.title}
+                  {step.title}
                 </h3>
               </div>
-              <p style={{ fontSize: 14, color: "#737373", lineHeight: 1.7 }}>
-                {feature.description}
+              <p style={{ fontSize: 14, color: "#737373", lineHeight: 1.7, maxWidth: 360 }}>
+                {step.description}
               </p>
             </div>
           ))}

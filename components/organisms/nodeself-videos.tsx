@@ -99,8 +99,12 @@ export function NodeselfVideos() {
               lineHeight: 1.1,
             }}
           >
-            See it working.
+            See your behavior take shape.
           </h2>
+          <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.7, maxWidth: 520, marginTop: 12 }}>
+            Write naturally about your day, your habits, or your state of mind.
+            Nodeself extracts signals, builds connections, and reveals the structure behind the patterns you live with.
+          </p>
         </div>
 
         {/* Tab switcher */}

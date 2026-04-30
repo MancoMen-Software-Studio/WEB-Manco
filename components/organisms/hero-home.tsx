@@ -172,12 +172,9 @@ export function HeroHome() {
             opacity: 0,
           }}
         >
-          Nodeself maps your personal change as a{" "}
-          <span style={{ color: "var(--color-gray-300)" }}>living graph</span> — causal modeling,
-          exponential decay, forward simulation.
-          The first platform to show you the{" "}
-          <span style={{ color: "var(--color-gray-300)" }}>architecture</span>{" "}
-          of your own behavior.
+          Nodeself turns habits, emotions, and decisions into a{" "}
+          <span style={{ color: "var(--color-gray-300)" }}>living graph</span>
+          {" "}— so you can see what is shaping your behavior and what changes when one part of the system moves.
         </p>
 
         {/* CTAs */}
@@ -194,48 +191,29 @@ export function HeroHome() {
           }}
         >
           <Button href={ROUTES.projects} size="large">
-            See Nodeself
+            See how it works
           </Button>
           <Button href={ROUTES.contact} variant="secondary" size="large">
-            Build with us
+            Get early access
           </Button>
         </div>
 
-        {/* Meta tags */}
-        <div
+        {/* Micro line */}
+        <p
           ref={metaRef}
           style={{
-            marginTop: 40,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: 0,
+            marginTop: 20,
+            fontSize: 12,
+            color: "var(--color-gray-700)",
+            fontFamily: "var(--font-mono)",
+            letterSpacing: "0.08em",
             opacity: 0,
           }}
         >
-          {["Behavioral modeling", "App Store 2026"].map((item, i) => (
-            <div key={item} style={{ display: "flex", alignItems: "center" }}>
-              <span
-                style={{
-                  fontSize: 11,
-                  color: "var(--color-gray-700)",
-                  fontFamily: "var(--font-mono)",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  padding: "4px 20px",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {item}
-              </span>
-              {i < 1 && (
-                <span style={{ width: 1, height: 10, background: "var(--color-gray-800)", flexShrink: 0 }} />
-              )}
-            </div>
-          ))}
-        </div>
+          A new way to understand personal change through structure, not streaks.
+        </p>
       </div>
+    
 
       <div style={{ position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)", zIndex: 10 }}>
         <ScrollIndicator />

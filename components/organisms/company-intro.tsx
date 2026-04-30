@@ -11,17 +11,17 @@ const problems = [
   {
     stat: "$13B",
     label: "wellness market",
-    description: "Flooded with apps that track but don't understand. Streaks, points, reminders — surface-level signals with no structural model underneath.",
+    description: "Flooded with apps that track but never model. Streaks, points, reminders — surface signals with nothing structural underneath.",
   },
   {
     stat: "0",
     label: "behavioral graph platforms",
-    description: "No existing product models behavior as a causal network. They count what you do — not why, not how one thing affects another.",
+    description: "No existing product maps behavior as a causal network. They count what you do — not why, or how one thing affects another.",
   },
   {
     stat: "∞",
     label: "failed habits",
-    description: "Not from lack of motivation — from lack of visibility. People can't fix what they can't see. The architecture of their change is invisible to them.",
+    description: "Not from lack of motivation. From lack of visibility. If you cannot see the structure, you keep treating the symptoms.",
   },
 ];
 
@@ -77,18 +77,13 @@ export function CompanyIntro() {
           <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 28, opacity: 0 }}>
             <Badge>The Problem</Badge>
             <Heading as="h2">
-              The wellness market has{" "}
-              <span className="text-electric">never seen its own data</span>
+              Most tools{" "}
+              <span className="text-electric">measure the surface</span>
             </Heading>
             <Text style={{ maxWidth: 480 }}>
-              Hundreds of millions of people try to change every year. They download apps, set
-              goals, build streaks. Most fail — not because they&apos;re weak, but because they&apos;re
-              flying blind. No app shows them the structure of their own process.
-            </Text>
-            <Text style={{ maxWidth: 480 }}>
-              Nodeself is the first product to model behavioral change as what it actually is:
-              a network of habits, decisions, emotions, and states with real causal relationships
-              between them. A graph that lives, grows, and decays in real time.
+              People try to change through reminders, streaks, and isolated habit tracking.
+              But behavior does not move in straight lines. It behaves like a system of
+              influences, tensions, reinforcement, and decay.
             </Text>
             <blockquote
               style={{
@@ -101,7 +96,7 @@ export function CompanyIntro() {
                 lineHeight: 1.7,
               }}
             >
-              &ldquo;Not an app of wellness. A mirror of your behavior that doesn&apos;t lie.&rdquo;
+              &ldquo;If you cannot see the structure, you keep treating the symptoms.&rdquo;
             </blockquote>
           </div>
 

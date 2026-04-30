@@ -125,7 +125,7 @@ export function StudioIdentity() {
                 letterSpacing: "0.1em",
               }}
             >
-              STUDIO PRINCIPLES
+              PRODUCT PHILOSOPHY
             </span>
           </div>
 
@@ -140,7 +140,7 @@ export function StudioIdentity() {
               color: "white",
             }}
           >
-            We don&apos;t build{" "}
+            A different philosophy{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -149,14 +149,13 @@ export function StudioIdentity() {
                 backgroundClip: "text",
               }}
             >
-              features.
+              of self-understanding.
             </span>
-            <br />
-            We build{" "}
-            <em style={{ fontStyle: "normal", color: "var(--color-gray-300)" }}>
-              models.
-            </em>
           </h2>
+          <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.75, maxWidth: 560, marginTop: 16 }}>
+            Nodeself is built on a simple belief: personal change becomes clearer when it can be seen as structure.
+            Not as guilt. Not as pressure. Not as isolated habits. Structure creates a different kind of honesty.
+          </p>
         </div>
 
         {/* Principles grid */}
@@ -273,7 +272,7 @@ export function StudioIdentity() {
               opacity: 0.6,
             }}
           >
-            Built to scale · Built to last
+            What you cannot see, you cannot truly understand.
           </span>
         </div>
       </div>
