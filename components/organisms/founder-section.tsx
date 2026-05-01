@@ -17,7 +17,7 @@ const team = [
   },
   {
     name: "Andres Eraso",
-    role: "Co-Founder",
+    role: "Co-Founder & COO",
     photo: "/visuals/andres-photo.jpg",
     description: [
       "I am convinced that exceeding expectations is the inevitable result when creative problem solving meets structured and methodical execution.",
@@ -26,7 +26,7 @@ const team = [
   },
   {
     name: "Juan Pedraza",
-    role: "Head of Strategy",
+    role: "Board Member & Strategic Advisor",
     photo: "/visuals/juan-pedraza.jpg",
     description: [
       "For me creativity and innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
