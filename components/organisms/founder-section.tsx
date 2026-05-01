@@ -24,6 +24,14 @@ const team = [
       "Here we see improvement as an always open window of opportunity.",
     ],
   },
+  {
+    name: "Juan Pedraza",
+    role: "Head of Strategy",
+    photo: "/visuals/juan-pedraza.jpg",
+    description: [
+      "for me Creativity and Innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
+    ],
+  },
 ];
 
 export function FounderSection() {
