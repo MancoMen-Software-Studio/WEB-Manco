@@ -15,6 +15,7 @@ const HeroScene = createDynamicScene(
 export function HeroHome() {
   const containerRef = useRef<HTMLDivElement>(null);
   const eyebrowRef = useRef<HTMLDivElement>(null);
+  const productNameRef = useRef<HTMLParagraphElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -27,7 +28,8 @@ export function HeroHome() {
     const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
     tl.fromTo(eyebrowRef.current, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.3 })
-      .fromTo(titleRef.current, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 1.3 }, "-=0.3")
+      .fromTo(productNameRef.current, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.9 }, "-=0.2")
+      .fromTo(titleRef.current, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 1.3 }, "-=0.4")
       .fromTo(subtitleRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, "-=0.7")
       .fromTo(ctaRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.5")
       .fromTo(metaRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.3");
@@ -130,6 +132,22 @@ export function HeroHome() {
             Software Studio · Bogotá, Colombia
           </span>
         </div>
+
+        {/* Product name */}
+        <p
+          ref={productNameRef}
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "clamp(13px, 1.8vw, 17px)",
+            letterSpacing: "0.38em",
+            color: "rgba(0,229,255,0.55)",
+            textTransform: "uppercase",
+            marginBottom: 22,
+            opacity: 0,
+          }}
+        >
+          Nodeself
+        </p>
 
         {/* Main heading — tighter spacing, less extreme size */}
         <h1
