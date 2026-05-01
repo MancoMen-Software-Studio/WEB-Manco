@@ -7,7 +7,7 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion";
 const team = [
   {
     name: "Juan Martinez",
-    role: "Founder",
+    role: "Founder & CTO",
     photo: "/visuals/founder-photo.jpg",
     description: [
       "I believe deeply in the power of ideas and in their capacity to change lives when they become something real.",
@@ -29,7 +29,7 @@ const team = [
     role: "Head of Strategy",
     photo: "/visuals/juan-pedraza.jpg",
     description: [
-      "for me Creativity and Innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
+      "For me creativity and innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
     ],
   },
 ];
@@ -238,7 +238,10 @@ export function FounderSection() {
                       key={i}
                       style={{
                         fontSize: 17,
-                        color: "var(--color-gray-300)",
+                        fontFamily: "var(--font-display)",
+                        fontWeight: 500,
+                        letterSpacing: "-0.01em",
+                        color: "var(--color-gray-200)",
                         lineHeight: 1.7,
                         marginBottom: i === member.description.length - 1 ? 0 : 20,
                       }}
