@@ -10,7 +10,7 @@ export const companyInfo = {
     "Independent software studio. Building Nodeself — behavioral modeling for personal transformation.",
   founded: "2024",
   location: "Bogotá, Colombia",
-  teamSize: "1",
+  teamSize: "3",
   stats: [
     { label: "Pre-Seed Target", value: "$150K–300K" },
     { label: "App Store Launch", value: "2026" },

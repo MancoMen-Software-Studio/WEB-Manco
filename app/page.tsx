@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/organisms/navbar";
 import { HeroHome } from "@/components/organisms/hero-home";
 import { NodeselfVideos } from "@/components/organisms/nodeself-videos";
+import { WaitlistSection } from "@/components/organisms/waitlist-section";
 import { CompanyIntro } from "@/components/organisms/company-intro";
 import { ServicesGrid } from "@/components/organisms/services-grid";
 import { DifferentiatorsSection } from "@/components/organisms/differentiators-section";
@@ -18,6 +19,7 @@ export default function Home() {
       <main>
         <HeroHome />
         <NodeselfVideos />
+        <WaitlistSection />
         <CompanyIntro />
         <ServicesGrid />
         <DifferentiatorsSection />
