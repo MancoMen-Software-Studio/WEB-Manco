@@ -26,7 +26,7 @@ const team = [
   },
   {
     name: "Juan Pedraza",
-    role: "Executive Director & Board Member",
+    role: "Strategic Advisor",
     photo: "/visuals/juan-pedraza.jpg",
     description: [
       "For me creativity and innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
