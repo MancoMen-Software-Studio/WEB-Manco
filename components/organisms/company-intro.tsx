@@ -11,12 +11,12 @@ const problems = [
   {
     stat: "$13B",
     label: "wellness market",
-    description: "Flooded with apps that track but never model. Streaks, points, reminders — surface signals with nothing structural underneath.",
+    description: "Flooded with apps that track but never model. Streaks, points, reminders: surface signals with nothing structural underneath.",
   },
   {
     stat: "0",
     label: "behavioral graph platforms",
-    description: "No existing product maps behavior as a causal network. They count what you do — not why, or how one thing affects another.",
+    description: "No existing product maps behavior as a causal network. They count what you do, not why, or how one thing affects another.",
   },
   {
     stat: "∞",

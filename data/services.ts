@@ -6,15 +6,15 @@ export const services: Service[] = [
     title: "Behavioral Graph",
     subtitle: "A causal map of who you're becoming.",
     description:
-      "Unlike habit trackers that log streaks, Nodeself builds a personal graph of nodes and edges: habits, decisions, emotional states, and the causal connections between them. The graph is alive — it grows with every check-in and shows you patterns you couldn't see before.",
+      "Unlike habit trackers that log streaks, Nodeself builds a personal graph of nodes and edges: habits, decisions, emotional states, and the causal connections between them. The graph is alive, grows with every check-in, and shows you patterns you couldn't see before.",
     icon: "eye",
     features: [
       "Automatic node extraction from natural language entries",
       "Causal and correlative edge detection via AI analysis",
       "Real-time graph visualization powered by React Native Skia",
-      "Contradiction detection — when your behaviors conflict",
+      "Contradiction detection: when your behaviors conflict",
       "Node clustering by behavioral category",
-      "Full local storage — your graph never leaves your device",
+      "Full local storage: your graph never leaves your device",
     ],
     technologies: [
       "React Native Skia",
@@ -33,7 +33,7 @@ export const services: Service[] = [
       {
         title: "AI Analysis",
         description:
-          "The model identifies nodes (habits, states, events, decisions) and the relationships between them — causal, correlative, temporal, or contradictory.",
+          "The model identifies nodes (habits, states, events, decisions) and the relationships between them: causal, correlative, temporal, or contradictory.",
       },
       {
         title: "Graph Construction",
@@ -52,7 +52,7 @@ export const services: Service[] = [
     title: "Decay Engine",
     subtitle: "Silence is data. Time changes everything.",
     description:
-      "Most apps treat inactivity as zero data. Nodeself treats it as signal. The decay engine applies exponential decay to every node based on time elapsed since last reinforcement. The graph fades where you stop paying attention — making absence visible, not invisible.",
+      "Most apps treat inactivity as zero data. Nodeself treats it as signal. The decay engine applies exponential decay to every node based on time elapsed since last reinforcement. The graph fades where you stop paying attention, making absence visible, not invisible.",
     icon: "code",
     features: [
       "Exponential decay per node based on elapsed time",
@@ -73,7 +73,7 @@ export const services: Service[] = [
       {
         title: "Time as a Dimension",
         description:
-          "Every node has a half-life. The longer you go without reinforcing a behavior, the weaker it becomes in the graph — visually and structurally.",
+          "Every node has a half-life. The longer you go without reinforcing a behavior, the weaker it becomes in the graph, visually and structurally.",
       },
       {
         title: "Visual Fading",
@@ -88,7 +88,7 @@ export const services: Service[] = [
       {
         title: "Reinforcement Recovery",
         description:
-          "Returning to a behavior after absence produces a recovery curve — not just a reset. The system remembers the context of the gap.",
+          "Returning to a behavior after absence produces a recovery curve, not just a reset. The system remembers the context of the gap.",
       },
     ],
   },
@@ -97,12 +97,12 @@ export const services: Service[] = [
     title: "Simulator",
     subtitle: "See your future before you live it",
     description:
-      "Nodeself can project the state of your behavioral graph 30, 60, or 90 days into the future under different scenarios. Maintain this habit, drop that one, add a new one — and watch how your graph evolves. The simulator is deterministic and audited by AI.",
+      "Nodeself can project the state of your behavioral graph 30, 60, or 90 days into the future under different scenarios. Maintain this habit, drop that one, add a new one and watch how your graph evolves. The simulator is deterministic and audited by AI.",
     icon: "strategy",
     features: [
       "Deterministic forward simulation under user-defined scenarios",
       "30 / 60 / 90 day projection windows",
-      "AI audit of simulation output — narrative interpretation",
+      "AI audit of simulation output: narrative interpretation",
       "Scenario comparison: maintain vs. abandon vs. add",
       "Burnout, recovery, and transition scenario templates",
       "Export simulation snapshots for journaling and reflection",
@@ -134,7 +134,7 @@ export const services: Service[] = [
       {
         title: "Scenario Comparison",
         description:
-          "Run multiple scenarios side by side. See which path leads to the graph you want in 90 days — and what it costs to get there.",
+          "Run multiple scenarios side by side. See which path leads to the graph you want in 90 days and what it costs to get there.",
       },
     ],
   },

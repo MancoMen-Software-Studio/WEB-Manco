@@ -9,7 +9,7 @@ const differentiators = [
   {
     glyph: "≠",
     title: "Not streaks. Structure.",
-    body: "Nodeself does not count repetitions. It maps how behaviors shape one another — and what happens when one part of the system moves.",
+    body: "Nodeself does not count repetitions. It maps how behaviors shape one another and what happens when one part of the system moves.",
     accent: "var(--color-electric-light)",
   },
   {
@@ -27,7 +27,7 @@ const differentiators = [
   {
     glyph: "◎",
     title: "Built for clarity.",
-    body: "Nodeself reveals what is driving progress, resistance, relapse, or collapse — before you have to live the consequence.",
+    body: "Nodeself reveals what is driving progress, resistance, relapse, or collapse. Before you have to live the consequence.",
     accent: "var(--color-cyan)",
   },
 ];

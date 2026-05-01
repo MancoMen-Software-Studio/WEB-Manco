@@ -109,7 +109,7 @@ export function CTASection() {
                 textTransform: "uppercase",
               }}
             >
-              Now in development — App Store 2026
+              Now in development. App Store 2026
             </span>
           </div>
 
@@ -151,7 +151,7 @@ export function CTASection() {
           >
             {[
               { glyph: "◈", text: "The core engine is complete and functional" },
-              { glyph: "⬡", text: "A new category — no direct competition" },
+              { glyph: "⬡", text: "A new category. No direct competition" },
               { glyph: "⊕", text: "Local-first, privacy by design" },
               { glyph: "∿", text: "App Store launch target: 2026" },
             ].map((item) => (

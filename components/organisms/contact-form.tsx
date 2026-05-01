@@ -122,7 +122,7 @@ export function ContactForm() {
               </span>
             </h2>
             <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.7 }}>
-              Investor conversation, early access to Nodeself, or just want to connect —
+              Investor conversation, early access to Nodeself, or just want to connect.
               Juan reads every message and responds personally.
             </p>
           </div>

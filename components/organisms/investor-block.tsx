@@ -151,7 +151,7 @@ export function InvestorBlock() {
             >
               {[
                 { glyph: "◈", text: "Core engine complete and functional" },
-                { glyph: "⬡", text: "New category — no direct competition" },
+                { glyph: "⬡", text: "New category. No direct competition" },
                 { glyph: "⊕", text: "Local-first, privacy by design" },
                 { glyph: "∿", text: "App Store launch target: 2026" },
                 { glyph: "▷", text: "Pre-seed: $150K–$300K" },

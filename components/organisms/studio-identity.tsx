@@ -8,13 +8,13 @@ const principles = [
   {
     glyph: "⬡",
     label: "Architecture first",
-    body: "We don't prototype to validate ideas. We build the real thing from day one — correct data models, deterministic algorithms, production-grade structure.",
+    body: "We don't prototype to validate ideas. We build the real thing from day one: correct data models, deterministic algorithms, production-grade structure.",
     accent: "var(--color-electric-light)",
   },
   {
     glyph: "◈",
     label: "Model the invisible",
-    body: "The most valuable software doesn't manage tasks or track streaks — it reveals structure that exists but cannot be seen with the naked eye.",
+    body: "The most valuable software doesn't manage tasks or track streaks. It reveals structure that exists but cannot be seen with the naked eye.",
     accent: "var(--color-cyan)",
   },
   {
@@ -26,7 +26,7 @@ const principles = [
   {
     glyph: "⊕",
     label: "Privacy is a design decision",
-    body: "Behavioral data is the most sensitive data that exists. Local-first, no persistent cloud storage of personal text. Not a feature — a commitment.",
+    body: "Behavioral data is the most sensitive data that exists. Local-first, no persistent cloud storage of personal text. Not a feature. A commitment.",
     accent: "var(--color-cyan)",
   },
 ];

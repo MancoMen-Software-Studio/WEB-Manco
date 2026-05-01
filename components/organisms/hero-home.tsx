@@ -192,7 +192,7 @@ export function HeroHome() {
         >
           Nodeself turns habits, emotions, and decisions into a{" "}
           <span style={{ color: "var(--color-white)" }}>living graph</span>
-          {" "}— so you can see what is shaping your behavior and what changes when one part of the system moves.
+          {" "}so you can see what is shaping your behavior and what changes when one part of the system moves.
         </p>
 
         {/* CTAs */}
