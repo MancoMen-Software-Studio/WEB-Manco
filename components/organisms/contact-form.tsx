@@ -10,10 +10,12 @@ import { FormField } from "@/components/molecules/form-field";
 import { Button } from "@/components/atoms/button";
 import { CONTACT } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
 export function ContactForm() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
@@ -90,6 +92,8 @@ export function ContactForm() {
     }
   };
 
+  const cf = t.contactForm;
+
   return (
     <section className="section-spacing" style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div
@@ -109,7 +113,7 @@ export function ContactForm() {
                 color: "white",
               }}
             >
-              Let&apos;s talk about{" "}
+              {cf.title}{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, var(--color-electric-light), var(--color-cyan))",
@@ -118,12 +122,11 @@ export function ContactForm() {
                   backgroundClip: "text",
                 }}
               >
-                what you&apos;re building.
+                {cf.titleAccent}
               </span>
             </h2>
             <p style={{ fontSize: 15, color: "var(--color-gray-500)", lineHeight: 1.7 }}>
-              Investor conversation, early access to Nodeself, or just want to connect.
-              Juan reads every message and responds personally.
+              {cf.body}
             </p>
           </div>
 
@@ -193,10 +196,8 @@ export function ContactForm() {
               >
                 <Icon name="mail" size={32} className="text-electric" />
               </div>
-              <Heading as="h3">Message sent</Heading>
-              <Text>
-                Thank you for reaching out. We&apos;ll be in touch within 24 hours.
-              </Text>
+              <Heading as="h3">{cf.successTitle}</Heading>
+              <Text>{cf.successBody}</Text>
             </div>
           ) : (
             <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -215,41 +216,41 @@ export function ContactForm() {
                 </div>
               )}
               <FormField
-                label="Name"
+                label={cf.fields.name}
                 name="name"
-                placeholder="Your full name"
+                placeholder={cf.fields.namePlaceholder}
                 value={formData.name}
                 onChange={updateField("name")}
                 error={errors.name}
               />
               <FormField
-                label="Email"
+                label={cf.fields.email}
                 name="email"
                 type="email"
-                placeholder="you@company.com"
+                placeholder={cf.fields.emailPlaceholder}
                 value={formData.email}
                 onChange={updateField("email")}
                 error={errors.email}
               />
               <FormField
-                label="Company"
+                label={cf.fields.company}
                 name="company"
-                placeholder="Your company name"
+                placeholder={cf.fields.companyPlaceholder}
                 value={formData.company}
                 onChange={updateField("company")}
                 error={errors.company}
               />
               <FormField
-                label="Message"
+                label={cf.fields.message}
                 name="message"
                 type="textarea"
-                placeholder="Tell us about your project, timeline, and budget..."
+                placeholder={cf.fields.messagePlaceholder}
                 value={formData.message}
                 onChange={updateField("message")}
                 error={errors.message}
               />
               <Button type="submit" fullWidth disabled={sending}>
-                {sending ? "Sending..." : "Send Message"}
+                {sending ? cf.submitting : cf.submit}
               </Button>
             </form>
           )}

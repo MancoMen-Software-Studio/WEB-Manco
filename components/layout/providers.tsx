@@ -2,9 +2,11 @@
 
 import { SmoothScroll } from "./smooth-scroll";
 import { NodeNetwork } from "@/components/canvas/node-network";
+import { LanguageProvider } from "@/context/language-context";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
+    <LanguageProvider>
     <SmoothScroll>
       {/* Global interactive graph background */}
       <NodeNetwork nodeCount={90} />
@@ -18,5 +20,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
         {children}
       </div>
     </SmoothScroll>
+    </LanguageProvider>
   );
 }

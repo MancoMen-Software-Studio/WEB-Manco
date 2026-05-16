@@ -5,11 +5,13 @@ import { gsap, useGSAP } from "@/lib/gsap-config";
 import { Button } from "@/components/atoms/button";
 import { ROUTES, CONTACT } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
 export function InvestorBlock() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !contentRef.current) return;
@@ -31,6 +33,8 @@ export function InvestorBlock() {
       }
     );
   }, { scope: sectionRef });
+
+  const ib = t.investorBlock;
 
   return (
     <section
@@ -90,7 +94,7 @@ export function InvestorBlock() {
                   textTransform: "uppercase",
                 }}
               >
-                For Investors
+                {ib.label}
               </span>
             </div>
             <h2
@@ -105,7 +109,7 @@ export function InvestorBlock() {
                 marginBottom: 20,
               }}
             >
-              Building a new category.{" "}
+              {ib.title}{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -114,17 +118,14 @@ export function InvestorBlock() {
                   backgroundClip: "text",
                 }}
               >
-                The product is already working.
+                {ib.titleAccent}
               </span>
             </h2>
             <p style={{ fontSize: 17, color: "var(--color-gray-300)", lineHeight: 1.75, maxWidth: 600 }}>
-              Nodeself is building a new category around behavioral modeling. The thesis is differentiated,
-              the engine is complete, and the next phase is focused on launch, paid user validation,
-              and long-term category positioning.
+              {ib.body1}
             </p>
             <p style={{ fontSize: 16, color: "var(--color-gray-400)", lineHeight: 1.7, maxWidth: 600, marginTop: 16 }}>
-              MancoMen is building original software systems around behavior, structure, and human experience.
-              Nodeself is the first flagship product in that direction.
+              {ib.body2}
             </p>
           </div>
 
@@ -149,13 +150,7 @@ export function InvestorBlock() {
                 gap: 14,
               }}
             >
-              {[
-                { glyph: "◈", text: "Core engine complete and functional" },
-                { glyph: "⬡", text: "New category. No direct competition" },
-                { glyph: "⊕", text: "Local-first, privacy by design" },
-                { glyph: "∿", text: "App Store launch target: 2026" },
-                { glyph: "▷", text: "Pre-seed: $150K–$300K" },
-              ].map((item) => (
+              {ib.points.map((item) => (
                 <div key={item.text} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                   <span style={{ color: "var(--color-electric-light)", fontSize: 13, flexShrink: 0, paddingTop: 1 }}>
                     {item.glyph}
@@ -185,18 +180,18 @@ export function InvestorBlock() {
                   className="font-display"
                   style={{ fontSize: 20, fontWeight: 700, color: "white", marginBottom: 8, letterSpacing: "-0.01em" }}
                 >
-                  Interested in the opportunity?
+                  {ib.ctaTitle}
                 </p>
                 <p style={{ fontSize: 15, color: "var(--color-gray-300)", lineHeight: 1.6 }}>
-                  Schedule a conversation or request the deck. We respond within 24 hours.
+                  {ib.ctaBody}
                 </p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <Button href={`${ROUTES.contact}?intent=investor-deck`} size="large">
-                  Request the deck
+                  {ib.ctaDeck}
                 </Button>
                 <Button href={`${ROUTES.contact}?intent=investor-conversation`} variant="secondary">
-                  Schedule a conversation
+                  {ib.ctaConversation}
                 </Button>
               </div>
               <p style={{ fontSize: 11, color: "#404040", fontFamily: "var(--font-mono)" }}>

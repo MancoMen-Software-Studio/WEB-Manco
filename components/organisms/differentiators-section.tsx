@@ -4,39 +4,14 @@ import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { SectionHeader } from "@/components/molecules/section-header";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-
-const differentiators = [
-  {
-    glyph: "≠",
-    title: "Not streaks. Structure.",
-    body: "Nodeself does not count repetitions. It maps how behaviors shape one another and what happens when one part of the system moves.",
-    accent: "var(--color-electric-light)",
-  },
-  {
-    glyph: "∅",
-    title: "Silence is data.",
-    body: "When something stops being reinforced, the graph changes. What fades matters as much as what grows.",
-    accent: "var(--color-cyan)",
-  },
-  {
-    glyph: "⊞",
-    title: "A system, not a feed.",
-    body: "This is not content, motivation, or noise. It is a model of how your change actually behaves over time.",
-    accent: "var(--color-electric-light)",
-  },
-  {
-    glyph: "◎",
-    title: "Built for clarity.",
-    body: "Nodeself reveals what is driving progress, resistance, relapse, or collapse. Before you have to live the consequence.",
-    accent: "var(--color-cyan)",
-  },
-];
+import { useLanguage } from "@/context/language-context";
 
 export function DifferentiatorsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !sectionRef.current) return;
@@ -75,6 +50,8 @@ export function DifferentiatorsSection() {
     );
   }, { scope: sectionRef });
 
+  const d = t.differentiators;
+
   return (
     <section
       ref={sectionRef}
@@ -96,9 +73,9 @@ export function DifferentiatorsSection() {
 
         <div ref={titleRef} style={{ textAlign: "center", marginBottom: 72, opacity: 0 }}>
           <SectionHeader
-            badge="Why it feels different"
-            title="Why it feels different"
-            description="Most behavioral tools count what you do. Nodeself models how everything connects."
+            badge={d.badge}
+            title={d.title}
+            description={d.description}
             align="center"
           />
         </div>
@@ -113,9 +90,9 @@ export function DifferentiatorsSection() {
             border: "1px solid rgba(30,30,56,0.8)",
           }}
         >
-          {differentiators.map((d) => (
+          {d.items.map((item) => (
             <div
-              key={d.title}
+              key={item.title}
               style={{
                 padding: "44px 40px",
                 background: "var(--color-black-rich)",
@@ -138,8 +115,8 @@ export function DifferentiatorsSection() {
                   style={{
                     fontSize: 26,
                     lineHeight: 1,
-                    color: d.accent,
-                    filter: `drop-shadow(0 0 12px ${d.accent})`,
+                    color: item.accent,
+                    filter: `drop-shadow(0 0 12px ${item.accent})`,
                     fontFamily: "monospace",
                     flexShrink: 0,
                     marginTop: 2,
@@ -147,7 +124,7 @@ export function DifferentiatorsSection() {
                     textAlign: "center",
                   }}
                 >
-                  {d.glyph}
+                  {item.glyph}
                 </span>
                 <h3
                   className="font-display"
@@ -159,11 +136,11 @@ export function DifferentiatorsSection() {
                     lineHeight: 1.2,
                   }}
                 >
-                  {d.title}
+                  {item.title}
                 </h3>
               </div>
               <p style={{ fontSize: 16, color: "var(--color-gray-300)", lineHeight: 1.75, maxWidth: 440 }}>
-                {d.body}
+                {item.body}
               </p>
               <div
                 style={{
@@ -172,7 +149,7 @@ export function DifferentiatorsSection() {
                   left: 0,
                   right: 0,
                   height: 1,
-                  background: `linear-gradient(90deg, ${d.accent}40, transparent)`,
+                  background: `linear-gradient(90deg, ${item.accent}40, transparent)`,
                   opacity: 0.5,
                 }}
               />

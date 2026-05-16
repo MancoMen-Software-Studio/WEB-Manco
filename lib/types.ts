@@ -1,6 +1,7 @@
 export interface NavItem {
   label: string;
   href: string;
+  key: "nodeself" | "studio" | "contact";
 }
 
 export interface Service {

@@ -3,17 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-
-const transmissions = [
-  { id: "T-001", text: "Behavioral change is not linear. It is a network." },
-  { id: "T-002", text: "Silence is data. The absence of a signal is a signal." },
-  { id: "T-003", text: "Every habit has a half-life. We measure it." },
-  { id: "T-004", text: "The user does not fail. The model fails the user." },
-  { id: "T-005", text: "Causality, not correlation. Structure, not streaks." },
-  { id: "T-006", text: "The graph knows what you forgot to track." },
-  { id: "T-007", text: "Privacy is not a feature. It is the architecture." },
-  { id: "T-008", text: "Nodeself simulates futures before you live them." },
-];
+import { useLanguage } from "@/context/language-context";
 
 function TypewriterText({ text, speed = 30 }: { text: string; speed?: number }) {
   const [displayed, setDisplayed] = useState("");
@@ -52,6 +42,9 @@ export function TechShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visible, setVisible] = useState(false);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
+
+  const transmissions = t.techShowcase.transmissions;
 
   useGSAP(() => {
     if (reducedMotion || !sectionRef.current) return;
@@ -79,7 +72,12 @@ export function TechShowcase() {
       setActiveIndex(i => (i + 1) % transmissions.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [visible]);
+  }, [visible, transmissions.length]);
+
+  // Reset index when language changes
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [transmissions]);
 
   const active = transmissions[activeIndex];
 
@@ -165,9 +163,9 @@ export function TechShowcase() {
           >
             {/* Log lines (previous) */}
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {transmissions.slice(Math.max(0, activeIndex - 2), activeIndex).map((t) => (
+              {transmissions.slice(Math.max(0, activeIndex - 2), activeIndex).map((tx) => (
                 <div
-                  key={t.id}
+                  key={tx.id}
                   style={{
                     display: "flex",
                     gap: 16,
@@ -176,10 +174,10 @@ export function TechShowcase() {
                   }}
                 >
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--color-electric)", flexShrink: 0 }}>
-                    {t.id}
+                    {tx.id}
                   </span>
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--color-gray-500)" }}>
-                    {t.text}
+                    {tx.text}
                   </span>
                 </div>
               ))}
@@ -219,7 +217,7 @@ export function TechShowcase() {
                   letterSpacing: "-0.01em",
                 }}
               >
-                {visible ? <TypewriterText key={activeIndex} text={active.text} speed={28} /> : active.text}
+                {visible ? <TypewriterText key={`${activeIndex}-${active.text}`} text={active.text} speed={28} /> : active.text}
               </p>
             </div>
 

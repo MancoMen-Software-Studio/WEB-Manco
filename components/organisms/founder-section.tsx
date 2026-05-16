@@ -3,35 +3,12 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
-const team = [
-  {
-    name: "Juan Martinez",
-    role: "Founder & CTO",
-    photo: "/visuals/founder-photo.jpg",
-    description: [
-      "I believe deeply in the power of ideas and in their capacity to change lives when they become something real.",
-      "I see technology as a tool for shaping profound ideas, building worlds with identity, and transforming the way we understand our own experience.",
-      "MancoMen Studio is the space where that vision takes form. Nodeself is today its clearest and most ambitious manifestation, what I want to build and leave in the world.",
-    ],
-  },
-  {
-    name: "Andres Eraso",
-    role: "Co-Founder & Creative Director",
-    photo: "/visuals/andres-photo.jpg",
-    description: [
-      "I am convinced that exceeding expectations is the inevitable result when creative problem solving meets structured and methodical execution.",
-      "Here we see improvement as an always open window of opportunity.",
-    ],
-  },
-  {
-    name: "Juan Pedraza",
-    role: "Strategic Advisor",
-    photo: "/visuals/juan-pedraza.jpg",
-    description: [
-      "For me creativity and innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
-    ],
-  },
+const photos = [
+  "/visuals/founder-photo.jpg",
+  "/visuals/andres-photo.jpg",
+  "/visuals/juan-pedraza.jpg",
 ];
 
 export function FounderSection() {
@@ -39,6 +16,7 @@ export function FounderSection() {
   const headerRef = useRef<HTMLDivElement>(null);
   const teamRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !sectionRef.current) return;
@@ -77,6 +55,8 @@ export function FounderSection() {
     );
   }, { scope: sectionRef });
 
+  const fs = t.founderSection;
+
   return (
     <section
       ref={sectionRef}
@@ -105,11 +85,11 @@ export function FounderSection() {
           pointerEvents: "none",
         }}
       >
-        CONVICTION
+        {fs.backgroundWord}
       </div>
 
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
-        
+
         {/* Shared Section Header */}
         <div ref={headerRef} style={{ marginBottom: 60, maxWidth: 800, opacity: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
@@ -142,7 +122,7 @@ export function FounderSection() {
               color: "white",
             }}
           >
-            Founded from conviction,{" "}
+            {fs.title}{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -151,14 +131,14 @@ export function FounderSection() {
                 backgroundClip: "text",
               }}
             >
-              built from scratch.
+              {fs.titleAccent}
             </span>
           </h2>
         </div>
 
         {/* Team Grid */}
         <div ref={teamRef} style={{ display: "flex", flexDirection: "column", gap: 80 }}>
-          {team.map((member, idx) => (
+          {fs.team.map((member, idx) => (
             <div
               key={member.name}
               className={`team-member ${idx % 2 === 0 ? "even" : "odd"}`}
@@ -166,8 +146,9 @@ export function FounderSection() {
             >
               {/* Photo Box */}
               <div className="member-photo-box">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={member.photo}
+                  src={photos[idx]}
                   alt={member.name}
                   style={{
                     width: "100%",
@@ -204,9 +185,9 @@ export function FounderSection() {
                 </div>
               </div>
 
-              {/* Description Box with Gato/Logo effect background */}
+              {/* Description Box */}
               <div className="member-description-box">
-                {/* Logo Effect 1: Scanning line */}
+                {/* Scanning line */}
                 <div
                   style={{
                     position: "absolute",
@@ -218,7 +199,7 @@ export function FounderSection() {
                   }}
                 />
 
-                {/* Logo Effect 2: Pulse ring */}
+                {/* Pulse ring */}
                 <div
                   style={{
                     position: "absolute",
@@ -251,7 +232,7 @@ export function FounderSection() {
                   ))}
                 </div>
 
-                {/* Stylized name decoration */}
+                {/* Name decoration */}
                 <div
                   style={{
                     position: "absolute",

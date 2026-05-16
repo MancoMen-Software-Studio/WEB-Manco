@@ -3,39 +3,14 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-
-const principles = [
-  {
-    glyph: "⬡",
-    label: "Architecture first",
-    body: "We don't prototype to validate ideas. We build the real thing from day one: correct data models, deterministic algorithms, production-grade structure.",
-    accent: "var(--color-electric-light)",
-  },
-  {
-    glyph: "◈",
-    label: "Model the invisible",
-    body: "The most valuable software doesn't manage tasks or track streaks. It reveals structure that exists but cannot be seen with the naked eye.",
-    accent: "var(--color-cyan)",
-  },
-  {
-    glyph: "∿",
-    label: "Behavior has physics",
-    body: "Habits decay. Patterns compound. Contradictions create instability. We build software that respects the laws of behavioral dynamics.",
-    accent: "var(--color-electric-light)",
-  },
-  {
-    glyph: "⊕",
-    label: "Privacy is a design decision",
-    body: "Behavioral data is the most sensitive data that exists. Local-first, no persistent cloud storage of personal text. Not a feature. A commitment.",
-    accent: "var(--color-cyan)",
-  },
-];
+import { useLanguage } from "@/context/language-context";
 
 export function StudioIdentity() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !sectionRef.current) return;
@@ -73,6 +48,8 @@ export function StudioIdentity() {
       }
     );
   }, { scope: sectionRef });
+
+  const si = t.studioIdentity;
 
   return (
     <section
@@ -125,7 +102,7 @@ export function StudioIdentity() {
                 letterSpacing: "0.1em",
               }}
             >
-              PRODUCT PHILOSOPHY
+              {si.label}
             </span>
           </div>
 
@@ -140,7 +117,7 @@ export function StudioIdentity() {
               color: "white",
             }}
           >
-            A different philosophy{" "}
+            {si.title}{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -149,12 +126,11 @@ export function StudioIdentity() {
                 backgroundClip: "text",
               }}
             >
-              of self-understanding.
+              {si.titleAccent}
             </span>
           </h2>
           <p style={{ fontSize: 17, color: "var(--color-gray-300)", lineHeight: 1.75, maxWidth: 600, marginTop: 16 }}>
-            Nodeself is built on a simple belief: personal change becomes clearer when it can be seen as structure.
-            Not as guilt. Not as pressure. Not as isolated habits. Structure creates a different kind of honesty.
+            {si.body}
           </p>
         </div>
 
@@ -169,7 +145,7 @@ export function StudioIdentity() {
             border: "1px solid rgba(30,30,56,0.8)",
           }}
         >
-          {principles.map((p) => (
+          {si.principles.map((p) => (
             <div
               key={p.label}
               style={{
@@ -221,7 +197,7 @@ export function StudioIdentity() {
                 {p.body}
               </p>
 
-              {/* Bottom accent line on hover */}
+              {/* Bottom accent line */}
               <div
                 style={{
                   position: "absolute",
@@ -258,7 +234,7 @@ export function StudioIdentity() {
                 textAlign: "center",
               }}
             >
-              BOGOTÁ, COLOMBIA · FOUNDED 2024 · PRE-SEED 2026
+              {si.tagline}
             </span>
             <div style={{ height: 1, width: 40, background: "var(--color-gray-800)" }} />
           </div>
@@ -272,7 +248,7 @@ export function StudioIdentity() {
               opacity: 0.6,
             }}
           >
-            What you cannot see, you cannot truly understand.
+            {si.quote}
           </span>
         </div>
       </div>

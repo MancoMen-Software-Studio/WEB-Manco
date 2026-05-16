@@ -6,30 +6,14 @@ import { Heading } from "@/components/atoms/heading";
 import { Text } from "@/components/atoms/text";
 import { Badge } from "@/components/atoms/badge";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-
-const problems = [
-  {
-    stat: "$13B",
-    label: "wellness market",
-    description: "Flooded with apps that track but never model. Streaks, points, reminders: surface signals with nothing structural underneath.",
-  },
-  {
-    stat: "0",
-    label: "behavioral graph platforms",
-    description: "No existing product maps behavior as a causal network. They count what you do, not why, or how one thing affects another.",
-  },
-  {
-    stat: "∞",
-    label: "failed habits",
-    description: "Not from lack of motivation. From lack of visibility. If you cannot see the structure, you keep treating the symptoms.",
-  },
-];
+import { useLanguage } from "@/context/language-context";
 
 export function CompanyIntro() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !sectionRef.current) return;
@@ -68,6 +52,8 @@ export function CompanyIntro() {
     );
   }, { scope: sectionRef });
 
+  const ci = t.companyIntro;
+
   return (
     <section ref={sectionRef} className="section-spacing" style={{ paddingTop: 120, paddingBottom: 120 }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -75,15 +61,13 @@ export function CompanyIntro() {
 
           {/* Left: The problem statement */}
           <div ref={leftRef} style={{ display: "flex", flexDirection: "column", gap: 28, opacity: 0 }}>
-            <Badge>The Problem</Badge>
+            <Badge>{ci.badge}</Badge>
             <Heading as="h2">
-              Most tools{" "}
-              <span className="text-electric">measure the surface</span>
+              {ci.title}{" "}
+              <span className="text-electric">{ci.titleAccent}</span>
             </Heading>
             <Text style={{ maxWidth: 520, fontSize: 18, color: "var(--color-gray-200)" }}>
-              People try to change through reminders, streaks, and isolated habit tracking.
-              But behavior does not move in straight lines. It behaves like a system of
-              influences, tensions, reinforcement, and decay.
+              {ci.body}
             </Text>
             <blockquote
               style={{
@@ -96,13 +80,13 @@ export function CompanyIntro() {
                 lineHeight: 1.7,
               }}
             >
-              &ldquo;If you cannot see the structure, you keep treating the symptoms.&rdquo;
+              {ci.quote}
             </blockquote>
           </div>
 
           {/* Right: Problem stats */}
           <div ref={rightRef} style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-            {problems.map((p) => (
+            {ci.problems.map((p) => (
               <div
                 key={p.label}
                 style={{

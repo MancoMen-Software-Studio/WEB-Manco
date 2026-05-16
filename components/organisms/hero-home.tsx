@@ -7,6 +7,7 @@ import { Button } from "@/components/atoms/button";
 import { ScrollIndicator } from "@/components/molecules/scroll-indicator";
 import { ROUTES } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
 const HeroScene = createDynamicScene(
   () => import("@/components/canvas/hero-scene")
@@ -21,6 +22,7 @@ export function HeroHome() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const metaRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !containerRef.current) return;
@@ -45,7 +47,7 @@ export function HeroHome() {
         justifyContent: "center",
         minHeight: "100vh",
         overflow: "hidden",
-        paddingTop: 80, // clear fixed navbar
+        paddingTop: 80,
       }}
     >
       {/* 3D scene */}
@@ -129,7 +131,7 @@ export function HeroHome() {
               letterSpacing: "0.06em",
             }}
           >
-            Software Studio · Bogotá, Colombia
+            {t.hero.badge}
           </span>
         </div>
 
@@ -149,7 +151,7 @@ export function HeroHome() {
           Nodeself
         </p>
 
-        {/* Main heading — tighter spacing, less extreme size */}
+        {/* Main heading */}
         <h1
           ref={titleRef}
           className="font-display"
@@ -162,7 +164,7 @@ export function HeroHome() {
             color: "white",
           }}
         >
-          Not a tracker.
+          {t.hero.title1}
           <br />
           <span
             style={{
@@ -174,7 +176,7 @@ export function HeroHome() {
               animation: "shimmer 5s linear infinite",
             }}
           >
-            A behavioral mirror.
+            {t.hero.title2}
           </span>
         </h1>
 
@@ -190,9 +192,9 @@ export function HeroHome() {
             opacity: 0,
           }}
         >
-          Nodeself turns habits, emotions, and decisions into a{" "}
-          <span style={{ color: "var(--color-white)" }}>living graph</span>
-          {" "}so you can see what is shaping your behavior and what changes when one part of the system moves.
+          {t.hero.subtitle}{" "}
+          <span style={{ color: "var(--color-white)" }}>{t.hero.subtitleBold}</span>
+          {" "}{t.hero.subtitleEnd}
         </p>
 
         {/* CTAs */}
@@ -209,10 +211,10 @@ export function HeroHome() {
           }}
         >
           <Button href={ROUTES.projects} size="large">
-            See how it works
+            {t.hero.cta1}
           </Button>
           <Button href={ROUTES.contact} variant="secondary" size="large">
-            Get early access
+            {t.hero.cta2}
           </Button>
         </div>
 
@@ -228,10 +230,10 @@ export function HeroHome() {
             opacity: 0,
           }}
         >
-          A new way to understand personal change through structure, not streaks.
+          {t.hero.meta}
         </p>
       </div>
-    
+
 
       <div style={{ position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)", zIndex: 10 }}>
         <ScrollIndicator />

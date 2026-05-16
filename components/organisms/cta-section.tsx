@@ -7,11 +7,13 @@ import { Text } from "@/components/atoms/text";
 import { Button } from "@/components/atoms/button";
 import { ROUTES, CONTACT } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
 export function CTASection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !contentRef.current) return;
@@ -33,6 +35,8 @@ export function CTASection() {
       }
     );
   }, { scope: sectionRef });
+
+  const cta = t.cta;
 
   return (
     <section
@@ -109,13 +113,13 @@ export function CTASection() {
                 textTransform: "uppercase",
               }}
             >
-              Now in development. App Store 2026
+              {cta.label}
             </span>
           </div>
 
           <div className="opacity-0" style={{ marginBottom: 24 }}>
             <Heading as="h2" display>
-              See yourself{" "}
+              {cta.title}{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-cyan) 100%)",
@@ -124,14 +128,13 @@ export function CTASection() {
                   backgroundClip: "text",
                 }}
               >
-                with more clarity.
+                {cta.titleAccent}
               </span>
             </Heading>
           </div>
 
           <Text className="opacity-0" style={{ maxWidth: 580, marginBottom: 48 }}>
-            Nodeself helps turn scattered experiences into visible structure,
-            so change becomes something you can understand, not just chase.
+            {cta.body}
           </Text>
 
           <div
@@ -149,12 +152,7 @@ export function CTASection() {
               background: "rgba(139,92,246,0.04)",
             }}
           >
-            {[
-              { glyph: "◈", text: "The core engine is complete and functional" },
-              { glyph: "⬡", text: "A new category. No direct competition" },
-              { glyph: "⊕", text: "Local-first, privacy by design" },
-              { glyph: "∿", text: "App Store launch target: 2026" },
-            ].map((item) => (
+            {cta.points.map((item) => (
               <div key={item.text} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                 <span style={{ color: "var(--color-electric-light)", fontSize: 14, flexShrink: 0, paddingTop: 1 }}>
                   {item.glyph}
@@ -168,10 +166,10 @@ export function CTASection() {
 
           <div className="opacity-0" style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
             <Button href={ROUTES.contact} size="large">
-              Get early access
+              {cta.cta1}
             </Button>
             <Button href={ROUTES.projects} variant="secondary" size="large">
-              See how it works
+              {cta.cta2}
             </Button>
           </div>
 

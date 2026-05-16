@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -10,6 +11,7 @@ export function WaitlistSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -59,10 +61,12 @@ export function WaitlistSection() {
 
       setStatus("success");
     } catch {
-      setErrorMsg("Network error. Please try again.");
+      setErrorMsg(t.waitlist.networkError);
       setStatus("error");
     }
   }
+
+  const w = t.waitlist;
 
   return (
     <section
@@ -148,7 +152,7 @@ export function WaitlistSection() {
                 textTransform: "uppercase",
               }}
             >
-              Early Access
+              {w.tag}
             </span>
           </div>
 
@@ -165,7 +169,7 @@ export function WaitlistSection() {
               opacity: 0,
             }}
           >
-            Be among the{" "}
+            {w.heading}{" "}
             <span
               style={{
                 background:
@@ -175,7 +179,7 @@ export function WaitlistSection() {
                 backgroundClip: "text",
               }}
             >
-              first to use it.
+              {w.headingAccent}
             </span>
           </h2>
 
@@ -190,8 +194,7 @@ export function WaitlistSection() {
               opacity: 0,
             }}
           >
-            Nodeself launches on iOS and Android in 2026. Join the waitlist for early
-            access, first-month pricing, and updates on the engine as it ships.
+            {w.subtitle}
           </p>
 
           {/* Form */}
@@ -234,7 +237,7 @@ export function WaitlistSection() {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  You're on the list.
+                  {w.successTitle}
                 </p>
                 <p
                   style={{
@@ -244,7 +247,7 @@ export function WaitlistSection() {
                     lineHeight: 1.5,
                   }}
                 >
-                  We'll reach out when early access opens.
+                  {w.successBody}
                 </p>
               </div>
             ) : (
@@ -264,7 +267,7 @@ export function WaitlistSection() {
                       setEmail(e.target.value);
                       if (status === "error") setStatus("idle");
                     }}
-                    placeholder="your@email.com"
+                    placeholder={w.placeholder}
                     required
                     disabled={status === "loading"}
                     style={{
@@ -324,7 +327,7 @@ export function WaitlistSection() {
                       e.currentTarget.style.borderColor = "rgba(139,92,246,0.35)";
                     }}
                   >
-                    {status === "loading" ? "Joining…" : "Join waitlist"}
+                    {status === "loading" ? w.buttonLoading : w.button}
                   </button>
                 </div>
 
@@ -356,7 +359,7 @@ export function WaitlistSection() {
               opacity: 0,
             }}
           >
-            No spam. One email when it's ready.
+            {w.micro}
           </p>
         </div>
       </div>

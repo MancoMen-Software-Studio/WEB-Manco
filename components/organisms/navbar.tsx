@@ -9,10 +9,59 @@ import { navigationItems } from "@/data/navigation";
 import { NavLink } from "@/components/molecules/nav-link";
 import { Button } from "@/components/atoms/button";
 import { getLenisInstance } from "@/lib/lenis";
+import { useLanguage } from "@/context/language-context";
+import type { Language } from "@/lib/translations";
+
+function LangToggle({ compact }: { compact?: boolean }) {
+  const { lang, setLang } = useLanguage();
+  const langs: Language[] = ["en", "es"];
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: compact ? 6 : 4,
+        fontFamily: "var(--font-mono)",
+        fontSize: compact ? 12 : 11,
+        letterSpacing: "0.12em",
+      }}
+    >
+      {langs.map((l, i) => (
+        <span key={l} style={{ display: "flex", alignItems: "center", gap: compact ? 6 : 4 }}>
+          <button
+            onClick={() => setLang(l)}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: compact ? "2px 0" : 0,
+              color:
+                lang === l
+                  ? "var(--color-electric-light)"
+                  : "rgba(163,163,163,0.35)",
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              letterSpacing: "inherit",
+              transition: "color 0.25s",
+              lineHeight: 1,
+            }}
+          >
+            {l.toUpperCase()}
+          </button>
+          {i < langs.length - 1 && (
+            <span style={{ color: "rgba(139,92,246,0.3)", lineHeight: 1 }}>·</span>
+          )}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handler = () => setIsScrolled(window.scrollY > 50);
@@ -163,11 +212,12 @@ export function Navbar() {
           <div className="hidden md:flex" style={{ alignItems: "center", gap: 40 }}>
             {navigationItems.map((item) => (
               <NavLink key={item.href} href={item.href}>
-                {item.label}
+                {t.nav[item.key]}
               </NavLink>
             ))}
+            <LangToggle />
             <Button href={ROUTES.contact} magnetic>
-              Build with us
+              {t.nav.buildWithUs}
             </Button>
           </div>
 
@@ -312,7 +362,7 @@ export function Navbar() {
                         lineHeight: 1,
                       }}
                     >
-                      {item.label}
+                      {t.nav[item.key]}
                     </span>
                     <span
                       style={{
@@ -342,8 +392,11 @@ export function Navbar() {
               }}
             >
               <Button href={ROUTES.contact} onClick={closeMenu} size="large" fullWidth>
-                Build with us
+                {t.nav.buildWithUs}
               </Button>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16 }}>
+                <LangToggle compact />
+              </div>
               <p
                 style={{
                   fontSize: 11,
@@ -353,7 +406,7 @@ export function Navbar() {
                   letterSpacing: "0.1em",
                 }}
               >
-                MANCOMEN SOFTWARE STUDIO · PRE-SEED 2026
+                {t.nav.preseed}
               </p>
             </motion.div>
           </motion.div>

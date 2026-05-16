@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { Badge } from "@/components/atoms/badge";
-import { companyValues } from "@/data/company";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useLanguage } from "@/context/language-context";
 
 const glyphs = ["◈", "⬡", "⊕", "∿"];
 const accents = [
@@ -18,6 +18,7 @@ export function ValuesSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !cardsRef.current) return;
@@ -40,11 +41,13 @@ export function ValuesSection() {
     );
   }, { scope: sectionRef });
 
+  const vs = t.valuesSection;
+
   return (
     <section ref={sectionRef} style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", marginBottom: 64 }}>
-          <Badge>Principles</Badge>
+          <Badge>{vs.badge}</Badge>
           <h2
             className="font-display"
             style={{
@@ -55,7 +58,7 @@ export function ValuesSection() {
               color: "white",
             }}
           >
-            What we believe
+            {vs.title}
           </h2>
         </div>
 
@@ -69,7 +72,7 @@ export function ValuesSection() {
             border: "1px solid rgba(30,30,56,0.6)",
           }}
         >
-          {companyValues.map((value, i) => (
+          {vs.values.map((value, i) => (
             <div
               key={value.title}
               style={{
