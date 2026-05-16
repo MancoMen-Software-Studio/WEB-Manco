@@ -74,7 +74,7 @@ export function ValuesSection() {
         >
           {vs.values.map((value, i) => (
             <div
-              key={value.title}
+              key={i}
               style={{
                 padding: "40px 36px",
                 background: "var(--color-black-rich)",

@@ -147,7 +147,7 @@ export function StudioIdentity() {
         >
           {si.principles.map((p) => (
             <div
-              key={p.label}
+              key={p.glyph}
               style={{
                 padding: "44px 40px",
                 background: "var(--color-black-rich)",

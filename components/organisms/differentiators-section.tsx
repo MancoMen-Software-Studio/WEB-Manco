@@ -92,7 +92,7 @@ export function DifferentiatorsSection() {
         >
           {d.items.map((item) => (
             <div
-              key={item.title}
+              key={item.glyph}
               style={{
                 padding: "44px 40px",
                 background: "var(--color-black-rich)",

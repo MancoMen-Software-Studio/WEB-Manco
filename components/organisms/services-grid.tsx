@@ -59,7 +59,7 @@ export function ServicesGrid() {
         >
           {sg.steps.map((step) => (
             <div
-              key={step.title}
+              key={step.number}
               style={{
                 padding: "44px 40px",
                 background: "#08080f",

@@ -9,15 +9,15 @@ export const translations = {
     },
     hero: {
       badge: "Software Studio · Bogotá, Colombia",
-      title1: "Not a tracker.",
-      title2: "A behavioral mirror.",
-      subtitle: "Nodeself turns habits, emotions, and decisions into a",
+      title1: "Change has architecture.",
+      title2: "Nodeself reveals it.",
+      subtitle: "Habits, emotions, and decisions connected into a",
       subtitleBold: "living graph",
       subtitleEnd:
-        "so you can see what is shaping your behavior and what changes when one part of the system moves.",
+        "so you can see what is shaping your behavior and what shifts when one part of the system moves.",
       cta1: "See how it works",
       cta2: "Get early access",
-      meta: "A new way to understand personal change through structure, not streaks.",
+      meta: "Personal change made visible as structure, not streaks.",
     },
     nodeselfVideos: {
       label: "Live Demo",
@@ -44,8 +44,8 @@ export const translations = {
     },
     companyIntro: {
       badge: "The Problem",
-      title: "Most tools",
-      titleAccent: "measure the surface",
+      title: "Most tools only",
+      titleAccent: "read the surface",
       body: "People try to change through reminders, streaks, and isolated habit tracking. But behavior does not move in straight lines. It behaves like a system of influences, tensions, reinforcement, and decay.",
       quote:
         "“If you cannot see the structure, you keep treating the symptoms.”",
@@ -110,14 +110,14 @@ export const translations = {
       ],
     },
     differentiators: {
-      badge: "Why it feels different",
-      title: "Why it feels different",
+      badge: "What makes it different",
+      title: "What makes it different",
       description:
         "Most behavioral tools count what you do. Nodeself models how everything connects.",
       items: [
         {
           glyph: "≠",
-          title: "Not streaks. Structure.",
+          title: "Structure, not streaks.",
           body: "Nodeself does not count repetitions. It maps how behaviors shape one another and what happens when one part of the system moves.",
           accent: "var(--color-electric-light)",
         },
@@ -153,24 +153,44 @@ export const translations = {
         { id: "T-008", text: "Nodeself simulates futures before you live them." },
       ],
     },
+    projectsShowcase: {
+      badge: "The Product",
+      title: "Nodeself",
+      titleAccent: "functional and already working.",
+      description:
+        "Nodeself is a behavioral modeling system. It turns natural-language check-ins into connected graphs, reveals hidden relationships between habits and emotional states, and shows how behavior changes over time.",
+      meta: "What you see here is a real product built to make personal change visible as structure.",
+      capabilities: [
+        "Turn natural-language check-ins into connected behavioral graphs",
+        "Reveal relationships between habits, emotions, and decisions",
+        "Show visual decay when important nodes stop being reinforced",
+        "Simulate possible outcomes under different behavioral scenarios",
+        "Generate insights from the structure of your graph over time",
+      ],
+      pillars: [
+        { glyph: "≈", label: "Habits fade", sub: "Without reinforcement, every pattern decays" },
+        { glyph: "◈", label: "Everything connects", sub: "One behavior shifts the weight of everything around it" },
+        { glyph: "→", label: "Your future is visible", sub: "Nodeself simulates where your graph is heading" },
+      ],
+    },
     studioIdentity: {
       label: "PRODUCT PHILOSOPHY",
-      title: "A different philosophy",
-      titleAccent: "of self-understanding.",
-      body: "Nodeself is built on a simple belief: personal change becomes clearer when it can be seen as structure. Not as guilt. Not as pressure. Not as isolated habits. Structure creates a different kind of honesty.",
+      title: "A different way",
+      titleAccent: "of understanding yourself.",
+      body: "Nodeself is built on a simple belief: personal change becomes clearer when seen as structure. When structure is visible, so is everything that shapes it.",
       tagline: "BOGOTÁ, COLOMBIA · FOUNDED 2024 · PRE-SEED 2026",
       quote: "What you cannot see, you cannot truly understand.",
       principles: [
         {
           glyph: "⬡",
           label: "Architecture first",
-          body: "We don’t prototype to validate ideas. We build the real thing from day one: correct data models, deterministic algorithms, production-grade structure.",
+          body: "We don't prototype to validate ideas. We build the real thing from day one: correct data models, deterministic algorithms, production-grade structure.",
           accent: "var(--color-electric-light)",
         },
         {
           glyph: "◈",
           label: "Model the invisible",
-          body: "The most valuable software doesn’t manage tasks or track streaks. It reveals structure that exists but cannot be seen with the naked eye.",
+          body: "The most valuable software doesn't manage tasks or track streaks. It reveals structure that exists but cannot be seen with the naked eye.",
           accent: "var(--color-cyan)",
         },
         {
@@ -182,7 +202,7 @@ export const translations = {
         {
           glyph: "⊕",
           label: "Privacy is a design decision",
-          body: "Behavioral data is the most sensitive data that exists. Local-first, no persistent cloud storage of personal text. Not a feature. A commitment.",
+          body: "Behavioral data is the most sensitive data that exists. Local-first, no persistent cloud storage of personal text. A commitment, not a feature.",
           accent: "var(--color-cyan)",
         },
       ],
@@ -211,7 +231,7 @@ export const translations = {
       label: "Now in development. App Store 2026",
       title: "See yourself",
       titleAccent: "with more clarity.",
-      body: "Nodeself helps turn scattered experiences into visible structure, so change becomes something you can understand, not just chase.",
+      body: "Nodeself turns scattered experiences into visible structure, so change becomes something you can understand, not just chase.",
       points: [
         { glyph: "◈", text: "The core engine is complete and functional" },
         { glyph: "⬡", text: "A new category. No direct competition" },
@@ -231,21 +251,21 @@ export const translations = {
     },
     aboutPage: {
       badge: "The Studio",
-      title: "Not a consultancy.",
-      titleAccent: "A product studio.",
-      body: "MancoMen Software Studio was born as an enterprise consultancy. It pivoted. Today it has one mission: build software that reveals the structure of human behavior — starting with Nodeself.",
+      title: "We build software",
+      titleAccent: "that reveals invisible structure.",
+      body: "MancoMen Software Studio was founded with one mission: build products that make the invisible visible. Starting with Nodeself, the first behavioral modeling platform that maps personal change as a living graph.",
     },
     contactPage: {
       badge: "Contact",
-      title: "Start a",
-      titleAccent: "conversation.",
-      body: "Whether you’re interested in Nodeself early access, a conversation about investing in MancoMen, or just want to say hello — Juan reads every message.",
+      title: "Let's connect.",
+      titleAccent: "Tell us what you have in mind.",
+      body: "Investor conversations, early access to Nodeself, or simply curious about what we're building. The MancoMen team reads every message and responds directly.",
     },
     projectsPage: {
       badge: "Flagship Product",
-      title: "Nodeself —",
-      titleAccent: "the behavioral graph",
-      body: "A mobile-first platform that maps your personal change as a living graph. Feed it data in natural language — Nodeself extracts the behavioral structure, builds a causal graph, and models what happens over time. The graph decays when you stop. It simulates your future when you ask.",
+      title: "Nodeself",
+      titleAccent: "maps behavior as a living graph.",
+      body: "A mobile-first platform that turns natural-language input into a causal graph of your habits, emotions, and decisions. The graph evolves over time, decays when you stop, and simulates your future when you ask.",
       status: "Core engine complete · App Store launch 2026",
     },
     founderSection: {
@@ -274,7 +294,7 @@ export const translations = {
           name: "Juan Pedraza",
           role: "Strategic Advisor",
           description: [
-            "For me creativity and innovation are the tools that drive technological evolution forward. Everyday a new idea conceptualizes an advancement and hard work make it a reality",
+            "For me creativity and innovation are the tools that drive technological evolution forward. Every day a new idea conceptualizes an advancement and hard work makes it a reality.",
           ],
         },
       ],
@@ -284,14 +304,14 @@ export const translations = {
       title: "What we believe",
       values: [
         {
-          title: "Reveal, don’t prescribe",
+          title: "Reveal, not prescribe",
           description:
-            "The best software doesn’t tell you what to do. It shows you what you couldn’t see. Nodeself doesn’t coach. It maps, models, and mirrors.",
+            "The best software doesn't tell you what to do. It shows you what you couldn't see. Nodeself doesn't coach. It maps, models, and mirrors.",
         },
         {
           title: "Structure over noise",
           description:
-            "Behavioral change isn’t random. It has patterns, cycles, causal chains. Our job is to surface that structure, not to gamify it or flatten it.",
+            "Behavioral change has patterns, cycles, causal chains. Our job is to surface that structure, not to gamify it or flatten it.",
         },
         {
           title: "Privacy by design",
@@ -301,7 +321,7 @@ export const translations = {
         {
           title: "Built to last",
           description:
-            "Every architecture decision in Nodeself is made to endure. Strict TypeScript, SQLite-first, deterministic simulation engine. Not a prototype. A platform.",
+            "Every architecture decision in Nodeself is made to endure. Strict TypeScript, SQLite-first, deterministic simulation engine. A platform, not a prototype.",
         },
       ],
     },
@@ -319,13 +339,13 @@ export const translations = {
           number: "02",
           title: "Graph Updates",
           description:
-            "Every check-in strengthens or weakens nodes. Habits, decisions, emotional states: they’re all connected. The graph evolves with you.",
+            "Every check-in strengthens or weakens nodes. Habits, decisions, emotional states: they're all connected. The graph evolves with you.",
         },
         {
           number: "03",
           title: "Decay Happens",
           description:
-            "If you stop registering, nodes fade. Silence is data. The graph shows you what you’ve been ignoring, not just what you’ve been doing.",
+            "If you stop registering, nodes fade. Silence is data. The graph shows you what you've been ignoring, not just what you've been doing.",
         },
         {
           number: "04",
@@ -336,11 +356,11 @@ export const translations = {
       ],
     },
     contactForm: {
-      title: "Let’s talk about",
-      titleAccent: "what you’re building.",
-      body: "Investor conversation, early access to Nodeself, or just want to connect. Juan reads every message and responds personally.",
+      title: "Let's talk about",
+      titleAccent: "what you're building.",
+      body: "Investor conversation, early access to Nodeself, or simply connecting. The MancoMen team reads and responds to every message.",
       successTitle: "Message sent",
-      successBody: "Thank you for reaching out. We’ll be in touch within 24 hours.",
+      successBody: "Thank you for reaching out. We'll be in touch within 24 hours.",
       fields: {
         name: "Name",
         namePlaceholder: "Your full name",
@@ -349,7 +369,7 @@ export const translations = {
         company: "Company",
         companyPlaceholder: "Your company name",
         message: "Message",
-        messagePlaceholder: "Tell us about your project, timeline, and budget...",
+        messagePlaceholder: "Tell us about what you have in mind...",
       },
       submit: "Send Message",
       submitting: "Sending...",
@@ -366,15 +386,15 @@ export const translations = {
     },
     hero: {
       badge: "Software Studio · Bogotá, Colombia",
-      title1: "No un rastreador.",
-      title2: "Un espejo del comportamiento.",
-      subtitle: "Nodeself convierte hábitos, emociones y decisiones en un",
+      title1: "El cambio tiene arquitectura.",
+      title2: "Nodeself la revela.",
+      subtitle: "Hábitos, emociones y decisiones conectados en un",
       subtitleBold: "grafo vivo",
       subtitleEnd:
         "para que puedas ver qué está moldeando tu comportamiento y qué cambia cuando una parte del sistema se mueve.",
       cta1: "Ver cómo funciona",
       cta2: "Acceso anticipado",
-      meta: "Una nueva forma de entender el cambio personal a través de la estructura, no de las rachas.",
+      meta: "El cambio personal, visible como estructura.",
     },
     nodeselfVideos: {
       label: "Demo en Vivo",
@@ -401,8 +421,8 @@ export const translations = {
     },
     companyIntro: {
       badge: "El Problema",
-      title: "La mayoría de las herramientas",
-      titleAccent: "miden la superficie",
+      title: "La mayoría de las herramientas solo",
+      titleAccent: "leen la superficie",
       body: "Las personas intentan cambiar con recordatorios, rachas y seguimiento aislado de hábitos. Pero el comportamiento no se mueve en línea recta. Se comporta como un sistema de influencias, tensiones, refuerzo y decaimiento.",
       quote:
         "“Si no puedes ver la estructura, sigues tratando los síntomas.”",
@@ -467,14 +487,14 @@ export const translations = {
       ],
     },
     differentiators: {
-      badge: "Por qué se siente diferente",
-      title: "Por qué se siente diferente",
+      badge: "Lo que lo hace diferente",
+      title: "Lo que lo hace diferente",
       description:
         "La mayoría de las herramientas conductuales cuentan lo que haces. Nodeself modela cómo todo se conecta.",
       items: [
         {
           glyph: "≠",
-          title: "No rachas. Estructura.",
+          title: "Estructura, no rachas.",
           body: "Nodeself no cuenta repeticiones. Mapea cómo los comportamientos se moldean entre sí y qué sucede cuando una parte del sistema se mueve.",
           accent: "var(--color-electric-light)",
         },
@@ -510,18 +530,38 @@ export const translations = {
         { id: "T-008", text: "Nodeself simula futuros antes de que los vivas." },
       ],
     },
+    projectsShowcase: {
+      badge: "El Producto",
+      title: "Nodeself",
+      titleAccent: "funcional y ya en marcha.",
+      description:
+        "Nodeself es un sistema de modelado conductual. Convierte check-ins en lenguaje natural en grafos conectados, revela relaciones ocultas entre hábitos y estados emocionales, y muestra cómo el comportamiento cambia en el tiempo.",
+      meta: "Lo que ves aquí es un producto real, construido para hacer visible el cambio personal como estructura.",
+      capabilities: [
+        "Convierte check-ins en lenguaje natural en grafos conductuales conectados",
+        "Revela relaciones entre hábitos, emociones y decisiones",
+        "Muestra el decaimiento visual cuando nodos importantes dejan de reforzarse",
+        "Simula posibles resultados bajo distintos escenarios conductuales",
+        "Genera insights desde la estructura de tu grafo a lo largo del tiempo",
+      ],
+      pillars: [
+        { glyph: "≈", label: "Los hábitos decaen", sub: "Sin refuerzo, cada patrón se desvanece" },
+        { glyph: "◈", label: "Todo se conecta", sub: "Un comportamiento desplaza el peso de todo lo que lo rodea" },
+        { glyph: "→", label: "Tu futuro es visible", sub: "Nodeself simula hacia dónde se dirige tu grafo" },
+      ],
+    },
     studioIdentity: {
       label: "FILOSOFÍA DE PRODUCTO",
-      title: "Una filosofía diferente",
-      titleAccent: "de la comprensión personal.",
-      body: "Nodeself se construye sobre una creencia simple: el cambio personal se vuelve más claro cuando puede verse como estructura. No como culpa. No como presión. No como hábitos aislados. La estructura crea un tipo diferente de honestidad.",
+      title: "Una forma diferente",
+      titleAccent: "de comprenderte a ti mismo.",
+      body: "Nodeself nace de una creencia simple: el cambio personal se vuelve más claro cuando puede verse como estructura. Cuando la estructura es visible, también lo es todo lo que la moldea.",
       tagline: "BOGOTÁ, COLOMBIA · FUNDADO 2024 · PRE-SEED 2026",
       quote: "Lo que no puedes ver, no puedes comprenderlo de verdad.",
       principles: [
         {
           glyph: "⬡",
           label: "Arquitectura primero",
-          body: "No prototipamos para validar ideas. Construimos la versión real desde el día uno: modelos de datos correctos, algoritmos deterministas, estructura de nivel producción.",
+          body: "Construimos la versión real desde el día uno: modelos de datos correctos, algoritmos deterministas, estructura de nivel producción.",
           accent: "var(--color-electric-light)",
         },
         {
@@ -539,7 +579,7 @@ export const translations = {
         {
           glyph: "⊕",
           label: "La privacidad es una decisión de diseño",
-          body: "Los datos conductuales son los datos más sensibles que existen. Local-first, sin almacenamiento persistente en la nube de texto personal. No es una función. Es un compromiso.",
+          body: "Los datos conductuales son los más sensibles que existen. Local-first, sin almacenamiento persistente en la nube de texto personal. Un compromiso, no una función.",
           accent: "var(--color-cyan)",
         },
       ],
@@ -551,7 +591,7 @@ export const translations = {
       body1:
         "Nodeself está construyendo una nueva categoría en torno al modelado conductual. La tesis es diferenciada, el motor está completo y la siguiente fase se enfoca en el lanzamiento, la validación de usuarios de pago y el posicionamiento de categoría a largo plazo.",
       body2:
-        "MancoMen está construyendo sistemas de software originales en torno al comportamiento, la estructura y la experiencia humana. Nodeself es el primer producto insignia en esa dirección.",
+        "MancoMen construye sistemas de software originales en torno al comportamiento, la estructura y la experiencia humana. Nodeself es el primer producto insignia en esa dirección.",
       points: [
         { glyph: "◈", text: "Motor central completo y funcional" },
         { glyph: "⬡", text: "Nueva categoría. Sin competencia directa" },
@@ -566,9 +606,9 @@ export const translations = {
     },
     cta: {
       label: "En desarrollo. App Store 2026",
-      title: "Mírate a ti mismo",
-      titleAccent: "con más claridad.",
-      body: "Nodeself ayuda a convertir experiencias dispersas en estructura visible, para que el cambio sea algo que puedas entender, no solo perseguir.",
+      title: "Mírate con",
+      titleAccent: "más claridad.",
+      body: "Nodeself convierte experiencias dispersas en estructura visible, para que el cambio sea algo que puedas entender y no solo perseguir.",
       points: [
         { glyph: "◈", text: "El motor central está completo y funcional" },
         { glyph: "⬡", text: "Una nueva categoría. Sin competencia directa" },
@@ -588,21 +628,21 @@ export const translations = {
     },
     aboutPage: {
       badge: "El Estudio",
-      title: "No una consultora.",
-      titleAccent: "Un estudio de producto.",
-      body: "MancoMen Software Studio nació como una consultora empresarial. Pivotó. Hoy tiene una sola misión: construir software que revele la estructura del comportamiento humano — comenzando con Nodeself.",
+      title: "Construimos software",
+      titleAccent: "que revela estructuras invisibles.",
+      body: "MancoMen Software Studio fue fundado con una sola misión: construir productos que hagan visible lo invisible. Comenzando con Nodeself, la primera plataforma de modelado conductual que mapea el cambio personal como un grafo vivo.",
     },
     contactPage: {
       badge: "Contacto",
-      title: "Comienza una",
-      titleAccent: "conversación.",
-      body: "Ya sea que te interese el acceso anticipado a Nodeself, una conversación sobre invertir en MancoMen, o simplemente quieras saludar — Juan lee cada mensaje.",
+      title: "Conectemos.",
+      titleAccent: "Cuéntanos qué tienes en mente.",
+      body: "Conversaciones con inversores, acceso anticipado a Nodeself, o simplemente curiosidad por lo que construimos. El equipo de MancoMen lee cada mensaje y responde directamente.",
     },
     projectsPage: {
       badge: "Producto Insignia",
-      title: "Nodeself —",
-      titleAccent: "el grafo conductual",
-      body: "Una plataforma mobile-first que mapea tu cambio personal como un grafo vivo. Alímentala con datos en lenguaje natural — Nodeself extrae la estructura conductual, construye un grafo causal y modela qué sucede en el tiempo. El grafo decae cuando te detienes. Simula tu futuro cuando lo pides.",
+      title: "Nodeself",
+      titleAccent: "mapea el comportamiento como un grafo vivo.",
+      body: "Una plataforma mobile-first que convierte input en lenguaje natural en un grafo causal de tus hábitos, emociones y decisiones. El grafo evoluciona, decae cuando te detienes y simula tu futuro cuando lo pides.",
       status: "Motor central completo · Lanzamiento App Store 2026",
     },
     founderSection: {
@@ -643,12 +683,12 @@ export const translations = {
         {
           title: "Revelar, no prescribir",
           description:
-            "El mejor software no te dice qué hacer. Te muestra lo que no podías ver. Nodeself no hace coaching. Mapea, modela y refleja.",
+            "El mejor software te muestra lo que no podías ver. Nodeself mapea, modela y refleja.",
         },
         {
           title: "Estructura sobre el ruido",
           description:
-            "El cambio conductual no es aleatorio. Tiene patrones, ciclos, cadenas causales. Nuestro trabajo es sacar esa estructura a la superficie, no gamificarla ni aplanarla.",
+            "El cambio conductual tiene patrones, ciclos, cadenas causales. Nuestro trabajo es sacar esa estructura a la superficie, no gamificarla ni aplanarla.",
         },
         {
           title: "Privacidad por diseño",
@@ -658,7 +698,7 @@ export const translations = {
         {
           title: "Construido para durar",
           description:
-            "Cada decisión de arquitectura en Nodeself está hecha para perdurar. TypeScript estricto, SQLite-first, motor de simulación determinista. No un prototipo. Una plataforma.",
+            "Cada decisión de arquitectura en Nodeself está hecha para perdurar. TypeScript estricto, SQLite-first, motor de simulación determinista. Una plataforma, no un prototipo.",
         },
       ],
     },
@@ -688,16 +728,16 @@ export const translations = {
           number: "04",
           title: "Simula",
           description:
-            "Ejecuta simulaciones hacia adelante. ¿Qué pasa en tu grafo si mantienes este hábito 30 días? ¿Y si lo abandones? El modelo responde.",
+            "Ejecuta simulaciones hacia adelante. ¿Qué pasa en tu grafo si mantienes este hábito 30 días? ¿Y si lo abandonas? El modelo responde.",
         },
       ],
     },
     contactForm: {
       title: "Hablemos de",
-      titleAccent: "lo que estás construyendo.",
-      body: "Conversación con inversores, acceso anticipado a Nodeself, o simplemente conectar. Juan lee cada mensaje y responde personalmente.",
+      titleAccent: "lo que tienes en mente.",
+      body: "Conversación con inversores, acceso anticipado a Nodeself, o simplemente conectar. El equipo de MancoMen lee y responde cada mensaje.",
       successTitle: "Mensaje enviado",
-      successBody: "Gracias por contactarnos. Te responderemos en 24 horas.",
+      successBody: "Gracias por escribirnos. Te responderemos en 24 horas.",
       fields: {
         name: "Nombre",
         namePlaceholder: "Tu nombre completo",
@@ -706,7 +746,7 @@ export const translations = {
         company: "Empresa",
         companyPlaceholder: "Nombre de tu empresa",
         message: "Mensaje",
-        messagePlaceholder: "Cuéntanos sobre tu proyecto, tiempos y presupuesto...",
+        messagePlaceholder: "Cuéntanos qué tienes en mente...",
       },
       submit: "Enviar Mensaje",
       submitting: "Enviando...",

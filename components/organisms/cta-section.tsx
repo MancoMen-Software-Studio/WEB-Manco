@@ -153,7 +153,7 @@ export function CTASection() {
             }}
           >
             {cta.points.map((item) => (
-              <div key={item.text} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
+              <div key={item.glyph} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                 <span style={{ color: "var(--color-electric-light)", fontSize: 14, flexShrink: 0, paddingTop: 1 }}>
                   {item.glyph}
                 </span>

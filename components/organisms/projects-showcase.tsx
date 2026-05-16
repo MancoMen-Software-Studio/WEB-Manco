@@ -3,28 +3,15 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { SectionHeader } from "@/components/molecules/section-header";
-import { ROUTES } from "@/lib/constants";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-
-const capabilities = [
-  "Turn natural-language check-ins into connected behavioral graphs",
-  "Reveal relationships between habits, emotions, and decisions",
-  "Show visual decay when important nodes stop being reinforced",
-  "Simulate possible outcomes under different behavioral scenarios",
-  "Generate insights from the structure of your graph over time",
-];
-
-const modelPillars = [
-  { glyph: "≈", label: "Habits fade", sub: "Without reinforcement, every pattern decays" },
-  { glyph: "◈", label: "Everything connects", sub: "One behavior shifts the weight of everything around it" },
-  { glyph: "→", label: "Your future is visible", sub: "Nodeself simulates where your graph is heading" },
-];
+import { useLanguage } from "@/context/language-context";
 
 export function ProjectsShowcase() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useGSAP(() => {
     if (reducedMotion || !sectionRef.current) return;
@@ -62,6 +49,8 @@ export function ProjectsShowcase() {
     );
   }, { scope: sectionRef });
 
+  const ps = t.projectsShowcase;
+
   return (
     <section
       ref={sectionRef}
@@ -86,9 +75,9 @@ export function ProjectsShowcase() {
       <div className="px-6 md:px-8 lg:px-12" style={{ maxWidth: 1200, margin: "0 auto", position: "relative" }}>
         <div style={{ textAlign: "center", marginBottom: 80 }}>
           <SectionHeader
-            badge="The Product"
-            title="Nodeself — built and already working"
-            description="Nodeself is already a functional behavioral modeling system. It turns natural-language check-ins into connected graphs, reveals hidden relationships between habits and emotional states, and shows how behavior changes over time."
+            badge={ps.badge}
+            title={`${ps.title} — ${ps.titleAccent}`}
+            description={ps.description}
             align="center"
           />
           <p
@@ -100,7 +89,7 @@ export function ProjectsShowcase() {
               letterSpacing: "0.06em",
             }}
           >
-            What you see here is not a concept or prototype. It is a real product built to make personal change visible as structure.
+            {ps.meta}
           </p>
         </div>
 
@@ -111,9 +100,9 @@ export function ProjectsShowcase() {
 
             {/* Capability list */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {capabilities.map((cap) => (
+              {ps.capabilities.map((cap, i) => (
                 <div
-                  key={cap}
+                  key={i}
                   style={{
                     display: "flex",
                     alignItems: "flex-start",
@@ -144,9 +133,9 @@ export function ProjectsShowcase() {
 
             {/* Model pillars */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {modelPillars.map((p) => (
+              {ps.pillars.map((p) => (
                 <div
-                  key={p.label}
+                  key={p.glyph}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -208,7 +197,7 @@ export function ProjectsShowcase() {
               }}
             />
 
-            {/* Phone mockups — three screenshots */}
+            {/* Phone mockups */}
             {["/screenshots/IMG_2786.jpg", "/screenshots/IMG_2799.jpg", "/screenshots/IMG_2793.jpg"].map((src, i) => (
               <div
                 key={src}

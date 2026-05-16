@@ -88,7 +88,7 @@ export function CompanyIntro() {
           <div ref={rightRef} style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {ci.problems.map((p) => (
               <div
-                key={p.label}
+                key={p.stat}
                 style={{
                   padding: "28px 32px",
                   borderRadius: 16,
