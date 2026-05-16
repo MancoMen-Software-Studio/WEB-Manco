@@ -76,7 +76,7 @@ export function ProjectsShowcase() {
         <div style={{ textAlign: "center", marginBottom: 80 }}>
           <SectionHeader
             badge={ps.badge}
-            title={`${ps.title} — ${ps.titleAccent}`}
+            title={ps.title}
             description={ps.description}
             align="center"
           />

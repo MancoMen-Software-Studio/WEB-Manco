@@ -155,8 +155,8 @@ export const translations = {
     },
     projectsShowcase: {
       badge: "The Product",
-      title: "Nodeself",
-      titleAccent: "functional and already working.",
+      title: "The engine is complete. Nodeself works.",
+      titleAccent: "",
       description:
         "Nodeself is a behavioral modeling system. It turns natural-language check-ins into connected graphs, reveals hidden relationships between habits and emotional states, and shows how behavior changes over time.",
       meta: "What you see here is a real product built to make personal change visible as structure.",
@@ -532,8 +532,8 @@ export const translations = {
     },
     projectsShowcase: {
       badge: "El Producto",
-      title: "Nodeself",
-      titleAccent: "funcional y ya en marcha.",
+      title: "El motor está completo. Nodeself funciona.",
+      titleAccent: "",
       description:
         "Nodeself es un sistema de modelado conductual. Convierte check-ins en lenguaje natural en grafos conectados, revela relaciones ocultas entre hábitos y estados emocionales, y muestra cómo el comportamiento cambia en el tiempo.",
       meta: "Lo que ves aquí es un producto real, construido para hacer visible el cambio personal como estructura.",
