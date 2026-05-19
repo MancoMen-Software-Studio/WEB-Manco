@@ -46,7 +46,6 @@ export function Footer() {
             <div style={{ display: "flex", gap: 10 }}>
               {[
                 { href: SOCIAL.linkedin, icon: "linkedin", label: "LinkedIn" },
-                { href: SOCIAL.github, icon: "github", label: "GitHub" },
               ].map((social) => (
                 <a
                   key={social.icon}

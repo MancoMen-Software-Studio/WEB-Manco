@@ -17,7 +17,6 @@ export const SITE = {
 
 export const SOCIAL = {
   linkedin: "https://www.linkedin.com/company/mancomen",
-  github: "https://github.com/MancoMartinez",
 } as const;
 
 export const CONTACT = {

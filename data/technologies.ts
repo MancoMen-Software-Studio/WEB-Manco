@@ -19,7 +19,6 @@ export const technologies: Technology[] = [
   { name: "Docker", category: "devops" },
   { name: "Kubernetes", category: "devops" },
   { name: "Terraform", category: "devops" },
-  { name: "GitHub Actions", category: "devops" },
   { name: "Azure DevOps", category: "devops" },
   { name: "Unity 6 LTS", category: "xr" },
   { name: "Unity DOTS", category: "xr" },
