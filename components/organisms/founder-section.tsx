@@ -138,7 +138,10 @@ export function FounderSection() {
 
         {/* Team Grid */}
         <div ref={teamRef} style={{ display: "flex", flexDirection: "column", gap: 80 }}>
-          {fs.team.map((member, idx) => (
+          {fs.team.map((member, idx) => {
+            // Juan Martinez (idx 0) temporalmente oculto — quitar el return null para restaurar
+            if (idx === 0) return null;
+            return (
             <div
               key={member.name}
               className={`team-member ${idx % 2 === 0 ? "even" : "odd"}`}
@@ -249,7 +252,8 @@ export function FounderSection() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
